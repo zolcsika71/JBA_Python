@@ -1,0 +1,19 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    line1 = "Night, square, apothecary, lantern,"
+    line2 = "Its meaningless and pallid light."
+    line3 = "Return a half a lifetime after – "
+    line4 = "All will remain. A scapeless rite."
+
+    # your one print() statement here
+    print(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7458#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 20 Jan 2021 16:40:25 UTC
+record: -1

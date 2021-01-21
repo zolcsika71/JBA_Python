@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    adj = "Good"
+    part_of_day = "morning"
+    comma = ","
+    title = "Ms."
+    surname = "Johnson"
+
+    # your print() function
+    print(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7457#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 20 Jan 2021 16:44:13 UTC
+record: -1

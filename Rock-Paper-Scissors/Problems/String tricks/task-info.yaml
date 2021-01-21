@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    random_numbers = [1, 22, 333, 4444, 55555]
+    print("\n".join(random_numbers))
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6980#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 21 Jan 2021 15:13:32 UTC
+record: -1

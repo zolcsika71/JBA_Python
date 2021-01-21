@@ -1,0 +1,24 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # Save the input in this variable
+    ticket = ...
+
+    # Add up the digits for each half
+    half1 = ...
+    half2 = ...
+
+    # Thanks to you, this code will work
+    if half1 == half2:
+        print("Lucky")
+    else:
+        print("Ordinary")
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7927#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 21 Jan 2021 11:36:30 UTC
+record: -1

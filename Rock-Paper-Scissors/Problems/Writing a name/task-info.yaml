@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    name = ['M', 'A', 'R', 'C', 'O']
+    # modify the next line
+    print(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7456#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 20 Jan 2021 16:35:58 UTC
+record: -1

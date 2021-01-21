@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    pasta = "tomato, basil, garlic, salt, pasta, olive oil"
+    apple_pie = "apple, sugar, salt, cinnamon, flour, egg, butter"
+    ratatouille = "aubergine, carrot, onion, tomato, garlic, olive oil, pepper, salt"
+    chocolate_cake = "chocolate, sugar, salt, flour, coffee, butter"
+    omelette = "egg, milk, bacon, tomato, salt, pepper"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6520#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Mon, 18 Jan 2021 16:29:27 UTC
+record: -1

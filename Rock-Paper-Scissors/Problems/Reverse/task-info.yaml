@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # the following line reads the list from the input; do not modify it, please
+    numbers = [int(num) for num in input().split()]
+
+    print(numbers[4:16:-1])  # the line with an error
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6969#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 21 Jan 2021 13:14:18 UTC
+record: -1

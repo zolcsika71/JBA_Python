@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# read sample.txt and print the number of lines'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8144#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 20 Jan 2021 18:09:03 UTC
+record: -1

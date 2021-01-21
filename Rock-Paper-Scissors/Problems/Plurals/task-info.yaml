@@ -1,0 +1,19 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    number = int(input())
+    word = input()
+
+    # write a condition for plurals
+
+
+    print(number, word)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8439#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Mon, 18 Jan 2021 16:34:52 UTC
+record: -1
