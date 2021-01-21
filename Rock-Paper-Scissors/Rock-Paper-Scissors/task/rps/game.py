@@ -8,7 +8,7 @@ def rnd(n, b=0):
 
 def get_player_name():
     name = str(input('Enter your name: '))
-    print(f'Hello, {name}')
+    print(f'Hello, {name} fucker')
     return name
 
 
