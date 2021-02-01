@@ -1,0 +1,28 @@
+<h2>Merge sorted lists</h2>
+<html>
+ <head></head>
+ <body>
+  <p>The <code class="java">merge_arrays(a, b)</code> function, which is partly implemented below, takes two sorted lists of integers, merges them into one sorted list, and returns the result. The function should work in the following way: create an empty list <code class="java">c</code> which will store the result; keep finding the smallest remaining element in <code class="java">a</code> and <code class="java">b</code> and moving it to the list <code class="java">c</code>; stop when there are no elements left in <code class="java">a</code> and <code class="java">b</code>.</p> 
+  <p>Your task is to fill in the gaps so that the function works correctly. Note, that during the execution any of the lists <code class="java">a</code> and <code class="java">b</code> can become empty, so handle these cases carefully. Try to use non-boolean values in logical expressions when possible.</p> 
+  <p>Your program shouldn't read any input or call the function, just implement it.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-920').style.display='inline'"> Hint </button> </p>
+  <div id="hint-920" style="display:none;">
+   The expression in the while loop should check if there are any elements left in 
+   <code class="java">a</code> or 
+   <code class="java">b</code>.
+   <br> The if statement should check if the next element should be taken from list 
+   <code class="java">a</code>. This happens in two situations:
+   <p></p> 
+   <ul> 
+    <li>list <code class="java">b</code> is empty;</li> 
+    <li>both lists are not empty and the first element in <code class="java">a</code> is less than the first element in <code class="java">b</code>.</li> 
+   </ul> 
+   <p></p>
+  </div>
+  <p></p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">1 2 3<br>2 3 4 4</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">1 2 2 3 3 4 4</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/10327">Show topic summary</a>

@@ -73,7 +73,7 @@ content:
 - Good programmer
 - Find the length
 - Initials
-- Modifying data
+- Modifying input
 - Lucky ticket
 - Cipher
 - Reverse
@@ -84,3 +84,6 @@ content:
 - String tricks
 - Spellchecker (1)
 - Find positions
+- Correct a mistake
+- Say hello
+- Merge sorted lists

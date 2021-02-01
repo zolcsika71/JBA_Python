@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def compare(numerator, denominator):
+        return denominator and numerator / denominator == 0.5
+
+
+    a = int(input())
+    b = int(input())
+
+    print(compare(a, b))
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10333#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 21 Jan 2021 20:37:01 UTC
+record: -1
