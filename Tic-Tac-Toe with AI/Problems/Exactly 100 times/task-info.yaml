@@ -3,14 +3,12 @@ files:
 - name: main.py
   visible: true
   text: |-
-    word = input()
-
-    # Change the next line
-    print(...)
+    n = 12345
+    # put your python code here
   learner_created: false
-feedback_link: https://hyperskill.org/learn/step/8213#comment
+feedback_link: https://hyperskill.org/learn/step/6716#comment
 status: Solved
 feedback:
   message: <html>Correct solution</html>
-  time: Mon, 01 Feb 2021 15:40:41 UTC
+  time: Mon, 01 Feb 2021 16:03:56 UTC
 record: -1

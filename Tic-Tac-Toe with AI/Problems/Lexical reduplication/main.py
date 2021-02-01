@@ -1,4 +1,4 @@
 word = input()
 
 # Change the next line
-print(...)
+print(word * 2)
