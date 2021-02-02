@@ -1,0 +1,13 @@
+type: code
+custom_name: Conditions & nested lists
+files:
+- name: main.py
+  visible: true
+  text: '# the list "students" is already defined'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6944#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 02 Feb 2021 16:07:40 UTC
+record: -1

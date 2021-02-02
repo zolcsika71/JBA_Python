@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    vowels = 'aeiou'
+    # create your list here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7191#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 02 Feb 2021 15:37:19 UTC
+record: -1

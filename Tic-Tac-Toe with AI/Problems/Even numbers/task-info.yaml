@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # the following line reads the list from the input; do not modify it, please
+    my_numbers = [int(x) for x in input().split(" ")]
+
+    # work with the variable 'my_numbers'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6319#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 02 Feb 2021 14:58:49 UTC
+record: -1
