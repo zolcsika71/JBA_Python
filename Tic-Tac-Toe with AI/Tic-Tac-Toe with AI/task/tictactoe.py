@@ -85,7 +85,7 @@ class Matrix:
             print('You should enter numbers!')
             return False
 
-    def ai_move(self, computer_char, level='easy'):
+    def ai_move(self, ai_char, level='easy'):
         if level == 'easy':
             # check empty cells
             empty_cells = []
@@ -96,7 +96,7 @@ class Matrix:
                         empty_cells.append([row, column])
 
             target_cell = empty_cells[rnd(0, len(empty_cells) - 1)]
-            self.matrix[target_cell[0]][target_cell[1]] = computer_char + ' '
+            self.matrix[target_cell[0]][target_cell[1]] = ai_char + ' '
 
             print('Making move level "easy"')
 
@@ -116,6 +116,7 @@ class Matrix:
         def get_results():
             results_array = []
 
+            # get column[i] from 2D array
             def column(i):
                 return [row_[i] for row_ in self]
 
