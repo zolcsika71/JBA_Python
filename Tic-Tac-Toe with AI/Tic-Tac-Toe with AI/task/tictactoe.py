@@ -39,22 +39,6 @@ class Matrix:
     def __getitem__(self, index):
         return self.matrix[index]
 
-    # define test table
-    # def init_table(self):
-    #     line_ = 'XO_XXOOXX'
-    #     x = 1
-    #     y = 1
-    #
-    #     for char in line_:
-    #         if char == '_':
-    #             char = ' '
-    #         self[x][y] = char + ' '
-    #         if y == GAME_SIZE:
-    #             y = 1
-    #             x += 1
-    #         else:
-    #             y += 1
-
     def print(self):
         for row in range(MATRIX_SIZE):
             for column in range(MATRIX_SIZE):
