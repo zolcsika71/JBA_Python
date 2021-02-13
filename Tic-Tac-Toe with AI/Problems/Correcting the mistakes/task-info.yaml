@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    hope = "I hope this is actually going to work'
+    doubt = 'Do I need to double check all lines?'
+    suggestion = "What if I write it in "double quotes"?
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11136#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 11 Feb 2021 12:01:53 UTC
+record: -1
