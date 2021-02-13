@@ -13,7 +13,7 @@ def rnd(n, b=0):
 def get_game_mode():
     game_mode_ = str(input('Input command: ')).split(' ')
 
-    if game_mode_[0] == 'exit'\
+    if game_mode_[0] == 'exit' \
             or (len(game_mode_) == 3
                 and game_mode_[0] == 'start'
                 and game_mode_[1] in ['user', 'easy']
@@ -35,9 +35,6 @@ class Matrix:
                 else '--' if column < MATRIX_LENGTH and (row == 0 or row == MATRIX_LENGTH)
                 else '-' if row == 0 or row == MATRIX_LENGTH else '  ' for column in range(self.size)
             ])
-
-    def __setitem__(self, index, char):
-        self.matrix[index] = char
 
     def __getitem__(self, index):
         return self.matrix[index]
@@ -64,7 +61,7 @@ class Matrix:
                 print(self[row][column], end='')
             print('\r')
 
-    def user_move(self, user_char):
+    def user_action(self, user_char):
 
         try:
             x, y = map(int, input('Enter the coordinates:').split())
@@ -85,7 +82,7 @@ class Matrix:
             print('You should enter numbers!')
             return False
 
-    def ai_move(self, ai_char, level='easy'):
+    def ai_action(self, ai_char, level='easy'):
         if level == 'easy':
             # check empty cells
             empty_cells = []
@@ -143,8 +140,10 @@ class Matrix:
 
     def table_full(self):
 
+        # get the sub matrix (the real table)
         game_table = [(self[row][1:-1]) for row in range(1, MATRIX_LENGTH)]
 
+        # get elements from sub matrix
         elements = [cell for row in game_table for cell in row]
 
         return all(True if element in ['X ', 'O '] else False for element in elements)
@@ -162,6 +161,7 @@ class Matrix:
             return False
 
 
+# get game mode [[start / exit], [player: user / easy], [player: user / easy]]
 game_mode = False
 
 while not game_mode:
@@ -170,10 +170,14 @@ while not game_mode:
 if game_mode[0] == 'exit':
     sys.exit()
 
+# init table
 table = Matrix(MATRIX_SIZE)
+
+# init players [[player, player_char]]
 players = [[game_mode[1], 'X'], [game_mode[2], 'O']]
 end_game = False
 
+# print init table
 table.print()
 
 while True:
@@ -181,13 +185,16 @@ while True:
     for player in players:
 
         if player[0] == 'user':
-            while not table.user_move(player[1]):
-                table.user_move(player[1])
+            # player action
+            while not table.user_action(player[1]):
+                table.user_action(player[1])
         else:
-            table.ai_move(player[1])
+            # ai action
+            table.ai_action(player[1])
 
         table.print()
 
+        # True if game over and prints the result
         if table.get_game_state():
             end_game = True
             break
