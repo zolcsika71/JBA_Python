@@ -13,7 +13,7 @@ def rnd(n, b=0):
 def get_game_mode():
     game_mode_ = str(input('Input command: ')).split(' ')
 
-    if game_mode_[0] == 'exit' \
+    if game_mode_[0] == 'exit'\
             or (len(game_mode_) == 3
                 and game_mode_[0] == 'start'
                 and game_mode_[1] in ['user', 'easy']
