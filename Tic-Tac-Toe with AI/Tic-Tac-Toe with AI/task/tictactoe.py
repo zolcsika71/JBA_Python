@@ -91,6 +91,27 @@ class Matrix:
         else:
             print('This level is not defined')
 
+    def get_result_array(self):
+        results_array = []
+
+        # get column[i] from 2D array
+        def column(i):
+            return [row_[i] for row_ in self]
+
+        for row in range(1, MATRIX_LENGTH):
+            # row
+            results_array.append(self[row][1:-1])
+            # column
+            results_array.append(column(row)[1:-1])
+
+        # diagonal 1
+        results_array.append([self[row][row] for row in range(1, MATRIX_LENGTH)])
+
+        # diagonal 2
+        results_array.append([self[row][MATRIX_LENGTH - row] for row in range(1, MATRIX_LENGTH)])
+
+        return results_array
+
     def winner(self):
 
         def count_result(result_):
@@ -102,23 +123,8 @@ class Matrix:
                 return False
 
         def get_results():
-            results_array = []
 
-            # get column[i] from 2D array
-            def column(i):
-                return [row_[i] for row_ in self]
-
-            for row in range(1, MATRIX_LENGTH):
-                # row
-                results_array.append(self[row][1:-1])
-                # column
-                results_array.append(column(row)[1:-1])
-
-            # diagonal 1
-            results_array.append([self[row][row] for row in range(1, MATRIX_LENGTH)])
-
-            # diagonal 2
-            results_array.append([self[row][MATRIX_LENGTH - row] for row in range(1, MATRIX_LENGTH)])
+            results_array = self.get_result_array()
 
             for result in results_array:
                 return_value = count_result(result)
