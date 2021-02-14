@@ -67,14 +67,21 @@ class Matrix:
             return False
 
     def ai_action(self, ai_char, level='easy'):
-        if level == 'easy':
+
+        def get_empty_cells():
             # check empty cells
-            empty_cells = []
+            empty_cells_ = []
 
             for row in range(1, MATRIX_LENGTH):
                 for column in range(1, MATRIX_LENGTH):
                     if self.matrix[row][column] == '  ':
-                        empty_cells.append([row, column])
+                        empty_cells_.append([row, column])
+
+            return empty_cells_
+
+        empty_cells = get_empty_cells()
+
+        if level == 'easy':
 
             target_cell = empty_cells[rnd(0, len(empty_cells) - 1)]
             self.matrix[target_cell[0]][target_cell[1]] = ai_char + ' '
