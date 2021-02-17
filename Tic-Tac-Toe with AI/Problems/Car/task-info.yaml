@@ -1,0 +1,23 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Car:
+        def __init__(self, model, color):
+            self.model = model
+            self.color = color
+
+
+    class Tesla(Car):
+        pass
+
+
+    # create an instance of Tesla
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7240#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 18:41:06 UTC
+record: -1

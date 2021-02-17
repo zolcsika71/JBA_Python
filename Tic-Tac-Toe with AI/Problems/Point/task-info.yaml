@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Point:
+        pass
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9518#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 15:26:49 UTC
+record: -1

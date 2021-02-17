@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Fish:
+        place = "aquarium"
+        n_fish = 0  # number of fish in the aquarium
+
+        def __init__(self, name, kind):
+            self.name = name
+            self.kind = kind
+
+
+    greg = Fish("Greg", "guppy")
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6682#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 14:38:50 UTC
+record: -1

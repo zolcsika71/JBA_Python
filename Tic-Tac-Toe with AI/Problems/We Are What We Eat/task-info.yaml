@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # the list "meals" is already defined
+    # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9010#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 14 Feb 2021 11:30:57 UTC
+record: -1

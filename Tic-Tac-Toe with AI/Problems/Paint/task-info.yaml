@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class House:
+        def __init__(self, floors):
+            self.floors = floors
+
+        # create the method here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6986#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 15:39:25 UTC
+record: -1

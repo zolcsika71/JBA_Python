@@ -1,0 +1,19 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Patient:
+        def __init__(self, name, last_name, age):
+            self.name = name
+            self.last_name = last_name
+            self.age = age
+
+        # create methods here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7146#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 17:53:34 UTC
+record: -1

@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Mountain:
+        def __init__(self, name, height):
+            self.name = name
+            self.height = height
+
+        # create convert_height here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6961#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 15:15:47 UTC
+record: -1

@@ -1,0 +1,25 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # our class Ship
+    class Ship:
+        def __init__(self, name, capacity):
+            self.name = name
+            self.capacity = capacity
+            self.cargo = 0
+
+        # the old sail method that you need to rewrite
+        def sail(self):
+            return "{} has sailed!".format(self.name)
+
+
+    black_pearl = Ship("Black Pearl", 800)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6936#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 15:20:09 UTC
+record: -1

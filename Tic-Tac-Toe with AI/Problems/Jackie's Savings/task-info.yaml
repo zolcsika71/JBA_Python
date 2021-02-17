@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def final_deposit_amount(amount=1000, interest):
+        pass
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9554#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Mon, 15 Feb 2021 17:49:46 UTC
+record: -1

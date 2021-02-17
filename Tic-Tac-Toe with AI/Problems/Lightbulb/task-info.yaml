@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Lightbulb:
+        def __init__(self):
+            self.state = "off"
+
+        # create method change_state here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6988#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 16:07:21 UTC
+record: -1

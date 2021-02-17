@@ -154,7 +154,7 @@ class TicTacToeTests(StageTest):
 
     is_easy_not_moving_like_medium = False
 
-    @dynamic_test(repeat=30, order=5)
+    @dynamic_test(repeat=30, order=-5)
     def check_easy_not_moving_like_medium(self):
 
         if self.is_easy_not_moving_like_medium:
@@ -204,6 +204,81 @@ class TicTacToeTests(StageTest):
 
         Grid.check_grid_sequence(grids)
 
+        return CheckResult.correct()
+
+    @dynamic_test(repeat=10, order=8)
+    def check_medium_ai(self):
+
+        program = TestedProgram()
+        program.start()
+        program.execute("start user medium")
+
+        output = program.execute("2 2")
+
+        game_grid = Grid.from_output(output, 2)
+
+        cells = game_grid.get_grid()
+
+        if cells[0][0] == CellState.EMPTY and cells[2][2] == CellState.EMPTY:
+            output = program.execute("1 1")
+            game_grid = Grid.from_output(output, 2)
+            if game_grid.get_grid()[2][2] == CellState.EMPTY:
+                return CheckResult.wrong("Looks like your Medium level AI doesn't make a correct move!")
+        else:
+            output = program.execute("1 3")
+            game_grid = Grid.from_output(output, 2)
+            if game_grid.get_grid()[2][0] == CellState.EMPTY:
+                return CheckResult.wrong("Looks like your Medium level AI doesn't make a correct move!")
+
+        program.stop()
+
+        return CheckResult.correct()
+
+    @dynamic_test(order=9)
+    def check_medium_vs_medium(self):
+
+        program = TestedProgram()
+        program.start()
+
+        output = program.execute("start medium medium")
+
+        grids = Grid.all_grids_from_output(output)
+
+        Grid.check_grid_sequence(grids)
+
+        return CheckResult.correct()
+
+    is_medium_not_moving_like_hard = False
+
+    @dynamic_test(repeat=30, order=10)
+    def check_medium_not_moving_like_hard(self):
+
+        if self.is_medium_not_moving_like_hard:
+            return CheckResult.correct()
+
+        program = TestedProgram()
+        program.start()
+
+        program.execute("start user medium")
+
+        output = program.execute("2 2")
+
+        user_move_grid = Grid.from_output(output, 1)
+        medium_move_grid = Grid.from_output(output, 2)
+
+        medium_move = Grid.get_move(user_move_grid, medium_move_grid)
+
+        minimax_correct_positions = Minimax.get_available_positions(user_move_grid, CellState.O)
+
+        if medium_move not in minimax_correct_positions:
+            self.is_medium_not_moving_like_hard = True
+
+        return CheckResult.correct()
+
+    @dynamic_test(order=11)
+    def check_medium_not_moving_like_hard_after(self):
+        if not self.is_medium_not_moving_like_hard:
+            return CheckResult.wrong("Looks like Medium level AI doesn't make a random move!")
         return CheckResult.correct()
 
 

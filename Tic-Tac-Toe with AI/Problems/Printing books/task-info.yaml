@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Book:
+        def __init__(self, author, title, price, book_id):
+            self.author = author
+            self.title = title
+            self.price = price
+            self.book_id = book_id
+
+        # define the necessary method here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7144#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 17:56:15 UTC
+record: -1

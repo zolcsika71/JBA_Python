@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    first_name = input()
+    last_name = input()
+
+    # create full_name here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8088#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 14 Feb 2021 09:58:53 UTC
+record: -1

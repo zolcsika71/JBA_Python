@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Dog:
+        def __init__(self, name):
+            self.name = name
+
+
+    # create pumpkin
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8092#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 13:06:37 UTC
+record: -1

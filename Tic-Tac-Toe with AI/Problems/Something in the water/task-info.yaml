@@ -1,0 +1,23 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class WaterBody:
+        def __init__(self, name, length,):
+            self.name = name  # str
+            self.length = length  # int
+
+
+    class River{WaterBody}:
+        pass
+
+
+    seine = River()
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7241#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 16 Feb 2021 18:18:47 UTC
+record: -1
