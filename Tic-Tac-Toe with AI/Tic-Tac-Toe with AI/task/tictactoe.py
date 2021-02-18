@@ -1,7 +1,7 @@
 import random
 import sys
+from collections import Counter
 
-DEBUG = False
 GAME_SIZE = 3
 MATRIX_SIZE = GAME_SIZE + 2
 MATRIX_LENGTH = MATRIX_SIZE - 1
@@ -11,24 +11,179 @@ def rnd(n, b=0):
     return int(round(random.random() * (b - n) + n, 0))
 
 
-def get_game_mode():
-    game_mode_ = str(input('Input command: ')).split(' ')
+class Table:
+    def __init__(self, table_):
+        self.table = table_
+        self.table_coords = \
+            {
+                '11': 0,
+                '12': 1,
+                '13': 2,
+                '21': 3,
+                '22': 4,
+                '23': 5,
+                '31': 6,
+                '32': 7,
+                '33': 8
+            }
 
-    if game_mode_[0] == 'exit' \
-            or (len(game_mode_) == 3
-                and game_mode_[0] == 'start'
-                and game_mode_[1] in ['user', 'easy', 'medium']
-                and game_mode_[2] in ['user', 'easy', 'medium']):
+    def write_table(self, coords, char):
+        if self.empty_cell(coords):
+            self.table[self.table_coords[coords]] = char
+            return True
+        else:
+            print(f'cell {(coords[0])}, {(coords[1])} is already occupied with {self.read_table(coords)}')
+            return False
 
-        return game_mode_
-    else:
-        print('Bad parameters!')
+    def read_table(self, coords):
+        return self.table[self.table_coords[coords]]
+
+    def empty_cell(self, coords):
+        return self.table[self.table_coords[coords]] == ' '
+
+    def table_full(self):
+        return all(cell != ' ' for cell in self.table)
+
+    def table_array(self):
+
+        rows = [
+            [self.table[0], self.table[1], self.table[2]],
+            [self.table[3], self.table[4], self.table[5]],
+            [self.table[6], self.table[7], self.table[8]]
+        ]
+        columns = [
+            [self.table[0], self.table[3], self.table[6]],
+            [self.table[1], self.table[4], self.table[7]],
+            [self.table[2], self.table[5], self.table[8]]
+
+        ]
+        diagonals = [
+            [self.table[0], self.table[4], self.table[8]],
+            [self.table[2], self.table[4], self.table[6]]
+        ]
+
+        return [rows, columns, diagonals]
+
+
+class Player(Table):
+    def __init__(self, name, char, table):
+        super().__init__(table)
+        self.name = name
+        self.char = char
+
+    def play(self):
+        if self.name == 'user':
+            self.user_action()
+        else:
+            self.ai_action()
+
+    def opponent_char(self):
+        if self.char == 'X':
+            return 'O'
+        else:
+            return 'X'
+
+    def winning(self):
+        if self.table_full():
+            print('Draw')
+            return True
+
+        for lines in self.table_array():
+            for line in lines:
+                if all(char == self.char for char in line):
+                    print(f'{self.char} wins')
+                    return True
+
         return False
 
+    def user_action(self):
+        try:
+            x, y = map(int, input('Enter the coordinates:').split())
+            user_input = [str(x), str(y)]
+            # check if it is in '123'
+            if all(char in '123' for char in user_input):
+                # check if cell is not occupied
+                coords = str(user_input[0]) + str(user_input[1])
+                print(f'coords: {coords}')
+                if self.empty_cell(coords):
+                    self.write_table(coords, self.char)
+                    return True
+                else:
+                    print('This cell is occupied! Choose another one!')
+                    self.user_action()
+            else:
+                print('Coordinates should be from 1 to 3!')
+                self.user_action()
+        except ValueError:
+            print('You should enter numbers!')
+            self.user_action()
 
-class Matrix:
+    def ai_action(self):
 
-    def __init__(self, size_):
+        def easy_ai_action():
+            empty_cells = [cell for cell in range(len(self.table)) if self.table[cell] == ' ']
+            target_cell = empty_cells[rnd(0, len(empty_cells) - 1)]
+            self.table[target_cell] = self.char
+
+            print('Making move level "easy"')
+
+        def medium_ai_action():
+
+            def make_move(type_index_, array_index_, empty_cell_index_):
+                # check rows
+                if type_index_ == 0:
+                    coords = str(array_index_ + 1) + str(empty_cell_index_)
+                    return self.write_table(coords, self.char)
+                # check columns
+                elif type_index_ == 1:
+                    coords = str(empty_cell_index_) + str(array_index_ + 1)
+                    return self.write_table(coords, self.char)
+                # check diagonals
+                elif type_index_ == 2:
+                    if array_index_ == 0:
+                        coords = str(empty_cell_index_) + str(empty_cell_index_)
+                    else:
+                        coords = str(empty_cell_index_) + str(MATRIX_LENGTH - empty_cell_index_)
+
+                    return self.write_table(coords, self.char)
+
+            def ai_move():
+                chars = [self.char, self.opponent_char()]
+                table_array = self.table_array()
+
+                for type_index in range(len(table_array)):
+                    for array_index in range(len(table_array[type_index])):
+                        char_counter = dict(Counter(table_array[type_index][array_index]))
+                        for char in chars:
+                            if char in char_counter \
+                                    and ' ' in char_counter \
+                                    and char_counter[char] == 2 \
+                                    and char_counter[' '] == 1:
+                                empty_cell_index = table_array[type_index][array_index].index(' ') + 1
+                                if make_move(type_index, array_index, empty_cell_index):
+                                    print('Making move level "medium"')
+                                    return True
+
+                return False
+
+            return ai_move()
+
+        def hard_ai_action():
+            pass
+
+        if self.name == 'easy':
+            easy_ai_action()
+        elif self.name == 'medium':
+            if not medium_ai_action():
+                easy_ai_action()
+        else:
+            hard_ai_action()
+
+
+class Matrix(Table):
+
+    def __init__(self, size_, table_):
+        super().__init__(table_)
         self.size = size_
         self.matrix = []
         for row in range(self.size):
@@ -37,22 +192,17 @@ class Matrix:
                 else '--' if column < MATRIX_LENGTH and (row == 0 or row == MATRIX_LENGTH)
                 else '-' if row == 0 or row == MATRIX_LENGTH else '  ' for column in range(self.size)
             ])
-
-        if DEBUG:
-            self.init_table()
+        self.update_table(table_)
 
     def __getitem__(self, index):
         return self.matrix[index]
 
-    # define test table
-    def init_table(self):
-        line_ = '_OO_XO_XX'
+    def update_table(self, table_):
         x = 1
         y = 1
 
-        for char in line_:
-            if char == '_':
-                char = ' '
+        for char in table_:
+            # print(f'x: {x}, y: {y}')
             self[x][y] = char + ' '
             if y == GAME_SIZE:
                 y = 1
@@ -60,259 +210,57 @@ class Matrix:
             else:
                 y += 1
 
-    def print(self):
+    def print(self, table_):
+        self.update_table(table_)
         for row in range(MATRIX_SIZE):
             for column in range(MATRIX_SIZE):
                 print(self[row][column], end='')
             print('\r')
 
-    def empty_cell(self, coords):
-        return self.matrix[int(coords[0])][int(coords[1])] == '  '
 
-    def make_move(self, coords, char):
-        cell = self.matrix[int(coords[0])][int(coords[1])]
-        if cell == '  ':
-            self.matrix[int(coords[0])][int(coords[1])] = char + ' '
-            return True
+class Game(Matrix):
+
+    def get_game_mode(self):
+        game_mode_ = str(input('Input command: ')).split(' ')
+
+        if game_mode_[0] == 'exit' \
+                or (len(game_mode_) == 3
+                    and game_mode_[0] == 'start'
+                    and game_mode_[1] in ['user', 'easy', 'medium', 'hard']
+                    and game_mode_[2] in ['user', 'easy', 'medium', 'hard']):
+
+            return game_mode_
         else:
-            print(f'cell {int(coords[0])}, {int(coords[1])} is already occupied')
-            print(self.matrix[int(coords[0])][int(coords[1])])
-            return False
+            print('Bad parameters!')
+            self.get_game_mode()
 
-    def user_action(self, user_char):
+    table = [' ' for i in range(GAME_SIZE ** 2)]
 
-        try:
-            x, y = map(int, input('Enter the coordinates:').split())
-            user_input = [str(x), str(y)]
-            # check if it is in '123'
-            if all(char in '123' for char in user_input):
-                # check if cell is not occupied
-                coords = [int(user_input[0]), int(user_input[1])]
-                if self.empty_cell(coords):
-                    self.make_move(coords, user_char)
-                    return True
-                else:
-                    print('This cell is occupied! Choose another one!')
-                    return False
-            else:
-                print('Coordinates should be from 1 to 3!')
-                return False
-        except ValueError:
-            print('You should enter numbers!')
-            return False
+    def __init__(self, size_):
+        super().__init__(size_, Game.table)
 
-    def ai_action(self, level, ai_char):
+        game_mode = Game.get_game_mode(self)
 
-        def easy_ai_action():
-
-            def get_all_empty_cells():
-                # check empty cells
-                empty_cells_ = []
-
-                for row in range(1, MATRIX_LENGTH):
-                    for column in range(1, MATRIX_LENGTH):
-                        if self.empty_cell([row, column]):
-                            empty_cells_.append([row, column])
-
-                return empty_cells_
-
-            empty_cells = get_all_empty_cells()
-
-            target_cell = empty_cells[rnd(0, len(empty_cells) - 1)]
-            target = [target_cell[0], target_cell[1]]
-            self.make_move(target, ai_char)
-
-            print('Making move level "easy"')
-
-        def medium_ai_action():
-
-            results_array = self.get_result_array(True)
-            action_made = False
-
-            def user_char():
-                if ai_char == 'X':
-                    return 'O'
-                else:
-                    return 'X'
-
-            def count_chars(list_):
-                dict_ = {}
-                for j in set(list_):
-                    dict_[j] = list_.count(j)
-
-                return dict_
-
-            def make_move(type_index, array_index, empty_cell_index):
-                # check rows
-                if type_index == 0:
-                    target = [array_index + 1, empty_cell_index]
-                    return self.make_move(target, ai_char)
-                # check columns
-                elif type_index == 1:
-                    target = [empty_cell_index, array_index + 1]
-                    return self.make_move(target, ai_char)
-                # check diagonals
-                elif type_index == 2:
-                    if array_index == 0:
-                        target = [empty_cell_index, empty_cell_index]
-                    else:
-                        target = [empty_cell_index, array_index]
-
-                    return self.make_move(target, ai_char)
-
-            def win_or_block(dict_, type_index, array_index, empty_cell_index, char):
-
-                if char + ' ' in dict_ and '  ' in dict_ and dict_[char + ' '] == 2 and dict_['  '] == 1:
-                    # try make a move
-                    return make_move(type_index, array_index, empty_cell_index)
-
-            def action_can_be_made(results_index):
-
-                for j in range(len(results_array[results_index])):
-                    current_array = results_array[results_index][j]
-                    dict_ = count_chars(current_array)
-                    try:
-                        empty_cell_index = current_array.index('  ') + 1
-                    except ValueError:
-                        return False
-
-                    # check moves
-                    for char in [ai_char, user_char()]:
-                        if win_or_block(dict_, results_index, j, empty_cell_index, char):
-                            if char == ai_char:
-                                print('win moves made')
-                            else:
-                                print('block moves made')
-                            return True
-
-                return False
-
-            for i in range(len(results_array)):
-                if action_can_be_made(i):
-                    action_made = True
-                    print('Making move level "medium"')
-                    break
-
-            if not action_made:
-                easy_ai_action()
-
-        if level == 'easy':
-            easy_ai_action()
-        if level == 'medium':
-            medium_ai_action()
-
-    def get_result_array(self, separated=False):
-
-        # get column[i] from 2D array
-        def column(i):
-            return [row_[i] for row_ in self]
-
-        rows = []
-        columns = []
-        for row in range(1, MATRIX_LENGTH):
-            rows.append(self[row][1:-1])
-            columns.append(column(row)[1:-1])
-
-        diagonals = [
-            [self[row][row] for row in range(1, MATRIX_LENGTH)],
-            [self[row][MATRIX_LENGTH - row] for row in range(1, MATRIX_LENGTH)]
-        ]
-
-        if not separated:
-            temp_array = []
-            temp_array.extend(rows)
-            temp_array.extend(columns)
-            temp_array.extend(diagonals)
-
-            return temp_array
-
-        else:
-            return [rows, columns, diagonals]
-
-    def winner(self):
-
-        def count_result(result_):
-            if all(char[0] == 'X' for char in result_):
-                return 'X'
-            elif all(char[0] == 'O' for char in result_):
-                return 'O'
-            else:
-                return False
-
-        def get_results():
-
-            results_array = self.get_result_array()
-
-            for result in results_array:
-                return_value = count_result(result)
-                if return_value:
-                    return return_value
-
-            return False
-
-        return get_results()
-
-    def table_full(self):
-
-        # get the sub matrix (the real table)
-        game_table = [(self[row][1:-1]) for row in range(1, MATRIX_LENGTH)]
-
-        # get elements from sub matrix
-        elements = [cell for row in game_table for cell in row]
-
-        return all(True if element in ['X ', 'O '] else False for element in elements)
-
-    def get_game_state(self):
-        winner = self.winner()
-        table_full = self.table_full()
-        if winner:
-            print(f'{winner} wins')
-            return True
-        elif table_full:
-            print('Draw')
-            return True
-        else:
-            return False
-
-
-class Game:
-
-    def __init__(self):
-        self.table = Matrix(MATRIX_SIZE)
-        self.players = []
-        self.end_game = False
-
-    def init(self):
-        game_mode = False
-        while not game_mode:
-            game_mode = get_game_mode()
-
-        if game_mode[0] == 'exit':
+        if game_mode is None:
             sys.exit()
 
-        # init players [[player, player_char]]
-        self.players = [[game_mode[1], 'X'], [game_mode[2], 'O']]
+        self.player_1 = Player(game_mode[1], 'X', self.table)
+        self.player_2 = Player(game_mode[2], 'O', self.table)
+        self.players = [self.player_1, self.player_2]
+        self.end_game = False
 
-        # print init table
-        self.table.print()
+        self.print(self.table)
 
     def play(self):
         while True:
 
             for player in self.players:
+                player.play()
 
-                if player[0] == 'user':
-                    # player action
-                    while not self.table.user_action(player[1]):
-                        self.table.user_action(player[1])
-                else:
-                    # ai action
-                    self.table.ai_action(player[0], player[1])
+                self.print(self.table)
 
-                self.table.print()
-
-                # True if game over and prints the result
-                if self.table.get_game_state():
+                # True if game over
+                if player.winning():
                     self.end_game = True
                     break
 
@@ -320,7 +268,5 @@ class Game:
                 break
 
 
-tic_tac_toe = Game()
-
-tic_tac_toe.init()
+tic_tac_toe = Game(MATRIX_SIZE)
 tic_tac_toe.play()
