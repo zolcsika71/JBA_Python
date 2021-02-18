@@ -12,6 +12,7 @@ def rnd(n, b=0):
 
 
 class Table:
+
     def __init__(self, table_):
         self.table = table_
         self.table_coords = \
@@ -66,6 +67,7 @@ class Table:
 
 
 class Player(Table):
+
     def __init__(self, name, char, table):
         super().__init__(table)
         self.name = name
@@ -90,6 +92,7 @@ class Player(Table):
 
         for lines in self.table_array():
             for line in lines:
+                # print(f'line: {line}')
                 if all(char == self.char for char in line):
                     print(f'{self.char} wins')
                     return True
@@ -238,7 +241,6 @@ class Game(Matrix):
 
     def __init__(self, size_):
         super().__init__(size_, Game.table)
-
         game_mode = Game.get_game_mode(self)
 
         if game_mode is None:
