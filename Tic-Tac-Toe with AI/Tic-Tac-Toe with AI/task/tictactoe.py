@@ -42,6 +42,9 @@ class Table:
     def empty_cell(self, coords):
         return self.table[self.table_coords[coords]] == ' '
 
+    def empty_cells_indexes(self):
+        return [cell for cell in range(len(self.table)) if self.table[cell] == ' ']
+
     def table_full(self):
         return all(cell != ' ' for cell in self.table)
 
@@ -92,7 +95,6 @@ class Player(Table):
 
         for lines in self.table_array():
             for line in lines:
-                # print(f'line: {line}')
                 if all(char == self.char for char in line):
                     print(f'{self.char} wins')
                     return True
@@ -107,12 +109,7 @@ class Player(Table):
             if all(char in '123' for char in user_input):
                 # check if cell is not occupied
                 coords = str(user_input[0]) + str(user_input[1])
-                print(f'coords: {coords}')
-                if self.empty_cell(coords):
-                    self.write_table(coords, self.char)
-                    return True
-                else:
-                    print('This cell is occupied! Choose another one!')
+                if not self.write_table(coords, self.char):
                     self.user_action()
             else:
                 print('Coordinates should be from 1 to 3!')
@@ -124,9 +121,10 @@ class Player(Table):
     def ai_action(self):
 
         def easy_ai_action():
-            empty_cells = [cell for cell in range(len(self.table)) if self.table[cell] == ' ']
+            empty_cells = self.empty_cells_indexes()
             target_cell = empty_cells[rnd(0, len(empty_cells) - 1)]
             self.table[target_cell] = self.char
+            print(f'easy_ai: {self.table}')
 
             print('Making move level "easy"')
 
@@ -195,17 +193,15 @@ class Matrix(Table):
                 else '--' if column < MATRIX_LENGTH and (row == 0 or row == MATRIX_LENGTH)
                 else '-' if row == 0 or row == MATRIX_LENGTH else '  ' for column in range(self.size)
             ])
-        self.update_table(table_)
 
     def __getitem__(self, index):
         return self.matrix[index]
 
-    def update_table(self, table_):
+    def update_table(self):
         x = 1
         y = 1
 
-        for char in table_:
-            # print(f'x: {x}, y: {y}')
+        for char in self.table:
             self[x][y] = char + ' '
             if y == GAME_SIZE:
                 y = 1
@@ -213,8 +209,8 @@ class Matrix(Table):
             else:
                 y += 1
 
-    def print(self, table_):
-        self.update_table(table_)
+    def print(self):
+        self.update_table()
         for row in range(MATRIX_SIZE):
             for column in range(MATRIX_SIZE):
                 print(self[row][column], end='')
@@ -251,7 +247,7 @@ class Game(Matrix):
         self.players = [self.player_1, self.player_2]
         self.end_game = False
 
-        self.print(self.table)
+        self.print()
 
     def play(self):
         while True:
@@ -259,7 +255,7 @@ class Game(Matrix):
             for player in self.players:
                 player.play()
 
-                self.print(self.table)
+                self.print()
 
                 # True if game over
                 if player.winning():
