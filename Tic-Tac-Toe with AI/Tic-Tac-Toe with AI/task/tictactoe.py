@@ -13,8 +13,8 @@ def rnd(n, b=0):
 
 class Table:
 
-    def __init__(self, table_):
-        self.table = table_
+    def __init__(self, table):
+        self.table = table
         self.table_coords = \
             {
                 '11': 0,
@@ -244,8 +244,8 @@ class Player(Table):
 
 class Matrix(Table):
 
-    def __init__(self, size_, table_):
-        super().__init__(table_)
+    def __init__(self, size_, table):
+        super().__init__(table)
         self.size = size_
         self.matrix = []
         for row in range(self.size):
