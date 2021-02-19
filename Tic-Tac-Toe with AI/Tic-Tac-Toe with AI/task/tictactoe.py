@@ -129,8 +129,6 @@ class Player(Table):
             empty_cells = self.empty_cells_indexes()
             target_cell = empty_cells[rnd(0, len(empty_cells) - 1)]
             self.table[target_cell] = self.char
-            print(f'easy_ai: {self.table}')
-
             print('Making move level "easy"')
 
         def medium_ai_action():
@@ -230,8 +228,10 @@ class Player(Table):
                 return moves[best_move]
 
             best_spot = minimax(ai_player)
+
             self.table[best_spot['index']] = ai_player
-            print('Making move level "hard"')
+
+            print(f'Making move level "hard" fc: {self.function_calls}')
 
         if self.name == 'easy':
             easy_ai_action()
@@ -329,4 +329,3 @@ class Game(Matrix):
 
 tic_tac_toe = Game(MATRIX_SIZE)
 tic_tac_toe.play()
-
