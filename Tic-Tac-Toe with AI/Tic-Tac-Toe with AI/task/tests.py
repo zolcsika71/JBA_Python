@@ -154,7 +154,7 @@ class TicTacToeTests(StageTest):
 
     is_easy_not_moving_like_medium = False
 
-    @dynamic_test(repeat=30, order=-5)
+    @dynamic_test(repeat=30, order=5)
     def check_easy_not_moving_like_medium(self):
 
         if self.is_easy_not_moving_like_medium:
@@ -279,6 +279,52 @@ class TicTacToeTests(StageTest):
     def check_medium_not_moving_like_hard_after(self):
         if not self.is_medium_not_moving_like_hard:
             return CheckResult.wrong("Looks like Medium level AI doesn't make a random move!")
+        return CheckResult.correct()
+
+    @dynamic_test(order=12)
+    def check_hard_ai(self):
+
+        program = TestedProgram()
+        program.start()
+
+        output = program.execute("start user hard")
+
+        grid = Grid.from_output(output)
+
+        next_move = Minimax.get_move(grid, CellState.X)
+
+        output = program.execute(f"{next_move.x + 1} {next_move.y + 1}")
+
+        while "win" not in output.lower() and "draw" not in output.lower():
+            grid_after_user_move = Grid.from_output(output)
+            grid_after_ai_move = Grid.from_output(output, 2)
+
+            ai_move = Grid.get_move(grid_after_user_move, grid_after_ai_move)
+
+            correct_minimax_positions = Minimax.get_available_positions(grid_after_user_move, CellState.O)
+
+            if ai_move not in correct_minimax_positions:
+                return CheckResult.wrong("Your minimax algorithm is wrong! It chooses wrong positions to make a move!")
+
+            next_move = Minimax.get_move(grid_after_ai_move, CellState.X)
+
+            output = program.execute(f"{next_move.x + 1}  {next_move.y + 1}")
+
+        return CheckResult.correct()
+
+    @dynamic_test(repeat=5, order=13)
+    def check_hard_vs_hard(self):
+
+        program = TestedProgram()
+        program.start()
+
+        output = program.execute("start hard hard")
+
+        if "draw" not in output.lower():
+            return CheckResult.wrong(
+                "The result of the game between minimax algorithms should be always 'Draw'!\n"
+                "Make sure your output contains 'Draw'.")
+
         return CheckResult.correct()
 
 

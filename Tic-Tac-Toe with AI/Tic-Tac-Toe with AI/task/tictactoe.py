@@ -75,6 +75,7 @@ class Player(Table):
         super().__init__(table)
         self.name = name
         self.char = char
+        self.function_calls = 0
 
     def play(self):
         if self.name == 'user':
@@ -88,18 +89,22 @@ class Player(Table):
         else:
             return 'X'
 
-    def winning(self):
+    def winning(self, player, display=False):
+        for lines in self.table_array():
+            for line in lines:
+                if all(char == player for char in line):
+                    if display:
+                        print(f'{player} wins')
+                    return True
+
+        return False
+
+    def game_state(self):
         if self.table_full():
             print('Draw')
             return True
 
-        for lines in self.table_array():
-            for line in lines:
-                if all(char == self.char for char in line):
-                    print(f'{self.char} wins')
-                    return True
-
-        return False
+        return self.winning(self.char, True)
 
     def user_action(self):
         try:
@@ -170,7 +175,63 @@ class Player(Table):
             return ai_move()
 
         def hard_ai_action():
-            pass
+
+            ai_player = self.char
+            hu_player = self.opponent_char()
+
+            def minimax(player):
+
+                self.function_calls += 1
+
+                empty_cells_indexes = self.empty_cells_indexes()
+
+                if self.winning(hu_player):
+                    return {'score': -10}
+                elif self.winning(ai_player):
+                    return {'score': 10}
+                elif self.table_full():
+                    return {'score': 0}
+
+                moves = []
+
+                for index in empty_cells_indexes:
+                    move = {'index': index}
+
+                    # player move to an empty cell
+                    self.table[index] = player
+
+                    if player == ai_player:
+                        result = minimax(hu_player)
+                        move['score'] = result['score']
+                    else:
+                        result = minimax(ai_player)
+                        move['score'] = result['score']
+
+                    # reset cell
+                    self.table[index] = ' '
+
+                    moves.append(move)
+
+                best_move = None
+
+                if player == ai_player:
+                    best_score = -10000
+                    for i in range(len(moves)):
+                        if moves[i]['score'] > best_score:
+                            best_score = moves[i]['score']
+                            best_move = i
+                else:
+                    best_score = 10000
+                    for i in range(len(moves)):
+                        if moves[i]['score'] < best_score:
+                            best_score = moves[i]['score']
+                            best_move = i
+
+                return moves[best_move]
+
+            best_spot = minimax(ai_player)
+            self.table[best_spot['index']] = ai_player
+            print('Making move level "hard"')
 
         if self.name == 'easy':
             easy_ai_action()
@@ -258,7 +319,7 @@ class Game(Matrix):
                 self.print()
 
                 # True if game over
-                if player.winning():
+                if player.game_state():
                     self.end_game = True
                     break
 
@@ -268,3 +329,4 @@ class Game(Matrix):
 
 tic_tac_toe = Game(MATRIX_SIZE)
 tic_tac_toe.play()
+

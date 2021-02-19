@@ -647,14 +647,8 @@ files:
         TicTacToeTests().run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/projects/82/stages/456/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: "Wrong answer in test #178\n\nAfter making a move the grid was the same!\n\
-    \nPlease find below the output of your program during this failed test.\nNote\
-    \ that the '>' character indicates the beginning of the input line.\n\n---\n\n\
-    Input command: > start user hard\n---------\n|       | \n|       | \n|       |\
-    \ \n---------\nEnter the coordinates:> 1 1\ncoords: 11\n---------\n| X     | \n\
-    |       | \n|       | \n---------\n---------\n| X     | \n|       | \n|      \
-    \ | \n---------\nEnter the coordinates:"
-  time: Thu, 18 Feb 2021 23:50:53 UTC
+  message: Congratulations!
+  time: Fri, 19 Feb 2021 18:25:46 UTC
 record: 5
