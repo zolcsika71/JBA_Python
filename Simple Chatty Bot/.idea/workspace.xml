@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2e0812a-dfb2-4542-b372-05a87a400076" name="Default Changelist" comment="simple chatty bot completed">
-      <change afterPath="$PROJECT_DIR$/Problems/Checking email/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Checking email/task-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Checking email/task-remote-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Checking email/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Levitate/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Levitate/task-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Levitate/task-remote-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Levitate/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Simon says/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Simon says/task-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Simon says/task-remote-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Simon says/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Substring/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Substring/task-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Substring/task-remote-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/Substring/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Problems/lesson-info.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simple Chatty Bot/Chatty Bot welcomes you/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Simple Chatty Bot/Chatty Bot welcomes you/task-info.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-info.yaml" afterDir="false" />
+    <list default="true" id="e2e0812a-dfb2-4542-b372-05a87a400076" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Error_/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Hello, Hangman/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Hello, Hangman/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Help is on the way/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Keep trying/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Let’s play a game/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Let’s play a game/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Make your choice/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Menu, please/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/The value of life/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/task/hangman/hangman.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/task/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/course-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +129,7 @@
       <workItem from="1613846774872" duration="140000" />
       <workItem from="1613847415739" duration="149000" />
       <workItem from="1613848315679" duration="1108000" />
-      <workItem from="1613849495091" duration="5141000" />
+      <workItem from="1613849495091" duration="5590000" />
     </task>
     <task id="LOCAL-00001" summary="simple chatty bot completed">
       <created>1613846553479</created>
@@ -151,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613846818158</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="simple chatty bot completed">
+      <created>1613854846312</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613854846312</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
