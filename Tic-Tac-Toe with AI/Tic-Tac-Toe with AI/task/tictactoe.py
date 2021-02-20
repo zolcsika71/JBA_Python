@@ -193,6 +193,7 @@ class Player(Table):
                 moves = []
 
                 for index in empty_cells_indexes:
+
                     move = {'index': index}
 
                     # player move to an empty cell

@@ -23,3 +23,11 @@ print(f'table_type: {type(table)}')
 
 
 
+def count(x):
+    if x == 1:
+        return 1
+    else:
+        return 1 + count(x - 1)
+
+
+print(f'count: {count(100)}')
