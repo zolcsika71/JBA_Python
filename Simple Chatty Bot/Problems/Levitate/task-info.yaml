@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: spell = "Wingardium Leviosa"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9570#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 20 Feb 2021 19:15:06 UTC
+record: -1

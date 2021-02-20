@@ -1,0 +1,28 @@
+<h2>Simon says</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Do you know the game "Simon says"? The instructor, "Simon", says what the players should do, e.g. "jump in the air" or "close your eyes". The players should follow the instructions only if the phrase starts with <code class="java">"Simon says"</code>. Now, let's implement a digital version of this game! We will modify it a bit: the correct instructions may not only start but also end with the words <code class="java">"Simon says"</code>. But be careful, instructions can be only at the beginning, or at the end, but not in the middle!</p> 
+  <p>Write a function that takes a string with instructions: if it starts or ends with the words <code class="java">"Simon says"</code>, your function should <strong>return</strong> the string <code class="java">"I "</code> plus what you would do: the instructions themselves. Otherwise, <strong>return</strong> <code class="java">"I won't do it!"</code>.</p> 
+  <p>You are <em>NOT</em> supposed to handle input or call your function, just implement it.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-988').style.display='inline'"> Hint </button> </p>
+  <div id="hint-988" style="display:none;">
+   To get a substring of a string from its beginning till a specific index, use 
+   <code class="java">string[:ind+1]</code>. In this case, the element with the index 
+   <code class="java">ind</code> will be included. The other way round, to get a substring from a specific index till the end of the string, use 
+   <code class="java">string[ind:]</code>. Do not forget to remove the space that remains before the phrase 
+   <code class="java">"Simon says"</code>.
+   <br> So, if you want to get string 
+   <code class="java">"make a wish"</code> from 
+   <code class="java">"make a wish Simon says"</code>, you should use the following construction 
+   <code class="java">string[:len("Simon says")+1]</code>.
+   <p></p> 
+   <p></p>
+  </div>
+  <p></p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">make a wish Simon says</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">I make a wish<br></code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">go away</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">I won't do it!</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/9558">Show topic summary</a>

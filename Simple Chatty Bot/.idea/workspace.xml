@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2e0812a-dfb2-4542-b372-05a87a400076" name="Default Changelist" comment="simple chatty bot completed" />
+    <list default="true" id="e2e0812a-dfb2-4542-b372-05a87a400076" name="Default Changelist" comment="simple chatty bot completed">
+      <change afterPath="$PROJECT_DIR$/Problems/Checking email/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Checking email/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Checking email/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Checking email/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Levitate/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Levitate/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Levitate/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Levitate/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Simon says/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Simon says/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Simon says/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Simon says/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Substring/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Substring/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Substring/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Substring/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simple Chatty Bot/Chatty Bot welcomes you/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Simple Chatty Bot/Chatty Bot welcomes you/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-info.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +48,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Simple Chatty Bot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -50,8 +71,54 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Simple Chatty Bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problems/Checking email" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problems/Checking email/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Simple Chatty Bot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problems/Simon says" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problems/Simon says/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.bot" />
       </list>
     </recent_temporary>
@@ -67,6 +134,8 @@
       <workItem from="1613843839943" duration="2905000" />
       <workItem from="1613846774872" duration="140000" />
       <workItem from="1613847415739" duration="149000" />
+      <workItem from="1613848315679" duration="1108000" />
+      <workItem from="1613849495091" duration="5141000" />
     </task>
     <task id="LOCAL-00001" summary="simple chatty bot completed">
       <created>1613846553479</created>
@@ -97,8 +166,10 @@
     <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$Simple_Chatty_Bot_Multiple_choice.coverage" NAME="Simple Chatty Bot/Multiple choice Coverage Results" MODIFIED="1613846443788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$Simple_Chatty_Bot_Guess_the_age.coverage" NAME="Simple Chatty Bot/Guess the age Coverage Results" MODIFIED="1613845707108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$Simple_Chatty_Bot_Learning_numbers.coverage" NAME="Simple Chatty Bot/Learning numbers Coverage Results" MODIFIED="1613846047068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$main.coverage" NAME="main Coverage Results" MODIFIED="1613851053061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems/Simon says" />
     <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$Simple_Chatty_Bot_Print_your_name.coverage" NAME="Simple Chatty Bot/Print your name Coverage Results" MODIFIED="1613844831227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1613845051636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Simple Chatty Bot/task/bot" />
-    <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$Simple_Chatty_Bot_Chatty_Bot_welcomes_you.coverage" NAME="Simple Chatty Bot/Chatty Bot welcomes you Coverage Results" MODIFIED="1613847457939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$Simple_Chatty_Bot_Chatty_Bot_welcomes_you.coverage" NAME="Simple Chatty Bot/Chatty Bot welcomes you Coverage Results" MODIFIED="1613848327430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Simple_Chatty_Bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1613853067594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems/Checking email" />
   </component>
 </project>
