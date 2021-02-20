@@ -1,0 +1,56 @@
+type: edu
+custom_name: stage1
+files:
+- name: tests.py
+  visible: false
+  text: |
+    import re
+    from hstest.stage_test import *
+    from hstest.test_case import TestCase
+
+    CheckResult.correct = lambda: CheckResult(True, '')
+    CheckResult.wrong = lambda feedback: CheckResult(False, feedback)
+
+
+    class ChattyBotTest(StageTest):
+        def generate(self) -> List[TestCase]:
+            return [TestCase()]
+
+        def check(self, reply: str, clue: Any) -> CheckResult:
+            lines = reply.strip().splitlines()
+            if len(lines) != 2:
+                return CheckResult.wrong(
+                    "You should output exactly 2 lines!\n" +
+                    f"Lines found: {len(lines)}"
+                    f"Your output:\n"
+                    f"{reply.strip()}"
+                )
+
+            if not re.match(".*\\d.*", lines[1]):
+                return CheckResult.wrong(
+                    "The second line should contain a year!\n" +
+                    "Your second line: \"" + lines[1] + "\""
+                )
+
+            return CheckResult.correct()
+
+
+    if __name__ == '__main__':
+        ChattyBotTest('bot.bot').run_tests()
+  learner_created: false
+- name: bot/bot.py
+  visible: true
+  text: |
+    # write your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/97/stages/534/implement#comment
+status: Failed
+feedback:
+  message: "Error in test #1\n\nProgram ran out of input. You tried to read more,\
+    \ than expected.\n\nPlease find below the output of your program during this failed\
+    \ test.\nNote that the '>' character indicates the beginning of the input line.\n\
+    \n---\n\nHello! My name is Aid.\nI was created in 2020.\nPlease, remind me your\
+    \ name.\n> \nWhat a great name you have, !\nLet me guess your age.\nEnter remainders\
+    \ of dividing your age by 3, 5 and 7."
+  time: Sat, 20 Feb 2021 18:57:38 UTC
+record: 1
