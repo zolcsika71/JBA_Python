@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/255033/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Sun, 31 Jan 2021 15:12:44 UTC
+update_date: Sat, 20 Feb 2021 21:18:57 UTC
 stages:
 - id: 431
   step: 7205
@@ -57,10 +57,6 @@ topics:
   1:
   - title: IDE
     theory_id: 10996
-  - title: List
-    theory_id: 5979
-  - title: Dictionary
-    theory_id: 6481
   - title: Invoking a function
     theory_id: 5891
   - title: Load module
@@ -73,6 +69,10 @@ topics:
     theory_id: 5814
   - title: String formatting
     theory_id: 6037
+  - title: List
+    theory_id: 5979
+  - title: Dictionary
+    theory_id: 6481
   2:
   - title: Avoiding bad comments
     theory_id: 6440
@@ -106,14 +106,14 @@ topics:
   - title: Flush and file arguments of print
     theory_id: 8006
   4:
+  - title: Escape sequences
+    theory_id: 7130
   - title: Indexes
     theory_id: 6189
   - title: Slicing
     theory_id: 6177
   - title: Operations with list
     theory_id: 6031
-  - title: Escape sequences
-    theory_id: 7130
   - title: Basic string methods
     theory_id: 6842
   - title: Split and join

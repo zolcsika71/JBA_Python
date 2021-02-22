@@ -2,20 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2e0812a-dfb2-4542-b372-05a87a400076" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Error_/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Hello, Hangman/task-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Hello, Hangman/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Help is on the way/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Keep trying/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Let’s play a game/task-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Let’s play a game/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Make your choice/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/Menu, please/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/The value of life/task.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/task/hangman/hangman.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/Hangman/task/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/course-info.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Hangman/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Problems/Factorial of 3/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Problems/Factorial of 3/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Problems/Factorial of 3/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Problems/Factorial of 3/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Problems/Letters/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Problems/Letters/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hangman/Problems/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hangman/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/../Hangman/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hangman/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/../Hangman/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hangman/Hangman/Hello, Hangman/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hangman/Hangman/Hello, Hangman/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hangman/Hangman/Let’s play a game/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hangman/Hangman/Let’s play a game/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hangman/Hangman/task/hangman/hangman.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Hangman/Hangman/task/hangman/hangman.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hangman/Hangman/task/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Hangman/Hangman/task/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hangman/course-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hangman/course-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/A pyramid_/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/A pyramid_/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/A pyramid_/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/A pyramid_/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Double greeting/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Double greeting/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Error/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Error/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Find the length/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Find the length/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Full name/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Full name/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Good programmer/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Good programmer/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Half-life/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Half-life/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Half-life/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Half-life/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/List from string/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/List from string/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Make the function work/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Make the function work/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Missing/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Missing/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Multiple cases/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Multiple cases/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Open the file/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Open the file/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Print a sign/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Print a sign/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Reverse/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Reverse/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Something in common/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Something in common/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Something in common/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Something in common/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Temperature/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Temperature/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Underworld/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/Underworld/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/lesson-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Problems/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Rock-Paper-Scissors/More options/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Rock-Paper-Scissors/More options/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/Rock-Paper-Scissors/Unfair computer/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Rock-Paper-Scissors/Unfair computer/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock-Paper-Scissors/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/course-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tic-Tac-Toe with AI/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tic-Tac-Toe with AI/course-remote-info.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +157,8 @@
       <workItem from="1613846774872" duration="140000" />
       <workItem from="1613847415739" duration="149000" />
       <workItem from="1613848315679" duration="1108000" />
-      <workItem from="1613849495091" duration="5590000" />
+      <workItem from="1613849495091" duration="5862000" />
+      <workItem from="1613917276059" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="simple chatty bot completed">
       <created>1613846553479</created>
