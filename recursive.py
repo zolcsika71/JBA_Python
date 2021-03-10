@@ -22,7 +22,6 @@ table = [' ' for i in range(8)]
 print(f'table_type: {type(table)}')
 
 
-
 def count(x):
     if x == 1:
         return 1

@@ -19,7 +19,7 @@ class Game:
             print('H A N G M A N')
 
     def menu(self):
-        menu = ''
+        menu = None
 
         while menu != 'exit' and menu != 'play':
             menu = str(input('Type "play" to play the game, "exit" to quit: '))

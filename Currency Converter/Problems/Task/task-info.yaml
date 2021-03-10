@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Task:
+        def __init__(self, description, team):
+            self.description = description
+            self.team = team
+
+        # create the method
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7451#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 24 Feb 2021 12:25:32 UTC
+record: -1

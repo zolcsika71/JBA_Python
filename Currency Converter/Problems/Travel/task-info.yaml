@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# add Turkey to countries.txt'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8340#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 24 Feb 2021 13:31:05 UTC
+record: -1

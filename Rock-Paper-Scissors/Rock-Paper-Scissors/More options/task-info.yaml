@@ -1,11 +1,6 @@
 type: edu
 custom_name: stage5
 files:
-- name: rps/game.py
-  visible: true
-  text: |
-    # Write your code here
-  learner_created: false
 - name: tests.py
   visible: false
   text: |
@@ -227,9 +222,14 @@ files:
     Jane 200
     Alex 400
   learner_created: true
+- name: rps/game.py
+  visible: true
+  text: |
+    # Write your code here
+  learner_created: false
 feedback_link: https://hyperskill.org/projects/78/stages/435/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Thu, 21 Jan 2021 17:57:47 UTC
+  time: Sun, 07 Mar 2021 20:40:38 UTC
 record: -1

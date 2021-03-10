@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    set_1 = set(input().split())
+    set_2 = set(input().split())
+    set_3 = set(input().split())
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8996#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Mon, 22 Feb 2021 19:23:48 UTC
+record: -1

@@ -1,0 +1,23 @@
+<h2>Task</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Below you can see the class <code class="language-python">Task</code>. Any task has a description and a person responsible for finishing this task. In our class, these aspects are represented by instance attributes <code class="language-python">description</code> and <code class="language-python">team</code>.</p> 
+  <p>Sometimes we may want to combine tasks together (that is, add them up). Define the method <code class="language-python">__add__</code> that:</p> 
+  <ul> 
+   <li>combines the descriptions of two tasks. Two descriptions should be on different lines;</li> 
+   <li>combines the two teams responsible for different tasks. They should be separated by a comma and a whitespace.</li> 
+  </ul> 
+  <p>Here's an example:</p> 
+  <pre><code class="language-python">task1 = Task("Finish the assignment.", "Kate")
+task2 = Task("Prepare the project for class.", "James, Ann")
+
+task3 = task1 + task2
+task3.description  # "Finish the assignment.\nPrepare the project for class."
+task3.team  # "Kate, James, Ann"</code></pre>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/7444">Show topic summary</a>
