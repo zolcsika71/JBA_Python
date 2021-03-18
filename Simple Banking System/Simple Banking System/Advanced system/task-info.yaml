@@ -425,15 +425,9 @@ files:
 - name: card.s3db
   visible: true
   learner_created: true
-- name: temp.s3db
-  visible: true
-  learner_created: true
-- name: card.s3db-journal
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/109/stages/594/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Thu, 18 Mar 2021 17:38:40 UTC
+  time: Thu, 18 Mar 2021 19:31:31 UTC
 record: -1

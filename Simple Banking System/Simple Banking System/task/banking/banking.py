@@ -157,6 +157,7 @@ class BankingSystem:
             print('Wrong card number or PIN!')
             self.main_menu()
 
+    # do transfer
     def transfer(self, card_number):
         print('Transfer')
 
@@ -166,17 +167,17 @@ class BankingSystem:
             transfer_card_number = input('Enter card number:\n')
 
         transfer_amount = int(input('Enter how much money you want to transfer:\n'))
-        balance = self.get_balance(card_number)
+        card_number_balance = self.get_balance(card_number)
 
-        if balance[0] < transfer_amount:
+        if card_number_balance[0] < transfer_amount:
             print('Not enough money!')
         else:
             print('Success!')
-            balance = self.get_balance(transfer_card_number)
-            self.update_balance(transfer_card_number, balance[0] + transfer_amount)
-            balance = self.get_balance(card_number)
-            self.update_balance(card_number, balance[0] - transfer_amount)
+            transfer_card_balance = self.get_balance(transfer_card_number)
+            self.update_balance(transfer_card_number, transfer_card_balance[0] + transfer_amount)
+            self.update_balance(card_number, card_number_balance[0] - transfer_amount)
 
+    # check if transfer_card_number is valid / exists
     def check_card_number(self, transfer_card_number):
 
         if transfer_card_number is None:
