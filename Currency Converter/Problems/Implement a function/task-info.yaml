@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: "def get_number(num):\n    \"\"\"Return the number one less than the given\
+    \ positive number. \n    If the number is nonpositive, return a string \"Enter\
+    \ a positive number!\".\n\n    Arguments:\n    num -- an integer.\n    Return\
+    \ values:\n    An integer one less than the input number.\n    \"\"\"\n    pass"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11874#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 10 Mar 2021 16:58:50 UTC
+record: -1
