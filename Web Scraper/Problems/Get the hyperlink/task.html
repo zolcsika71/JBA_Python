@@ -1,0 +1,20 @@
+<h2>Get the hyperlink</h2>
+<html>
+ <head></head>
+ <body>
+  <p>You will get a link to a web page with the text of "Pygmalion" by Bernard Shaw. There are several hyperlinks on this page, which can be used to jump to one of the play's five acts.</p> 
+  <p>Write a program that <strong>prints </strong>a hyperlink to the specific act. The number of the act and the link to the page with the text will be given as two lines in the input. For example, the input may look as follows:</p> 
+  <pre><code class="language-no-highlight">3
+http://www.gutenberg.org/files/3825/3825-h/3825-h.htm</code></pre> 
+  <p>It is important that you <strong>read the link from the input</strong>, rather than specify it yourself!</p> 
+  <p>Then, your program should print the hyperlink <code class="java">#act3</code>. Note that you shouldn't print the WHOLE page link, just this small part.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-850').style.display='inline'"> Hint </button> </p>
+  <div id="hint-850" style="display:none;">
+   Your algorithm to the task may look as follows. First, find all anchors. Then, from that list choose the act (but be careful: indexes start from 0). Finally, get the 
+   <code class="java">href</code> attribute using the 
+   <code class="java">get</code> method.
+  </div>
+  <p></p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 30 seconds</font><br><br>
+<a href="https://hyperskill.org/learn/step/10209">Show topic summary</a>

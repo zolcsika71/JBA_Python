@@ -417,14 +417,14 @@ files:
 - name: banking/card.s3db
   visible: true
   learner_created: true
+- name: card.s3db
+  visible: true
+  learner_created: true
 - name: banking/banking.py
   visible: true
   text: |
     # Write your code here
   learner_created: false
-- name: card.s3db
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/109/stages/594/implement#comment
 status: Solved
 feedback:
