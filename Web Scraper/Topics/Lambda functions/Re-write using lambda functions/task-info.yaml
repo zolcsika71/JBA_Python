@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    a = 1
+    b = 2
+    c = 3
+
+    # Don't forget to make use of lambda functions in your solution
+    result = (lambda ...)(a, b, c)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7097#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 28 Mar 2021 12:26:34 UTC
+record: -1

@@ -1,0 +1,23 @@
+<h2>Counting price</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Below, we have written the decorator <code class="language-python">price_string</code>. The function takes another function with one parameter as its argument, converts its output to a string, and adds the pound sign to this string to represent the price of a product.</p> 
+  <pre><code class="language-python">def price_string(func):
+    def wrapper(quantity):
+        return "£" + str(func(quantity))
+
+    return wrapper</code></pre> 
+  <p>Your task is to:</p> 
+  <ul> 
+   <li>write the body of the function <code class="language-python">new_price</code> : it should take an argument and return the float value with a 10% discount</li> 
+   <li>decorate the function with the decorator <code class="language-python">price_string</code></li> 
+  </ul> 
+  <p> For example, for the input value <code class="language-python">100</code>, the decorated function should return <code class="language-python">£90.0</code>.</p> 
+  <p>You do not need to take any input, just write the body of the function and decorate it.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 30 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/10103">Show topic summary</a>

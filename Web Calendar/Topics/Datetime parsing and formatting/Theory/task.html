@@ -1,0 +1,140 @@
+<html>
+ <head></head>
+ <body>
+  <p>Around the world, dates are formatted in a variety of ways. Some countries use dots as delimiters, some use slashes. In some date formats, month precedes the date, in others, vice versa. Then, there is always an option to write out dates in words, not just numbers.</p> 
+  <p>It's not surprising then that programming languages have tools for working with different date formats. In this topic, we'll see how this can be done in Python.</p> 
+  <p>If you recall, Python has a built-in module for working with date — <code class="language-python">datetime</code>. In this module, there are several classes that represent dates, time, and even timezones. One of the most flexible classes is <code class="language-python">datetime.datetime</code> which represents the date and time together.</p> 
+  <p>Here, we'll learn to perform datetime parsing and formatting using this class. Two operations that we'll consider are converting a string into a <code class="language-python">datetime</code> and formatting a <code class="language-python">datetime</code> object into a string. However, before going into details, we need to look closely at different formats.</p> 
+  <h2 style="text-align: center;">Formats</h2> 
+  <p>In order to parse or format dates, we need to specify the format. Take the date 06/04/2020, for example. Is this June 4 or April 6? Your answer will depend on where you're from. When we work with dates in Python, we don't want to play the guessing game. To avoid confusion, we just specify what format we want to work with.</p> 
+  <p>The format codes for working with dates make use of <strong>the % operator</strong> taken from the C programming language. With its help, you can include all kinds of things: days of the week, timezone names, microseconds, but we'll focus on the main ones. The rest you can find in <a target="_blank" href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes" rel="noopener noreferrer nofollow">the official documentation</a>.</p> 
+  <table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 600px;"> 
+   <caption> 
+    <p>Format codes</p> 
+   </caption> 
+   <thead> 
+    <tr> 
+     <th> Code </th> 
+     <th style="text-align: center;">Meaning</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr> 
+     <td style="text-align: center;">%d</td> 
+     <td style="text-align: center;">Day of the month — 01, 02, ..., 31</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%m</td> 
+     <td style="text-align: center;">Month as a number — 01, 02, ..., 12</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%y</td> 
+     <td style="text-align: center;">Year without century — 00, 01, ..., 99</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%Y</td> 
+     <td style="text-align: center;">Year with century — 0001, ..., 2020, ..., 9999</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%H</td> 
+     <td style="text-align: center;">Hour (24 hours) — 00, 01, ..., 23</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%I</td> 
+     <td style="text-align: center;">Hour (12 hours) — 01, 02, ..., 12</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%M</td> 
+     <td style="text-align: center;">Minutes — 00, 01, ..., 59</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%S</td> 
+     <td style="text-align: center;">Seconds — 00, 01, ..., 59</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align: center;">%B</td> 
+     <td style="text-align: center;">Month as the area's full name — January, February, ..., December</td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <p>Formats indicate from where to extract the desired information. Going back to our example, if we want to process the date 06/04/2020 as June 4, then we need to use the format <code class="language-python">"%m/%d/%Y"</code>. This is our way of saying that we have the sequence of the month, day, and year separated by slashes. If we choose April 6, then the format is <code class="language-python">"%d/%m/%Y"</code>. Note that we give very explicit instructions in the format strings: all delimiters, spaces, and punctuation should be in place, otherwise the date will not be parsed or we will not get the desired formatted string.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   Pay attention to zeros in the formats! They are necessary for these particular formats that we've provided. If you want to discard zeros in some fields, there are other formats you can use, check the documentation for that.
+  </div>
+  <p></p> 
+  <h2 style="text-align: center;">Datetime parsing</h2> 
+  <p>Now that we know about formats, let's get into action! The first order of business is <strong>datetime parsing</strong>, that is, creating a <code class="language-python">datetime</code> object from a string that represents some point in time in a particular format.</p> 
+  <p>Datetime parsing is done with the <code class="language-python">datetime.strptime()</code> method. This particular method name can be seen in many languages, not just Python. The method takes two arguments, <code class="language-python">date_string</code> and <code class="language-python">format</code>, and returns a <code class="language-python">datetime</code> object that corresponds to this string.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   When we use this method, we can omit the leading zero in some formats: 
+   <code class="language-python">%d</code>, 
+   <code class="language-python">%m</code>, 
+   <code class="language-python">%H</code>, 
+   <code class="language-python">%I</code>, 
+   <code class="language-python">%M</code> and 
+   <code class="language-python">%S</code>. Meaning that both 01 and 1 will be parsed correctly (if they fall in the range supported by the format).
+  </div>
+  <p></p> 
+  <p>Let's go back to our ambiguous date again. We are going to create a string with the date, add some time information to make things more interesting, and parse it into different <code class="language-python">datetime</code> objects. The full date we've chosen is 06/04/2020 12:30.</p> 
+  <pre><code class="language-python">from datetime import datetime
+
+
+date_string = "06/04/2020 12:30"
+
+dt1 = datetime.strptime(date_string, "%m/%d/%Y %H:%M")
+print(dt1)
+# 2020-06-04 12:30:00
+
+dt2 = datetime.strptime(date_string, "%d/%m/%Y %H:%M")
+print(dt2)
+# 2020-04-06 12:30:00
+
+dt3 = datetime.strptime(date_string, "%d/%m/%Y %I:%M")
+print(dt3)
+# 2020-04-06 00:30:00</code></pre> 
+  <p>We got three different datetime objects from one string simply because we specified different formats. The difference in the first two objects is the one we've already discussed: month first or day first. For both these dates, we've specified a 24-hour clock time and got 12:30 in the afternoon.</p> 
+  <p>In the third case, we've got a different time! This is because in the format string we chose a 12-hour clock time where midnight is 12:00 AM and midday is 12:00 PM. We didn't specify the time period so by default the time got parsed as midnight. There is, of course, a format code for AM and PM that you can find in the documentation.</p> 
+  <p>Again, you can see above that we've detailed the format strings and wrote down exactly how our strings are structured. If we're not careful and write an incorrect format or choose a wrong code, we'll get a <code class="language-python">ValueError</code>:</p> 
+  <pre><code class="language-python">datetime.strptime("06/04/2020", "%d/%m/%Y %I/%M")  # no time data in the original string
+# ValueError: time data '06/04/2020' does not match format '%d/%m/%Y %I/%M'
+
+datetime.strptime("06/04/2020 00:30", "%d/%m/%Y %I/%M")  # wrong time format
+# ValueError: time data '06/04/2020 00:30' does not match format '%d/%m/%Y %I/%M'</code></pre> 
+  <h2 style="text-align: center;">Datetime formatting</h2> 
+  <p>Now that we know how to parse strings into <code class="language-python">datetime</code> objects, let's do the opposite and format <code class="language-python">datetime</code> objects into strings. This can be done with the help of the <code class="language-python">datetime.strftime()</code> method. To distinguish the two methods, you can think of this one as "<strong>str</strong>ing <strong>f</strong>rom <strong>time</strong>". </p> 
+  <p>The only argument needed for this method is, as you might've guessed, the format. Let's take June 4, 2020, at 12:30 and format it in different ways.</p> 
+  <pre><code class="language-python">dt4 = datetime(2020, 6, 4, 12, 30)
+
+date_string1 = dt4.strftime("%B %d, %Y at %H:%M")
+print(date_string1)
+# June 04, 2020 at 12:30
+
+date_string2 = dt4.strftime("%d.%m.%y")
+print(date_string2)
+# 04.06.20
+
+date_string3 = dt4.strftime("%Y-%m-%d-%I:%m")
+print(date_string3)
+# 2020-06-04-12:06
+
+date_string4 = dt4.strftime("The event will take place on %B %d.")
+print(date_string4)
+# The event will take place on June 04.</code></pre> 
+  <p>Here we've got three different strings from the object. You can see that our formats don't have to be comprehensive. We can include whatever data from the object that we need.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   Note also that to call the 
+   <code class="language-python">strftime()</code> method, we need an instance of the 
+   <code class="language-python">datetime</code> class. 
+   <code class="language-python">strptime()</code> is different because it creates a 
+   <code class="language-python">datetime</code> object, so it is called directly from the class.
+  </div>
+  <p></p> 
+  <h2 style="text-align: center;">Summary</h2> 
+  <p>In this topic, we've seen how datetime parsing and formatting can be done in Python, specifically in the <code class="language-python">datetime</code> class from the <code class="language-python">datetime</code> module.</p> 
+  <p>Parsing and formatting is done with <code class="language-python">strptime</code> and <code class="language-python">strftime</code> methods respectively. For both these methods, we need to specify the desired format using the standard C notation.</p> 
+  <p><code class="language-python">strptime</code> takes two arguments, a string, and a format, and returns a <code class="language-python">datetime</code> object corresponding to these string and format. <code class="language-python">strftime</code> formats a <code class="language-python">datetime</code> object into a string, taking only a format as an argument.</p>
+ </body>
+</html>

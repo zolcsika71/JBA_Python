@@ -1,0 +1,27 @@
+<h2>Vowels and consonants</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Let's work with texts! You'll get a sequence of characters (a word, a sentence or just gibberish). For each character tell if it's a vowel or a consonant. If you hit a non-alphabetic symbol, just stop processing.</p> 
+  <p><strong>The input format:</strong></p> 
+  <p>One line with <strong>N</strong> characters.</p> 
+  <p>We will use letters from the English alphabet. The symbols <code class="language-python">aeiou</code> are considered vowels. Treat the rest of the letters as consonants.</p> 
+  <p><strong>The output format:</strong></p> 
+  <p>Print the line <code class="language-python">vowel</code> if the character is a vowel, and <code class="language-python">consonant</code> if the character is consonant. Stop printing information at the first non-alphabetic symbol.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-709').style.display='inline'"> Hint </button> </p>
+  <div id="hint-709" style="display:none;">
+   Consider using a string method 
+   <code class="language-python">isalpha()</code> to discriminate between an alphabetic and a non-alphabetic symbol. This method returns 
+   <code class="language-python">True</code> if the string contains only alphabetic characters, 
+   <code class="language-python">False</code> otherwise. For example:
+   <p></p> 
+   <pre><code class="language-python">print("string".isalpha())
+# True
+print("str!!ing".isalpha())
+# False</code></pre> 
+   <p></p>
+  </div>
+  <p></p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">somegibberish</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">consonant<br>vowel<br>consonant<br>vowel<br>consonant<br>vowel<br>consonant<br>consonant<br>vowel<br>consonant<br>vowel<br>consonant<br>consonant<br></code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">normal phrase</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">consonant<br>vowel<br>consonant<br>consonant<br>vowel<br>consonant<br></code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">weusedtowritewithnospaces</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">consonant<br>vowel<br>vowel<br>consonant<br>vowel<br>consonant<br>consonant<br>vowel<br>consonant<br>consonant<br>vowel<br>consonant<br>vowel<br>consonant<br>vowel<br>consonant<br>consonant<br>consonant<br>vowel<br>consonant<br>consonant<br>vowel<br>consonant<br>vowel<br>consonant<br></code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<a href="https://hyperskill.org/learn/step/6302">Show topic summary</a>

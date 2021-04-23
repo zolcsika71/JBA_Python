@@ -1,0 +1,29 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Robot:
+        def __init__(self, name, variety):
+            self.name = name
+            self.variety = variety
+            print("Robot")
+
+        def get_info(self):
+            return "{} is a {} robot".format(self.name, self.variety)
+
+
+    class ServiceRobot(Robot):
+        def __init__(self, name):
+            self.name = name
+
+
+    chappi = ServiceRobot("Chappi")
+    print(chappi.get_info())
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7635#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 10 Apr 2021 18:16:36 UTC
+record: -1

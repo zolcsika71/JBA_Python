@@ -1,0 +1,18 @@
+<h2>The __init__ method</h2>
+<html>
+ <head></head>
+ <body>
+  <p>We have created the exception class called <code class="language-python">NotWordError</code>:</p> 
+  <pre><code class="language-python">class NotWordError(Exception):
+    def __init__(self, word):
+        self.message = word + " is not a word, sorry!"
+        super().__init__(self.message)</code></pre> 
+  <p>It takes the wrong word and prints an error message about it. The class is already defined in the code, so you can use it.</p> 
+  <p>First, create a function <code class="language-python">check_word(word)</code> that checks if the given word contains a zero ('0'). If not, the function should return the given word. If it does, the <code class="language-python">NotWordError</code> should be raised.</p> 
+  <p>Then, create a new function <code class="language-python">error_handling(word)</code>. It should call the <code class="language-python">check_word()</code> function and use the <code class="language-python">try</code>-<code class="language-python">except</code> block to catch the <code class="language-python">NotWordError</code>. If the error occurs, print its error message. If not, print the result of the <code class="language-python">check_word()</code> function.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/10217">Show topic summary</a>

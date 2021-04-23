@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # Don't forget to make use of lambda functions in your solution
+    func = lambda ...  # noqa: E731
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7099#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 28 Mar 2021 12:23:37 UTC
+record: -1

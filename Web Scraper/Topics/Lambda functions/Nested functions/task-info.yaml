@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def create_function(n):
+        return ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7100#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 28 Mar 2021 12:53:49 UTC
+record: -1

@@ -1,0 +1,74 @@
+<html>
+ <head></head>
+ <body>
+  <p>One important concept of object-oriented programming is <strong>overriding. </strong>Overriding is the ability of a class to change the implementation of the methods inherited from its ancestor classes.</p> 
+  <p>This feature is extremely useful as it allows us to explore inheritance to its full potential. Not only can we reuse existing code and method implementations, but also upgrade and advance them if needed.</p> 
+  <p>Overriding is a concept applicable only to class hierarchies: without inheritance, we cannot talk about method overriding. Let's consider an example of a class hierarchy:</p> 
+  <pre><code class="language-python">class Parent:
+    def do_something(self):
+        print("Did something")
+
+
+class Child(Parent):
+    def do_something(self):
+        print("Did something else")
+
+
+parent = Parent()
+child = Child()
+
+parent.do_something()  # Did something
+child.do_something()  # Did something else</code></pre> 
+  <p>Here, the method <code class="language-python">do_something</code> is overridden in the class <code class="language-python">Child</code>. If we hadn't overridden it, the method would have the same implementation as in the class <code class="language-python">Parent</code>. The code <code class="language-python">child.do_something()</code> would then print <code class="language-python">Did something</code>.</p> 
+  <h2 style="text-align: center;">super()</h2> 
+  <p>Python has a special function for calling the method of the parent class inside the methods of the child class: the <strong><code class="language-python">super()</code></strong> function. It returns a proxy, a temporary object of the parent class, and allows us to call a method of the parent class using this proxy. Let's take a look at the following example:</p> 
+  <pre><code class="language-python">class Parent:
+    def __init__(self, name):
+        self.name = name
+        print("Called Parent __init__")
+
+
+class Child(Parent):
+    def __init__(self, name):
+        super().__init__(name)
+        print("Called Child __init__")</code></pre> 
+  <p>We've overridden the <code class="language-python">__init__()</code> method in the child class but inside it we've called the <code class="language-python">__init__()</code> of the parent class. If we create an object of the class <code class="language-python">Child</code>, we will get the following output:</p> 
+  <pre><code class="language-python">jack = Child("Jack")
+# Called Parent __init__
+# Called Child __init__</code></pre> 
+  <p>In Python 3 the method <code class="language-python">super()</code> doesn't have any required parameters. In earlier versions, however, you had to specify the class from which the method would search for a superclass. In our example, instead of <code class="language-python">super().__init__(name)</code> we would write <code class="language-python">super(Child, self).__init__(name)</code>. Both lines of code mean the same thing: that we want to find the superclass of the class <code class="language-python">Child</code> and then call its <code class="language-python">__init__</code> method. In Python 3 these are equivalent, so you don't have to explicitly write the type. However, it may be useful if you want to access the method of the "grandparent" class: the parent class of the parent class.</p> 
+  <h2 style="text-align: center;">super() with single inheritance</h2> 
+  <p>The method <code class="language-python">super()</code> is mostly used in cases of multiple inheritance: when a class inherits from two or more classes. There it is most convenient and useful but you'll have a chance to learn about that in the next topics. This method can also be of use with single inheritance which is what we'll cover now.</p> 
+  <p>Suppose we have the following classes:</p> 
+  <pre><code class="language-python">class Animal:
+    def __init__(self, species):
+        self.species = species
+
+       
+class Cat(Animal):
+    def __init__(self, name):
+        self.name = name</code></pre> 
+  <p>In the subclass <code class="language-python">Cat</code>, we've overridden the <code class="language-python">__init__()</code> method. Now the objects of the class <code class="language-python">Cat</code> do not have the <code class="language-python">species</code> attribute. We would like for objects of the <code class="language-python">Cat</code> class to have this attribute, but adding it as a parameter of the <code class="language-python">__init__</code> seems a bit excessive. We could, of course, simply create this attribute inside the initializer, but there is a more elegant (and more Pythonic) solution. This solution, as expected, is the <code class="language-python">super()</code> method:</p> 
+  <pre><code class="language-python">class Animal:
+    def __init__(self, species):
+        self.species = species
+        print("Animal __init__")
+
+
+class Cat(Animal):
+    def __init__(self, name):
+        super().__init__("cat")
+        self.name = name
+        print("Cat __init__")</code></pre> 
+  <p>Let's create a cat and see how this has worked:</p> 
+  <pre><code class="language-python">fluffy = Cat("Fluffy")
+# Animal __init__
+# Cat __init__
+
+print(fluffy.species, fluffy.name)  # cat Fluffy</code></pre> 
+  <p>Both <code class="language-python">__init__()</code> methods have done their job and our cat has both the <code class="language-python">species</code> and the <code class="language-python">name</code> attributes.</p> 
+  <p>You may wonder why we had to do it this way. Why did we have to call the parent implementation of the method when we could manage without it? Well, the example above is a very simple one. In real-life projects, classes, their methods and the relationships between them are much more sophisticated.</p> 
+  <p>Overriding does provide us with an opportunity to enhance the methods of the parent class but it doesn't mean that we should discard the original implementations. Sometimes, you may not have full access to the original implementation and you may not know everything that happens there. If you just override it, there may be unexpected consequences. So, it is recommended to always call the parent implementation. This way, you get the best of both worlds: you have the original implementation and your enhancements.</p> 
+  <p>Just be careful and thoughtful when overriding method and using the <code class="language-python">super()</code> function and you'll do great!</p>
+ </body>
+</html>

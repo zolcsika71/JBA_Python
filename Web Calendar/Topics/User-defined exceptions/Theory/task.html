@@ -1,0 +1,142 @@
+<html>
+ <head></head>
+ <body>
+  <p>In this topic, you are going to learn about user-defined exceptions. We will discuss the structure of custom exceptions, how to create and use them in our code.</p> 
+  <p>You are familiar with how to deal with built-in exceptions. However, some programs may need user-defined exceptions for their special needs. Let's consider the following example. We need to add two integers but we do not want to work with negative integers. Python will process the addition correctly, so we can create a custom exception to raise it if any negative numbers appear. So, it is necessary to know how to work with the user-created exceptions along with the built-in ones.</p> 
+  <h2 style="text-align: center;">Raising user-defined exceptions</h2> 
+  <p>If we want our program to <em>stop working</em> when something goes wrong, we can use the <code class="language-python">raise</code> keyword for the <code class="language-python">Exception</code> class when a condition is met. You may come across either your or <em>built-in </em>exceptions like the <code class="language-python">ZeroDivisionError</code> in the example below. Note that you can specify your feedback in brackets to explain the error. It will be shown when the exception occurs.</p> 
+  <pre><code class="language-python">def example_exceptions_1(x, y):
+    if y == 0:
+        raise ZeroDivisionError("The denominator is 0! Try again, please!")
+    elif y &lt; 0:
+        raise Exception("The denominator is negative!")
+    else:
+        print(x / y)</code></pre> 
+  <p>Now let's see how this function works with different inputs:</p> 
+  <pre><code class="language-python">example_exceptions_1(10, 0)
+# Traceback (most recent call last):
+#   File "main.py", line 9, in &lt;module&gt;
+#     example_exceptions_1(10, 0)
+#   File "main.py", line 3, in example_exceptions_1
+#     raise ZeroDivisionError("The denominator is 0! Try again, please!")
+# ZeroDivisionError: The denominator is 0! Try again, please!
+
+example_exceptions_1(10, -2)
+# Traceback (most recent call last):
+#   File "main.py", line 10, in &lt;module&gt;
+#     example_exceptions_1(10, -2)
+#   File "main.py", line 5, in example_exceptions_1
+#     raise Exception("The denominator is negative!")
+# Exception: The denominator is negative!
+
+example_exceptions_1(10, 5) 
+# 2.0</code></pre> 
+  <p>If there is a zero, the program will stop working and will display the built-in exception with the message you specified; note that if we had not raised this exception ourselves, it would have been raised by Python but with a regular message. If <code class="language-python">y</code> is a negative integer, we get the user-defined exception and the message. If the integer is positive, it prints the results.</p> 
+  <h2 style="text-align: center;">Creating a user-defined exception class</h2> 
+  <p>If you are eager to create a real code for processing user-defined exceptions in Python, you need to recall the basics of object-oriented programming. Exceptions should be derived from the <code class="language-python">Exception</code> class. In the following code, we create a new class of exceptions named <code class="language-python">NegativeResultError</code> derived from the built-in <code class="language-python">Exception</code> class. Note that it is good to end the name of the exception class with such word as <code class="language-python">Error</code> or <code class="language-python">Exception</code>. We print the message informing that the procedure of creating the class is finished inside.</p> 
+  <pre><code class="language-python">class NegativeResultError(Exception):
+    print("Hooray! My first exception is working!")</code></pre> 
+  <p>In the <code class="language-python">example_exceptions_2(a, b)</code> function below we use the <code class="language-python">try</code>-<code class="language-python">except</code> block. If the result of the division is positive, we just print the result. If it is negative, we <em>raise an exception</em> and go to the corresponding part of the code with <code class="language-python">except</code> to print the message.</p> 
+  <pre><code class="language-python">def example_exceptions_2(a, b):
+    try:
+        c = a / b
+        if c &lt; 0:
+            raise NegativeResultError
+        else:
+            print(c)
+    except NegativeResultError:
+        print("There is a negative result!")</code></pre> 
+  <p>Let's see the results of the function for different inputs.</p> 
+  <pre><code class="language-python">example_exceptions_2(2, 5)   # 0.4
+example_exceptions_2(2, -5)  # There is a negative result!</code></pre> 
+  <p>Note that the message from the <code class="language-python">NegativeResultError</code> class ("Hooray! My first exception is working!") is not printed anywhere, even if we raise it right away. So it makes sense to use <code class="language-python">pass</code> in such simple error classes instead of printing any message.</p> 
+  <pre><code class="language-python">raise NegativeResultError
+#  Traceback (most recent call last):
+#    File "main.py", line 10, in &lt;module&gt;
+#      raise NegativeResultError
+#  NegativeResultError</code></pre> 
+  <p>You can also create several exceptions of your own. An example is in the code below:</p> 
+  <pre><code class="language-python">class OutOfBoundsError(Exception):
+    pass
+
+class LessThanOneError(Exception):
+    pass
+
+def example_exceptions_3(x):
+    try:
+        if 3 &lt; x &lt; 16:
+            raise OutOfBoundsError
+        elif x &lt; 1:
+            raise LessThanOneError
+        else:
+            print(x)
+    except OutOfBoundsError:
+        print("The value can't be between 3 and 16!")
+    except LessThanOneError:
+        print("The value can't be less than 1!")</code></pre> 
+  <p>Different errors give different outputs:</p> 
+  <pre><code class="language-python">example_exceptions_3(2)    # 2
+example_exceptions_3(5)    # The value can't be between 3 and 16!
+example_exceptions_3(-10)  # The value can't be less than 1!</code></pre> 
+  <h2 style="text-align: center;">Specifying exception classes</h2> 
+  <p>In previous sections, we displayed messages about errors by printing them ourselves in the <code class="language-python">except</code>-part of the <code class="language-python">try</code>-<code class="language-python">except</code> block. However, we can also create the message inside the exception code using <code class="language-python">__str__</code>.</p> 
+  <pre><code class="language-python">class NotInBoundsError(Exception):
+    def __str__(self):
+        return "Wrong!"
+
+
+def example_exceptions_4(num):
+    try:
+        if not 57 &lt; num &lt; 150:
+            raise NotInBoundsError
+        else:
+            print(num)
+    except NotInBoundsError as err:
+        print(err)</code></pre> 
+  <p></p>
+  <div class="alert alert-primary">
+   Take a closer look at the 
+   <code class="language-python">except {class} as {variable}</code> construction. It can help you print the message that is specified inside the class.
+  </div>
+  <p></p> 
+  <p>Now, the function will work as follows:</p> 
+  <pre><code class="language-python">example_exceptions_4(46)  # Wrong!
+example_exceptions_4(58)  # 58</code></pre> 
+  <p>What is more, if we raise the exception instead of handling it, the message will still be shown:</p> 
+  <pre><code class="language-python">raise NotInBoundsError
+# Traceback (most recent call last):
+#    File "main.py", line 13, in &lt;module&gt;
+#    raise NotInBoundsError
+#  NotInBoundsError: Wrong!</code></pre> 
+  <p>Of course, <code class="language-python">__str__</code> is not the only method for specifying your exception. The <code class="language-python">__init__</code> is also suitable for working with exceptions. In the <code class="language-python">LessThanFiveHundredError</code> class below, the <code class="language-python">__init__</code> accepts our custom argument <code class="language-python">num</code> , which is included in the message.</p> 
+  <pre><code class="language-python">class LessThanFiveHundredError(Exception):
+    def __init__(self, num):
+        self.message = "The integer %s is below 500!" % str(num)
+        super().__init__(self.message)
+
+
+def example_exceptions_5(num):
+    if num &lt; 500:
+        raise LessThanFiveHundredError(num)
+    else:
+        print(num)</code></pre> 
+  <p>The error will also show the message we specified, but now it can use the given parameters:</p> 
+  <pre><code class="language-python">example_exceptions_5(501)
+# 501
+example_exceptions_5(50)
+# Traceback (most recent call last):
+#   File "main.py", line 15, in &lt;module&gt;
+#     example_exceptions_5(50)
+#   File "main.py", line 10, in example_exceptions_5
+#     raise LessThanFiveHundredError(num)
+# LessThanFiveHundredError: The integer 50 is below 500!</code></pre> 
+  <h2 style="text-align: center;">Conclusion</h2> 
+  <p>As far as you can see, user-defined exceptions are not so tricky as they may seem at first. To deal with them, you should remember some key features:</p> 
+  <ul> 
+   <li>use the <code class="language-python">raise</code> keyword to make your exception appear;</li> 
+   <li>don't forget about <code class="language-python">Exception</code> class when creating your code;</li> 
+   <li>specify and customize your exception with <code class="language-python">__init__</code> or <code class="language-python">__str__</code>.</li> 
+  </ul> 
+  <p>Only the practice counts when you try to learn something. So, switch on the following tasks to improve your skills of user-defined exceptions.</p>
+ </body>
+</html>

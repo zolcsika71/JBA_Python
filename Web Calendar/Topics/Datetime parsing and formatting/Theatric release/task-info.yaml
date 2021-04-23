@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from datetime import datetime
+
+
+    def get_release_date(release_str):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9819#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 03 Apr 2021 15:53:29 UTC
+record: -1

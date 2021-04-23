@@ -1,0 +1,17 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def check_integer(num):
+        ...
+
+    def error_handling(num):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10224#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 23 Apr 2021 11:01:21 UTC
+record: -1

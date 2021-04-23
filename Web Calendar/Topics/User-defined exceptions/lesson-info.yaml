@@ -1,0 +1,6 @@
+content:
+- Theory
+- Exceptions and Comparisons
+- The __str__ method in exceptions
+- The __init__ method
+- Raising exceptions
