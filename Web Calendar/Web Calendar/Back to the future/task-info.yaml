@@ -467,6 +467,9 @@ files:
 - name: test/__init__.py
   visible: false
   learner_created: false
+- name: events.db
+  visible: true
+  learner_created: true
 - name: app.py
   visible: true
   text: |
@@ -486,9 +489,6 @@ files:
         else:
             app.run()
   learner_created: false
-- name: events.db
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/170/stages/884/implement#comment
 status: Solved
 feedback:

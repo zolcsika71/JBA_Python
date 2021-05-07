@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def my_product(list_1, list_2):
+        return list(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8128#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 28 Apr 2021 16:11:08 UTC
+record: -1

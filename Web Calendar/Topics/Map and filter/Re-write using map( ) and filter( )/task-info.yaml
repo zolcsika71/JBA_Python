@@ -1,0 +1,21 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    even = [0, 2, 4, 6, 8]
+    odd = [1, 3, 5, 7, 9]
+
+    # Re-write the rest of the code here using map() and filter() where possible
+    my_sum = ...
+
+    remainders = ...
+
+    nonzero_remainders = ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8130#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 28 Apr 2021 16:03:31 UTC
+record: -1

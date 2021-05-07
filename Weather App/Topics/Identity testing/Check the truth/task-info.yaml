@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def check_values(first_value, second_value):
+        ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10962#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 06 May 2021 08:55:31 UTC
+record: -1

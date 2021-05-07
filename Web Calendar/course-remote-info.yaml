@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/502824/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Fri, 23 Apr 2021 19:02:13 UTC
+update_date: Wed, 28 Apr 2021 15:12:32 UTC
 stages:
 - id: 881
   step: 12528
@@ -37,6 +37,8 @@ topics:
     theory_id: 3614
   - title: Inheritance
     theory_id: 9844
+  - title: Computer programming
+    theory_id: 8739
   - title: Introduction to Python
     theory_id: 5204
   - title: Overview of the basic program

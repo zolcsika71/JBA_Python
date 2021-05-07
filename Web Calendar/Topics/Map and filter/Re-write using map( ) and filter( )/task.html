@@ -1,0 +1,26 @@
+<h2>Re-write using map( ) and filter( )</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Consider the following piece of code:</p> 
+  <pre><code class="language-python">even = [0, 2, 4, 6, 8]
+odd = [1, 3, 5, 7, 9]
+
+length = len(even)
+
+my_sum = []
+i = 0
+while i &lt; length:
+    my_sum.append(even[i] + odd[i])
+    i = i + 1
+
+remainders = [x % 3 for x in my_sum]
+
+nonzero_remainders = [r for r in remainders if r]</code></pre> 
+  <p>Re-write it using <code class="language-python">map()</code> and <code class="language-python">filter()</code> where possible.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/8122">Show topic summary</a>
