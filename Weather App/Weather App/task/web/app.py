@@ -104,7 +104,6 @@ def weather():
 
 
 @app.route('/delete/<city_id>', methods=['GET', 'POST'])
-# delete by id
 def delete(city_id):
     city = Cities.query.filter_by(id=city_id).first()
     db.session.delete(city)
