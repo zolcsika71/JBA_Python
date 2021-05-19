@@ -1,0 +1,9 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: 'class Painting:'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6684#comment
+status: Solved
+record: -1
