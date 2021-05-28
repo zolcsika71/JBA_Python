@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    first_name = input()
+    last_name = input()
+
+    # create full_name here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8088#comment
+status: Solved
+record: -1

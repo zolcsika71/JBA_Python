@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # use this tuple
+    numbers = tuple(int(n) for n in input().split())
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7471#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 23 May 2021 14:15:49 UTC
+record: -1

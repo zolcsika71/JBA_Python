@@ -1,0 +1,24 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class RightTriangle:
+        def __init__(self, hyp, leg_1, leg_2):
+            self.c = hyp
+            self.a = leg_1
+            self.b = leg_2
+            # calculate the area here
+
+
+    # triangle from the input
+    input_c, input_a, input_b = [int(x) for x in input().split()]
+
+    # write your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6676#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 21 May 2021 13:59:40 UTC
+record: -1
