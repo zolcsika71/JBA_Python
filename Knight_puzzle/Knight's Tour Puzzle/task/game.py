@@ -1,5 +1,3 @@
-import sys
-
 MOVE_OFFSETS = (
     (-1, -2), (1, -2), (-2, -1), (2, -1), (-2, 1), (2, 1), (-1, 2), (1, 2),
 )
@@ -25,12 +23,17 @@ class Board:
         return str(col) + str(row)
 
     def init_board(self):
-        for row in range(self.row, 0, - 1):
+        for row in range(1, self.row + 1):
             for column in range(1, self.column + 1):
-                positions = [pos for pos in self.legal_moves_from(column, row)]
-                self.board[str(column) + str(row)] = Cell(self.format_char('_'), positions)
+                positions = set([pos for pos in self.legal_moves_from(column, row)])
+                self.board[self.position(column, row)] = Cell(self.format_char('_'), positions)
 
-        # print(f'{self.board["1010"].knight_pos}')
+        self.sort_positions()
+
+    def sort_positions(self):
+        for key in self.board:
+            cell = self.board[key]
+            cell.knight_pos = sorted(cell.knight_pos, key=lambda x: len(self.board[x].knight_pos))
 
     def legal_moves_from(self, col, row):
         for row_offset, col_offset in MOVE_OFFSETS:
@@ -133,29 +136,37 @@ class Game(Board):
         if not self.type:
             self.run_computer()
         else:
-            # TODO check if it has a solution
-            self.run_player()
+            if self.run_computer(True):
+                self.run_player()
 
-    def run_computer(self):
+    def run_computer(self, check=False):
         self.init_board()
-        have_solution = self.find_solution(self.current, 1)
+        self.board[self.current].char = self.format_char('1')
+        self.board[self.current].visited = True
+        have_solution = self.find_solution(self.current, 2)
         if have_solution:
-            self.print_board()
+            if not check:
+                print("Here's the solution!")
+                self.print_board()
+            else:
+                return True
+        else:
+            print('No solution exists!')
 
     def find_solution(self, position, counter):
         knight_positions = self.possible_moves(position, False)
-        print(f'counter: {counter}', file=sys.stderr, flush=True)
-        for k_pos in knight_positions:
-            if counter >= self.board_size + 1:
-                return True
-            self.board[k_pos].char = self.format_char(str(counter))
-            self.board[k_pos].visited = True
-            if self.find_solution(k_pos, counter + 1):
-                return True
-            self.board[k_pos].char = self.format_char('_')
-            self.board[k_pos].visited = False
+        if len(knight_positions) != 0 or counter < self.board_size + 1:
+            for k_pos in knight_positions:
+                self.board[k_pos].char = self.format_char(str(counter))
+                self.board[k_pos].visited = True
+                if self.find_solution(k_pos, counter + 1):
+                    return True
+                self.board[k_pos].char = self.format_char('_')
+                self.board[k_pos].visited = False
 
-        return False
+            return False
+
+        return True
 
     def run_player(self):
         self.init_board()
@@ -217,6 +228,7 @@ class Game(Board):
         elif game_type == 'n':
             return False
         else:
+            print('Invalid option')
             return self.get_game_type()
 
     def get_starter(self):

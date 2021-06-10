@@ -381,34 +381,10 @@ files:
     if __name__ == '__main__':
         KnightsTourTest().run_tests()
   learner_created: false
-- name: dfs.py
-  visible: true
-  learner_created: true
-- name: dfs2.py
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/141/stages/764/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #1
-
-    Your program should ask if the player wants to try the puzzle
-
-    Please find below the output of your program during this failed test.
-    Note that the '>' character indicates the beginning of the input line.
-
-    ---
-
-    Enter your board dimensions:> 4 3
-    Enter the knight's starting position:> 3 3
-     ---------------
-    3| __ __  X __ |
-    2|  1 __ __ __ |
-    1| __  2 __  1 |
-     ---------------
-        1  2  3  4
-
-    Enter your next move:
-  time: Fri, 04 Jun 2021 10:52:21 UTC
+  message: Well done! You finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Thu, 10 Jun 2021 17:12:49 UTC
 record: 6
