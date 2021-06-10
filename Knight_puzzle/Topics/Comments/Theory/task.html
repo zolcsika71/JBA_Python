@@ -1,0 +1,42 @@
+<h2>Comments</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Sometimes you need to explain what some particular parts of your code are for. Lucky you, since Python gives you an opportunity to fulfill your needs. You can leave special notes called <strong>comments</strong>. They are especially useful for beginners. Throughout this course, we will often use comments to explain our examples.</p> 
+  <h2 style="text-align: center;">What is a comment?</h2> 
+  <p>Python comments start with a <strong>hash #</strong>. Everything after the hash mark and up to the end of the line is regarded as a comment and will be <strong>ignored </strong>when running the code.</p> 
+  <pre><code class="language-python">print("This will run.")  # This won't run</code></pre> 
+  <p>In the example above, you can see what PEP 8 calls an<strong> inline </strong>comment<strong> </strong>because it's written on the same line as the code.</p> 
+  <p>A comment can also refer to the block of code that follows it:</p> 
+  <pre><code class="language-python"># Outputs three numbers
+print("1")
+print("2")
+print("3")</code></pre> 
+  <p>We intend to use such comments primarily for learning purposes. Now, it's time to find out how to comment code properly.</p> 
+  <h2 style="text-align: center;">Formatting comments</h2> 
+  <p>Although it is pretty easy to write a comment, let's discuss how to do this in accordance with best practices.</p> 
+  <p>To begin with, after a hash mark there should be <strong>one space</strong> and, in inline comments, there should be <strong>two spaces</strong> between the end of the code and the hash mark. Putting more than two spaces between the end of the code and the hash mark is also acceptable but most commonly there are exactly two spaces.</p> 
+  <pre><code class="language-python">print("Learning Python is fun!")  # This is proper comment formatting
+print("PEP-8 is important!")#This is a very bad example</code></pre> 
+  <p>Indent your comment to the same level as the statement it explains. E.g. the following example is wrong:</p> 
+  <pre><code class="language-python"># this comment is at the wrong place
+print("This is a statement to print.")</code></pre> 
+  <p>A comment is not a Python command: it should not be too long. Following PEP-8, the comment length should be limited to 72 characters. It's better to split a long comment into several lines: you can do it by adding a hash mark at the beginning of each new line:</p> 
+  <pre><code class="language-python"># Imagine that this is an example of a really long comment
+# that we need to spread over three lines, so we continue
+# to write it even here.
+print("The long comment above explains this line of code.")</code></pre> 
+  <p>Comments that span multiple lines are called <strong>multi-line</strong> or <strong>block</strong> comments. In Python, there is no special way to indicate them.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   You may come across multi-line comments enclosed in triple quotes 
+   <code class="language-python">"""..."""</code>, still, we recommend that you use several hash marks for this purpose. Thus, your code will comply with the 
+   <a target="_blank" href="https://www.python.org/dev/peps/pep-0008/#block-comments" rel="noopener noreferrer nofollow">official style guide</a>. Triple quotes are reserved for 
+   <strong>documentation strings</strong>, or 
+   <strong>docstrings </strong>for short. They are also informative, but their use is limited to functions, methods and several other cases.
+  </div>
+  <p></p> 
+  <p>We hope our comments will help you understand our code examples better!</p>
+ </body>
+</html>
+<a href="https://hyperskill.org/learn/step/6081">Show topic summary</a>

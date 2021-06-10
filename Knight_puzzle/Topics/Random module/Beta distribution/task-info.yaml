@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    import random
+
+
+    random.seed(3)
+    # call the function here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7842#comment
+status: Solved
+record: -1

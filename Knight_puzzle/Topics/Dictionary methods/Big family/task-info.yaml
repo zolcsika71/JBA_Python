@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # The following lines create dictionaries from the input. Do not modify them, please
+    first_family = json.loads(input())
+    second_family = json.loads(input())
+
+    # Work with the 'first_family' and 'second_family' and create a new dictionary
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11103#comment
+status: Solved
+record: -1

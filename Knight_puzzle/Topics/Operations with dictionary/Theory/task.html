@@ -1,0 +1,90 @@
+<h2>Operations with dictionary</h2>
+<html>
+ <head></head>
+ <body>
+  <p>You have learned about basic methods that are used to work with dictionaries. Let's talk about other operations. They will help you discover new features of dictionaries.</p> 
+  <h2 style="text-align: center;">Membership testing in a dictionary</h2> 
+  <p>Sometimes you need to check whether a specific item is present in your dictionary. For example, you have a furniture catalog where products (keys) are listed along with prices (values), and you want to find out if it has a blue sofa in it or not. In this case, you can use operators <code class="language-python">in</code> and <code class="language-python">not in</code> for this purpose. The syntax is quite simple: <code class="language-python">key in dictionary</code> returns <code class="language-python">True</code> if <code class="language-python">key</code> exists in <code class="language-python">dictionary</code> and <code class="language-python">False</code> otherwise. The <code class="language-python">not in</code> operator does the opposite, it returns <code class="language-python">True</code> if <code class="language-python">key</code> does not exist in the dictionary:</p> 
+  <pre><code class="language-python">catalog = {'green table': 5000, 'brown chair': 1500, 'blue sofa': 15000, 'wardrobe': 10000}
+ 
+print('blue sofa' in catalog)        # True
+print('green table' not in catalog)  # False</code></pre> 
+  <p>Note that the membership operator looks for keys, not values:</p> 
+  <pre><code class="language-python">print(1500 in catalog)  # False</code></pre> 
+  <h2 style="text-align: center;">Iterating over keys</h2> 
+  <p>You already know that the <code class="language-python">for</code> loop allows us to iterate over elements of an object. So what does iteration over a dictionary give us? Let's take a look at the following example:</p> 
+  <pre><code class="language-python">tiny_dict = {'a': 1, 'b': 2, 'c': 3}
+ 
+for obj in tiny_dict:
+    print(obj)</code></pre> 
+  <p>We see the <em>keys</em> of the dictionary in the output:</p> 
+  <pre><code class="language-no-highlight">a
+b
+c</code></pre> 
+  <p>A similar way to iterate over keys is to use the <code class="language-python">keys</code> method, which creates a special iterable object — a collection of dictionary keys:</p> 
+  <pre><code class="language-python">print(tiny_dict.keys())  # dict_keys(['a', 'b', 'c'])</code></pre> 
+  <p>Now let's try to write our loop using the <code class="language-python">keys</code> method and check whether the output remains the same:</p> 
+  <pre><code class="language-python">for obj in tiny_dict.keys():
+    print(obj)
+# a
+# b
+# c</code></pre> 
+  <h2 style="text-align: center;">Including values in iteration</h2> 
+  <p>What if we want to get more than just the dictionary keys when iterating? </p> 
+  <p>The<code class="language-python">values</code> method is quite similar to the previous one, the only difference is that you get the values, not the keys. It provides a collection of values, without any information about keys that are used to get these values from the dictionary:</p> 
+  <pre><code class="language-python">for value in tiny_dict.values():
+    print(value)
+# 1
+# 2
+# 3
+
+print(tiny_dict.values())  # dict_values([1, 2, 3])</code></pre> 
+  <p>Finally, the <code class="language-python">items</code> method provides complete iteration in case you need both keys and values. It returns the collection of <code class="language-python">(key, value)</code> pairs (tuples):</p> 
+  <pre><code class="language-python">for obj in tiny_dict.items():
+    print(obj)
+# ('a', 1)
+# ('b', 2)
+# ('c', 3)
+
+print(tiny_dict.items())  # dict_items([('a', 1), ('b', 2), ('c', 3)])</code></pre> 
+  <h2 style="text-align: center;">Dictionary comprehension </h2> 
+  <p>Dictionary comprehension is a very convenient and concise way to create a new dictionary with one line of code. The minimal template looks like this:</p> 
+  <pre><code class="language-python">dictionary = {key: value for element in iterable}</code></pre> 
+  <p>Let's take a closer look. The expression is grouped in curly brackets — <code class="language-python">{}</code>. What happens inside? The <code class="language-python">for</code> loop goes over the elements of an iterable object (list, another dictionary, etc.). To create a dictionary, we need to specify the <code class="language-python">key</code>, which must be bound with an iterable object, and then the <code class="language-python">value</code>, which can be arbitrary:</p> 
+  <pre><code class="language-python">dictionary = {key + 5: 'some_value' for key in range(3)}
+print(dictionary)  # {5: 'some_value', 6: 'some_value', 7: 'some_value'}</code></pre> 
+  <p>However, the <code class="language-python">value</code> is usually also associated with the iterable:</p> 
+  <pre><code class="language-python">dictionary = {n + 10: n + 100 for n in range(5)}
+print(dictionary)  # {10: 100, 11: 101, 12: 102, 13: 103, 14: 104}</code></pre> 
+  <p>In the example above, we retrieve keys and values by performing operations on elements in the iterable object.</p> 
+  <p>However, dictionary comprehension is used more often to create a new dictionary by changing values in another dictionary. Imagine that we have a dictionary that contains the names of the planets and their diameters in kilometers. You need to create a new dictionary where the diameters are in miles. Without the dictionary comprehension, it would be like this:</p> 
+  <pre><code class="language-python">planets_diameter_km = {'Earth': 12742, 'Mars': 6779}
+
+# correct but long way
+planets_diameter_mile = {}
+for key, value in planets_diameter_km.items():
+    planets_diameter_mile[key] = round(value / 1.60934, 2)
+    
+print(planets_diameter_mile)  # {'Mars': 4212.29, 'Earth': 7917.53}</code></pre> 
+  <p>Now let's wrap the same operation with the dictionary comprehension; we will convert the values from kilometers into miles:</p> 
+  <pre><code class="language-python"># convenient and short!
+planets_diameter_mile = {key: round(value / 1.60934, 2) for (key, value) in 
+                         planets_diameter_km.items()}
+print(planets_diameter_mile)  # {'Mars': 4212.29, 'Earth': 7917.53}</code></pre> 
+  <p>We can devise some conditions in our expression. For now, we want to include only the planets that are bigger than 10000 km in the new dictionary:</p> 
+  <pre><code class="language-python">planets_diameter_mile = {key: round(value / 1.60934, 2) for (key, value) in
+                         planets_diameter_km.items() if value &gt; 10000}
+print(planets_diameter_mile)  # {'Earth': 7917.53}</code></pre> 
+  <p>So, the dictionary comprehension streamlines the process of creating a dictionary, and the logic of the process is understandable. However, be careful not to make your code hard to read.</p> 
+  <p>You can find more information about dictionary comprehension on the <a target="_blank" href="https://www.python.org/dev/peps/pep-0274/" rel="noopener noreferrer nofollow">official Python website</a>.</p> 
+  <h2 style="text-align: center;">Recap</h2> 
+  <p>In this topic, you've learned some tricks about dictionaries:</p> 
+  <ul> 
+   <li><code class="language-python">in</code> and <code class="language-python">not in</code> operators allow to test for membership in a dictionary, though, they look for keys only;</li> 
+   <li> the <code class="language-python">for</code> loop can iterate through the keys of a dictionary;</li> 
+   <li><code class="language-python">keys</code> and <code class="language-python">values</code> methods give you access to the keys and values of a dictionary and the <code class="language-python">items</code> method — to both at the same time.</li> 
+   <li>the dictionary comprehension is a quick and easy way to create a dictionary.</li> 
+  </ul>
+ </body>
+</html>
+<a href="https://hyperskill.org/learn/step/11096">Show topic summary</a>

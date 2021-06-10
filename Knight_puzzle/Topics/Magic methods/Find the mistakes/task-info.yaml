@@ -1,0 +1,23 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class MyClass:
+        n_objects = 0
+
+        def __new(self):
+            if cls.n_objects < 5:
+                cls.n_objects += 1
+                return object.__new__(cls)
+            return None
+
+        def __str__(self):
+            print("")
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7143#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 04 Jun 2021 10:58:39 UTC
+record: -1

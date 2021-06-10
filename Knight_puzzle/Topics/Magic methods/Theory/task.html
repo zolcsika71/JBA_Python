@@ -1,0 +1,89 @@
+<h2>Magic methods</h2>
+<html>
+ <head></head>
+ <body>
+  <p>There are different ways to enrich the functionality of your classes in Python. One of them is creating custom methods which you've already learned about. Another way, the one that we'll cover in this topic, is using "<strong>magic" methods.</strong></p> 
+  <h2 style="text-align: center;">What are "magic" methods?</h2> 
+  <p>Magic methods are special methods that make using your objects much easier. They are recognizable in the code of the class definitions because they are enclosed in<strong> double underscores:</strong> <code class="language-python">__init__</code> , for example, is one of those "magic" methods in Python. Since they are characterized by double underscores they are often called <strong>dunders.</strong> </p> 
+  <p>Dunders are not meant to be invoked directly by you or the user of your class, it happens internally on a certain action. For example, we do not explicitly call the <code class="language-python">__init__</code> method when we create a new object of the class, but instead, this method is invoked internally. All we need to do is to define the method inside the class in a way that makes sense for our project.</p> 
+  <p>There are many different dunders that you can use, but in this topic, we will focus on the most helpful ones.</p> 
+  <h2 style="text-align: center;">__new__ vs __init__</h2> 
+  <p>So far we've been calling <code class="language-python">__init__</code> the constructor of the class, but in reality, it is its initializer. New objects of the class are in fact created by the <strong><code class="language-python">__new__</code></strong> method that in its turn calls the <code class="language-python">__init__</code> method. </p> 
+  <p>The first argument of the <code class="language-python">__new__</code> method is <code class="language-python">cls</code>. It represents the class itself, similar to how <code class="language-python">self</code> represents an instance of the class. This also makes <code class="language-python">__new__</code> a different kind of method since it doesn't require an instance of the class. This makes sense since it is supposed to <em>create</em> those instances. The method returns a new instance of the class which is then passed to the <code class="language-python">__init__</code> method.</p> 
+  <p>Usually, there is no need to define a special <code class="language-python">__new__</code> method, but it can be useful if we want to return instances of other classes or restrict the number of objects in our class. </p> 
+  <p>Imagine, for example, that we want to create a class <code class="language-python">Sun</code> and make sure that we create only one object of this class. We would need to define a class variable that would track the number of instances in the class and forbid the creation of new ones if the limit has been reached.</p> 
+  <pre><code class="language-python">class Sun:
+    n = 0  # number of instances of this class
+
+    def __new__(cls):
+        if cls.n == 0: 
+            cls.n += 1
+            return object.__new__(cls)  # create new object of the class</code></pre> 
+  <p>The code above may be a bit unexpected so let's analyze it. We first check that the class variable <code class="language-python">n</code> has a value of zero. If it does, it means that no instances of the class have been created and we can do that. We then update the class variable and call <code class="language-python">__new__</code> method of <code class="language-python">object</code> class which allows us to create a new instance.</p> 
+  <p>If we now try to create 2 objects of this class we will not succeed:</p> 
+  <pre><code class="language-python">sun1 = Sun()
+sun2 = Sun()
+
+print(sun1)  # &lt;__main__.Sun object at 0x1106884a8&gt;
+print(sun2)  # None</code></pre> 
+  <h2 style="text-align: center;">__str__ vs __repr__</h2> 
+  <p>Printing out information and data is very important when programming. You can print the results of calculations for yourself or the user of your program, find the mistakes in the code or print out messages.</p> 
+  <p>For example, let's consider the class <code class="language-python">Transaction</code>: </p> 
+  <pre><code class="language-python">class Transaction:
+    def __init__(self, number, funds, status="active"):
+        self.number = number
+        self.funds = funds
+        self.status = status</code></pre> 
+  <p>If we create a transaction and try to print it out we will not get what we want:</p> 
+  <pre><code class="language-python">payment = Transaction("000001", 9999.999)
+print(payment)
+# example of the output: &lt;__main__.Transaction object at 0x11068f5f8&gt;</code></pre> 
+  <p>Instead of the values that we would like to see, we get information about the object itself. This can be altered if we deal with <code class="language-python">__str__</code> or <code class="language-python">__repr__</code> methods.</p> 
+  <p>As the names suggest, <code class="language-python">__str__</code> defines the behavior of the <code class="language-python">str()</code> function and <code class="language-python">__repr__</code> defines the <code class="language-python">repr()</code> function. A general rule with the <code class="language-python">__str__</code> and <code class="language-python">__repr__</code> methods is that the output of the <code class="language-python">__str__</code> should be <em>highly readable</em> and the output of the <code class="language-python">__repr__</code> should be <em>unambiguous</em>. In other words, <code class="language-python">__str__</code> creates a representation for users and <code class="language-python">__repr__</code> creates a representation for developers and debuggers. If possible, <code class="language-python">__repr__</code> should return Python code that could be used to create this object or, at least, a comprehensive description.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   Both 
+   <code class="language-python">__repr__</code> and 
+   <code class="language-python">__str__</code> should return a string object!
+  </div>
+  <p></p> 
+  <p>A good rule is to always define the <code class="language-python">__repr__</code> method first since it is the method used by developers in debugging. It is also a fallback method for <code class="language-python">__str__</code>which means that if the <code class="language-python">__str__</code> method isn't defined, in the situations where it's needed, the <code class="language-python">__repr__</code> will be called instead. This is, for example, the case with <code class="language-python">print()</code>.</p> 
+  <p>In our example here, let's create the <code class="language-python">__repr__</code> method that would create an unambiguous representation of the transaction and all its attributes.</p> 
+  <pre><code class="language-python">class Transaction:
+    def __init__(self, number, funds, status="active"):
+        self.number = number
+        self.funds = funds
+        self.status = status
+
+    def __repr__(self):
+        return "Transaction({}, {})".format(self.number, self.funds)</code></pre> 
+  <p>Now if we try to print any transaction we will get a standard readable string:</p> 
+  <pre><code class="language-python">payment = Transaction("000001", 9999.999)
+print(payment)
+# Transaction(000001, 9999.999)</code></pre> 
+  <p>You can see that we've called <code class="language-python">print</code> and got the representation from <code class="language-python">__repr__</code>. Now let's add <code class="language-python">__str__</code> and see if things change.</p> 
+  <pre><code class="language-python">class Transaction:
+    def __init__(self, number, funds, status="active"):
+        self.number = number
+        self.funds = funds
+        self.status = status
+
+    def __repr__(self):
+        return "Transaction({}, {})".format(self.number, self.funds)
+
+    def __str__(self):
+        return "Transaction {} for {} ({})".format(self.number, self.funds, self.status)
+
+
+payment = Transaction("000001", 9999.999)
+print(payment)
+# Transaction 000001 for 9999.999 (active)
+print(repr(payment))
+# Transaction(000001, 9999.999)</code></pre> 
+  <p>Now that we have <code class="language-python">__str__</code>, when we call <code class="language-python">print</code>, we get the representation defined there. To see the "official" representation we need to directly call the <code class="language-python">repr</code> function.</p> 
+  <h2 style="text-align: center;">Summary</h2> 
+  <p>Magic methods are said to add "magic" to your classes and that is somewhat true. Dunders really make working with classes much easier and far more efficient. </p> 
+  <p>In this topic, we've covered only a couple of these magic methods. We highly encourage you to look them up (for example, <a target="_blank" href="https://rszalski.github.io/magicmethods/" rel="noopener noreferrer nofollow">in "A Guide to Python's Magic Methods" by Rafe Kettler</a>) and try them out in your projects. As for the magic methods for arithmetics and comparisons, we'll look into them in another topic!</p>
+ </body>
+</html>
+<a href="https://hyperskill.org/learn/step/7139">Show topic summary</a>

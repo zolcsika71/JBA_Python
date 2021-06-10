@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # The following line creates a dictionary from the input. Do not modify it, please
+    test_dict = json.loads(input())
+
+    # Work with the 'test_dict'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6490#comment
+status: Solved
+record: -1

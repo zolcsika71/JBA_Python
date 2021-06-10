@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/262969/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Sun, 07 Mar 2021 16:16:07 UTC
+update_date: Fri, 28 May 2021 15:54:28 UTC
 stages:
 - id: 452
   step: 7439
@@ -104,12 +104,14 @@ topics:
   2:
   - title: Immutability
     theory_id: 7929
-  - title: Introduction to OOP
-    theory_id: 3614
+  - title: Computer programming
+    theory_id: 8739
   - title: Intro to computational thinking
     theory_id: 8742
   - title: Components of computational thinking
     theory_id: 8745
+  - title: Introduction to OOP
+    theory_id: 3614
   - title: Arguments
     theory_id: 7248
   - title: Functional decomposition

@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    name = list('Helen')
+    print(name)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6737#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 10 Jun 2021 13:57:12 UTC
+record: -1
