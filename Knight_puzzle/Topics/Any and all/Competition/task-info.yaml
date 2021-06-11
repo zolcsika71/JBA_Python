@@ -1,0 +1,20 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    check = ...([True, True, 1, 1, True])
+
+    if ...:
+        status = 'winner'
+    else:
+        status = 'loser'
+
+    if status == ...:
+        winning_sum = 100
+    else:
+        winning_sum = 10
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7806#comment
+status: Solved
+record: -1

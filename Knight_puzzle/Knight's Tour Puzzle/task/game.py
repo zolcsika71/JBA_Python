@@ -1,3 +1,5 @@
+import time
+
 MOVE_OFFSETS = (
     (-1, -2), (1, -2), (-2, -1), (2, -1), (-2, 1), (2, 1), (-1, 2), (1, 2),
 )
@@ -27,13 +29,6 @@ class Board:
             for column in range(1, self.column + 1):
                 positions = set([pos for pos in self.legal_moves_from(column, row)])
                 self.board[self.position(column, row)] = Cell(self.format_char('_'), positions)
-
-        self.sort_positions()
-
-    def sort_positions(self):
-        for key in self.board:
-            cell = self.board[key]
-            cell.knight_pos = sorted(cell.knight_pos, key=lambda x: len(self.board[x].knight_pos))
 
     def legal_moves_from(self, col, row):
         for row_offset, col_offset in MOVE_OFFSETS:
@@ -67,12 +62,14 @@ class Board:
             self.write_knights(next_pos)
 
     def possible_moves(self, position, length=True):
-        possible_moves = set([move for move in self.board[position].knight_pos
+        positions = self.board[position].knight_pos
+        possible_moves = set([move for move in positions
                               if not self.board[move].current
                               and not self.board[move].visited])
         if length:
             return len(possible_moves)
         else:
+            possible_moves = sorted(possible_moves, key=lambda x: len(self.board[x].knight_pos))
             return possible_moves
 
     def write_knights(self, position, char=None):
@@ -143,6 +140,7 @@ class Game(Board):
         self.init_board()
         self.board[self.current].char = self.format_char('1')
         self.board[self.current].visited = True
+        start = time.time()
         have_solution = self.find_solution(self.current, 2)
         if have_solution:
             if not check:
@@ -153,9 +151,13 @@ class Game(Board):
         else:
             print('No solution exists!')
 
+        end = time.time()
+
+        print(f'\n{end - start}')
+
     def find_solution(self, position, counter):
         knight_positions = self.possible_moves(position, False)
-        if len(knight_positions) != 0 or counter < self.board_size + 1:
+        if counter < self.board_size + 1:
             for k_pos in knight_positions:
                 self.board[k_pos].char = self.format_char(str(counter))
                 self.board[k_pos].visited = True

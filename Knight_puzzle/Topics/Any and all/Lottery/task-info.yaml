@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # As luck would have it
+    tickets = [11, 22, 33, 44, 55]
+    winning_tickets = [i >= ... for i in ...]
+    tickets_bool = ...(winning_tickets)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7805#comment
+status: Solved
+record: -1
