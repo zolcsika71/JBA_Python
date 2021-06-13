@@ -1,0 +1,32 @@
+<h2>Deposits</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Bank accounts can be of different types. We have created an abstract class <code class="language-python">Account</code> that can serve as a template for other accounts. It has two methods, abstract method <code class="language-python">add_money</code> and regular method <code class="language-python">add_interest.</code></p> 
+  <p>Your task is to create subclasses <code class="language-python">SavingsAccount</code> and <code class="language-python">Deposit</code>:</p> 
+  <ul> 
+   <li><code class="language-python">SavingsAccount</code>: we can add no less than $10 at a time. The interest rate is zero, so no percentage of the sum is paid back to the account.</li> 
+   <li><code class="language-python">Deposit</code>: we can add no less than $50 at a time. Deposits have a fixed interest rate, so a percentage of the money is paid back to the account.</li> 
+  </ul> 
+  <p>Below is an <strong>example</strong> of how these classes should behave. Note that this is just an example, not the exact check code!</p> 
+  <pre><code class="language-python">new_savings = SavingsAccount(50)
+new_savings.add_money(5)  # prints the following message:
+# Cannot add to SavingsAccount: amount too low.
+new_savings.add_money(30)
+new_savings.add_interest()
+print(new_savings.sum)
+# 80
+
+new_deposit = Deposit(60, 0.078)
+new_deposit.add_money(30)  # prints the following message:
+# Cannot add to Deposit: amount too low.
+new_deposit.add_money(70)
+new_deposit.add_interest()
+print(new_deposit.sum)
+# 140.14</code></pre>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/10111">Show topic summary</a>

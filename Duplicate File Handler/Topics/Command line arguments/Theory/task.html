@@ -1,0 +1,59 @@
+<h2>Command line arguments</h2>
+<html>
+ <head></head>
+ <body>
+  <h2>Running from the command line</h2> 
+  <p>Using the command line is sometimes very useful in the programmer's work. And Python scripts can be run from the command line just like its regular commands, e.g. "cd" or "mkdir". This means we can write a module that, for example, multiplies two numbers and nicely prints the result, and run it from the shell:</p> 
+  <pre><code class="language-no-highlight">python multiply_two_numbers.py 5 9</code></pre> 
+  <p>In the line above, <code class="language-python">python</code> is kind of a command that indicates that the Python interpreter should be used for the following script. In some cases, the system may already know how to run <em>.py</em> files but we will not go into details here and, for the sake of consistency, will use the <code class="language-python">python</code> command throughout this topic.</p> 
+  <p>Then, separated by a whitespace, follows the script name. Note that if the script is in another directory than the one you are working from, you should specify the path to the file. It may be an absolute path:</p> 
+  <pre><code class="language-no-highlight">python C:\python_scripts\add_two_numbers.py 11 44</code></pre> 
+  <p>Or it can be a relative path, for example to run a script from the parent directory:</p> 
+  <pre><code class="language-no-highlight">python ..\add_two_numbers.py 11 44</code></pre> 
+  <p>Finally, if the script takes any arguments, they are written separated by whitespaces after the script name.</p> 
+  <p>And that's it! However, the next question is – how can we get access to the specified arguments from our Python script?</p> 
+  <h2>System module</h2> 
+  <p>In order to do so, we can make use of the <strong>sys module</strong>. It provides access to functions and variables that allow for working with the underlying Python interpreter, irrespective of the operating system. We won't go into details talking about its features, but rather focus on the one that is the most important right now, namely, <strong>sys.argv</strong>. It performs the very operation we need: collects the arguments passed to the python script.</p> 
+  <p>By calling <code class="language-python">sys.argv</code>, we get arguments specified by the user as <strong>a list of strings</strong>. Indexing, as always in Python, starts from <em>0</em> but the first argument, <code class="language-python">sys.argv[0]</code> is the name of our Python script as it was invoked – either the name itself or including the path to the file. Following items are arguments that can also be accessed by their index. Take note that they are strings, and if we need a numerical value, we should perform type conversion.</p> 
+  <p>Let’s write a simple program <code class="language-python">multiply_two_numbers.py</code>:</p> 
+  <pre><code class="language-python">import sys  # first, we import the module
+
+args = sys.argv  # we get the list of arguments
+first_num = float(args[1])  # convert arguments to float
+second_num = float(args[2])
+
+product = first_num * second_num
+
+print("The product of " + args[1] + " times " + args[2] + " equals " + str(product))</code></pre> 
+  <h2>Checking the input</h2> 
+  <p>It is also worth mentioning that if we expect to get a specific number of arguments (i. e. almost always), it is a good idea to check the length of <code class="language-python">sys.argv</code> in the program. Let's check that in our script <code class="language-python">multiply_two_numbers.py</code>:</p> 
+  <pre><code class="language-python">import sys  
+
+args = sys.argv  
+
+if len(args) != 3:
+    print("The script should be called with two arguments, the first and the second number to be multiplied")
+
+else:
+    first_num = float(args[1])  
+    second_num = float(args[2])
+
+    product = first_num * second_num
+
+    print("The product of " + args[1] + " times " + args[2] + " equals " + str(product))</code></pre> 
+  <p>So, this is how our script will look like from the command line:</p> 
+  <p style="text-align: center;"><img alt="" height="133" src="https://ucarecdn.com/232cb492-5aae-4d95-afff-ed03fcf7f122/-/crop/877x153/1,0/-/preview/" width="762"></p> 
+  <h2>Within the IDE</h2> 
+  <p>Let's take a look at <strong>PyCharm</strong>'s capabilities in comparison to the command line. Instead of manually writing the script name and arguments each time, you can set them in the configuration. For this in the <strong>Run</strong> area select <strong>Edit Configurations</strong> to open the <em>Run/Debug Configurations</em> dialog. </p> 
+  <p style="text-align: center;"><img alt="" height="174" src="https://ucarecdn.com/7e03c68f-4040-488f-b542-56b9768dedef/" width="514"></p> 
+  <p>If you do not see a similar area in your IDE, then make it visible through <strong>View -&gt; Appearance -&gt; Navigation Bar</strong>. You can read more on how to do it in the <a target="_blank" href="https://www.jetbrains.com/help/pycharm/creating-and-editing-run-debug-configurations.html" rel="noopener noreferrer nofollow">JetBrains documentation</a>.</p> 
+  <p>Congratulations, you got into the<em> Run/Debug Configurations</em>! In the <strong>Parameters</strong> field, we can set the arguments that we would write in the command line separated by whitespaces.</p> 
+  <p style="text-align: center;"><img alt="" height="209" src="https://ucarecdn.com/4724dc35-74a8-498c-a3f4-15944342969a/" width="923"></p> 
+  <p> Save changes and run the script. The output would be as expected:</p> 
+  <pre><code class="language-no-highlight">The product of 3 times 5 equals 15.0</code></pre> 
+  <p>Now, instead of running the module from the shell as <code class="language-python">python multiply_two_numbers.py 3 5</code> and passing arguments each time it is called, you can set them in the <strong>Parameters</strong> field and just run the program in <strong>PyCharm</strong>.</p> 
+  <h2>Conclusion</h2> 
+  <p>We have learned how to run Python scripts from the command line, how to get access to the passed arguments from the program itself, as well as that it's important to check that the arguments are what we expect them to be. We also got acquainted with <strong>PyCharm</strong>'s capabilities for specifying script arguments in configurations. This knowledge will definitely help you in your further programmer's path!</p>
+ </body>
+</html>
+<a href="https://hyperskill.org/learn/step/7981">Show topic summary</a>

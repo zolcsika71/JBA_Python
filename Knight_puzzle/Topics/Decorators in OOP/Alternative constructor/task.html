@@ -1,0 +1,21 @@
+<h2>Alternative constructor</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Below we have the <code class="language-python">Person</code> class, which we use to store general information about the users. As for now, we have defined only the <code class="language-python">__init__</code> method with <code class="language-python">name</code> and <code class="language-python">email</code> as parameters.</p> 
+  <pre><code class="language-python">class Person:
+    
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email</code></pre> 
+  <p>Let's say we have a number of strings where a person's name and their email are separated by a single hyphen. Write a <code class="language-python">from_string</code> method that will serve as an alternative constructor for the class and specify the name of the decorator above it. Use the <code class="language-python">split(some_separator)</code> method to divide a string.</p> 
+  <p>For example, given input "<em>Test-test.user@email.com"</em>, we should be able to create a <code class="language-python">user</code> instance with the following specific values:</p> 
+  <pre><code class="language-python">print(user.name)   # Test
+print(user.email)  # test.user@email.com</code></pre> 
+  <p>You do not need to take any input or create new class instances yourself, just write the body of the method.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 30 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/10153">Show topic summary</a>

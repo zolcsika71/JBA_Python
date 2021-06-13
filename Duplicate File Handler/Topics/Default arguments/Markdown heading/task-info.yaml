@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    def heading():
+        pass
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9500#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 13 Jun 2021 09:39:23 UTC
+record: -1

@@ -1,0 +1,112 @@
+<h2>Multiple inheritance</h2>
+<html>
+ <head></head>
+ <body>
+  <p>By now, you are familiar with the mechanism of inheritance. Now it's time to go deeper and gain insight into multiple inheritance.</p> 
+  <p><strong>Multiple inheritance </strong>is when a class has two or more parent classes.</p> 
+  <p>In the code, multiple inheritance looks similar to the single inheritance. Only now, in brackets after the child class, you need to write all parent classes instead of just one:</p> 
+  <pre><code class="language-python">class ParentClass1:
+    ...
+
+
+class ParentClass2:
+    ...
+
+
+class ParentClass3:
+    ...
+
+# Class definition with multiple inheritance
+class ChildClass(ParentClass1, ParentClass2, ParentClass3):
+    ...</code></pre> 
+  <p> Let's have a look at a particular class hierarchy. In the scheme, arrows point from the child class to the parent class.</p> 
+  <p style="text-align: center;"><img alt="" src="https://ucarecdn.com/d0bfd897-623c-4fe7-a772-bd928072f88a/"></p> 
+  <p style="text-align: center;"><em>Class hierarchy with multiple inheritance.</em></p> 
+  <p>As you can see, there are a basic parent class <code class="language-python">Person</code> and classes <code class="language-python">Student</code> and <code class="language-python">Programmer</code> that inherit from it. The class <code class="language-python">StudentProgrammer</code>, in its turn, inherits from both <code class="language-python">Student</code> and <code class="language-python">Programmer</code> classes which makes it a case of multiple inheritance. This way, we can say that <code class="language-python">StudentProgrammer</code> has two parent classes, <code class="language-python">Student</code> and <code class="language-python">Programmer</code> while <code class="language-python">Person</code> can be regarded as a "grandparent" class.</p> 
+  <p>Here's how the basic code for this hierarchy looks:</p> 
+  <pre><code class="language-python">class Person:
+    ...
+
+
+class Student(Person):
+    ...
+
+
+class Programmer(Person):
+    ...
+
+
+class StudentProgrammer(Student, Programmer):
+    ...</code></pre> 
+  <h2 style="text-align: center;">The diamond problem</h2> 
+  <p>As you remember, classes inherit methods and attributes from their parents. If inheritance is simple, everything is clear and straightforward. However, when we deal with multiple inheritance, things are bound to get a little bit more complicated.</p> 
+  <p>One of the most famous "complications" is called a <strong>diamond problem </strong>(or, rather dramatically, "Deadly Diamond of Death"). The diamond problem is an ambiguity that arises in the case of multiple inheritance. The class hierarchy we've described above is a perfect example of the structure that may cause this problem.</p> 
+  <p>So, we have a class hierarchy with one superclass, two classes that inherit from it, and a class that has those child classes as parents. As you can see from the hierarchy scheme above, the whole structure is shaped like a diamond which is where the name of the issue comes from (not the Rihanna song, unfortunately).</p> 
+  <p>Let's add some methods to classes to see where the problems lie.</p> 
+  <pre><code class="language-python">class Person:
+    def print_message(self):
+        print("Message from Person")
+
+
+class Student(Person):
+    def print_message(self):
+        print("Message from Student")
+
+
+class Programmer(Person):
+    def print_message(self):
+        print("Message from Programmer")
+
+
+class StudentProgrammer(Student, Programmer):
+    ...</code></pre> 
+  <p>Class <code class="language-python">Person</code> has a method <code class="language-python">print_message</code> that classes <code class="language-python">Student</code> and <code class="language-python">Programmer</code> override to print their own messages. The class <code class="language-python">StudentProgrammer</code> doesn't override this method.</p> 
+  <p>The question is, then: if we create an instance of the class <code class="language-python">StudentProgrammer</code> and call <code class="language-python">print_message</code> method, which message will be printed?</p> 
+  <p>This is the crux of the diamond problem: how to choose an implementation when we have several alternatives.</p> 
+  <h2 style="text-align: center;">MRO</h2> 
+  <p>Different programming languages use different techniques for dealing with the diamond problem. Basically, what we need to do is to somehow transform the diamond shape (or any complicated hierarchy) into a single line so that we know in which order to look for the necessary method. Python uses the <a target="_blank" href="https://www.python.org/download/releases/2.3/mro/" rel="noopener noreferrer nofollow">C3 Linearization algorithm</a> that calculates the <strong>Method Resolution Order (MRO). </strong></p> 
+  <p>MRO tells us how the particular class hierarchy looks in a linear form and how we should navigate this hierarchy. Two basic rules are that child classes precede parent classes and parent classes are placed in the order they were listed in.</p> 
+  <p>Each class has a <code class="language-python">__mro__</code> attribute (inherited from <code class="language-python">object</code>) that contains the parent classes in the MRO. Let's print this attribute of the <code class="language-python">StudentProgrammer</code> class and see what we'll get:</p> 
+  <pre><code class="language-python">print(StudentProgrammer.__mro__)
+# (&lt;class '__main__.StudentProgrammer'&gt;, &lt;class '__main__.Student'&gt;, &lt;class '__main__.Programmer'&gt;, &lt;class '__main__.Person'&gt;, &lt;class 'object'&gt;)</code></pre> 
+  <p>You can see that according to MRO, the immediate parent of the class <code class="language-python">StudentProgrammer</code> is <code class="language-python">Student</code>. It means that if we call <code class="language-python">print_method</code>, the version from the class <code class="language-python">Student</code> will be implemented.</p> 
+  <pre><code class="language-python">jack = StudentProgrammer()
+jack.print_message()  # Message from Student</code></pre> 
+  <p>Note that the MRO looks like this because, in the definition of the class <code class="language-python">StudentProgrammer</code>, the class <code class="language-python">Student</code> precedes <code class="language-python">Programmer</code>. If the situation was reversed, the output of the code snippet above would be <code class="language-python">Message from Programmer</code>.</p> 
+  <h2 style="text-align: center;">super() with multiple inheritance</h2> 
+  <p>By now, you already know how the <code class="language-python">super()</code> function is used in single inheritance. However, it truly shines when we have to deal with multiple inheritance, especially the diamond problem. The <code class="language-python">super()</code> function uses MRO to call the method and get an attribute of the immediate parent class. You don't need to analyze the hierarchy and figure out the parent class yourself, the <code class="language-python">super()</code> function will do it for you.</p> 
+  <p>Let's modify our classes by adding the <code class="language-python">super()</code> calls to the <code class="language-python">print_message</code> methods.</p> 
+  <pre><code class="language-python">class Person:
+    def print_message(self):
+        print("Message from Person")
+
+
+class Student(Person):
+    def print_message(self):
+        print("Message from Student")
+        super().print_message()
+
+
+class Programmer(Person):
+    def print_message(self):
+        print("Message from Programmer")
+        super().print_message()
+
+
+class StudentProgrammer(Student, Programmer):
+    def print_message(self):
+        super().print_message()</code></pre> 
+  <p>Each class (except <code class="language-python">Person</code>) now calls the method of the parent class after printing its own message. Now if we call this method for <code class="language-python">StudentProgrammer</code> class we'll see the following:</p> 
+  <pre><code class="language-python">jack = StudentProgrammer()
+jack.print_message()
+# Message from Student
+# Message from Programmer
+# Message from Person</code></pre> 
+  <p>The messages were printed in the MRO of the class <code class="language-python">StudentProgrammer</code> without any repetitions. This is the beauty and the benefit of the <code class="language-python">super()</code> function: if you've designed your classes well, you don't need to worry about the order.</p> 
+  <h2 style="text-align: center;">Summary</h2> 
+  <p>In this topic, we've looked at multiple inheritance in Python: a situation when a class has more than one parent. While it can be very useful, multiple inheritance can also lead to some problems, for example, the diamond problem.</p> 
+  <p>Python uses method resolution order, MRO, to deal with ambiguity. Every class has an attribute that contains its MRO. The <code class="language-python">super()</code> function, which is used for accessing methods and attributes of the parent class, makes use of the MRO to determine which implementation to call.</p> 
+  <p>We encourage you to experiment with different class hierarchies and the <code class="language-python">super()</code> function. This will allow you to get the hang of multiple inheritance, deal with hidden dangers and learn how to construct complex hierarchies in an efficient way.</p>
+ </body>
+</html>
+<a href="https://hyperskill.org/learn/step/7657">Show topic summary</a>

@@ -1,0 +1,26 @@
+<h2>Types</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Let's say there's a script <code class="language-python">add_four_numbers.py</code>. It takes exactly four arguments, all of which are numerical. It may be run from the command line like this: </p> 
+  <pre><code class="language-no-highlight">python3 add_four_numbers.py 25 17 808 9</code></pre> 
+  <p>Inside the program itself, the arguments are firstly read from the command line into the list <code class="language-python">args</code>:</p> 
+  <pre><code class="language-python"># script 'add_four_numbers.py'
+
+import sys  
+
+args = sys.argv</code></pre> 
+  <p>You don't see the import part of the script but you have access to <code class="language-python">args</code>, see below (please don't import the module yourself, it is important for the tests).</p> 
+  <p>Your task is to access <strong>the arguments</strong> and print the result of the addition.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-831').style.display='inline'"> Hint </button> </p>
+  <div id="hint-831" style="display:none;">
+   Remeber, what does 
+   <code class="language-python">sys.argv</code> store as the first element? And what type do all its elements have?
+  </div>
+  <p></p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/7981">Show topic summary</a>

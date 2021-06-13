@@ -1,0 +1,12 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# create the hierarchy here'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7664#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 12 Jun 2021 10:44:20 UTC
+record: -1

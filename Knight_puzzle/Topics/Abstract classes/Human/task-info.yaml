@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from abc import ABC, abstractmethod
+
+
+    # create Human
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10115#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 12 Jun 2021 12:20:16 UTC
+record: -1

@@ -1,0 +1,36 @@
+type: code
+custom_name: You're a wizard!
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from abc import ABC, abstractmethod
+
+
+    class Player(ABC):
+        def __init__(self, name, rank, level):
+            self.name = name
+            self.rank = rank
+            self.level = level
+            super().__init__()
+
+        @abstractmethod
+        def fight(self):
+            ...
+
+        @abstractmethod
+        def do_spell(self):
+            ...
+
+        def sing_song(self):
+            print("No songs for me!")
+
+
+    # create a Wizard
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10118#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 12 Jun 2021 12:09:46 UTC
+record: -1

@@ -1,0 +1,23 @@
+<h2>Reverse engineering</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Imagine that you need to create a program representing a class hierarchy.</p> 
+  <p>This class hierarchy concerns different types of cars. You know that the class <code class="language-python">Vehicle</code> is the base class. There are two classes, <code class="language-python">LandVehicle</code> and <code class="language-python">WaterVehicle</code> , that inherit from the class <code class="language-python">Vehicle</code>. </p> 
+  <p>There is also a class <code class="language-python">CarBoat</code> and its MRO looks like this:</p> 
+  <pre><code class="language-python"># (&lt;class '__main__.CarBoat'&gt;, &lt;class '__main__.Car'&gt;, &lt;class '__main__.LandVehicle'&gt;, &lt;class '__main__.Boat'&gt;, &lt;class '__main__.WaterVehicle'&gt;, &lt;class '__main__.Vehicle'&gt;, &lt;class 'object'&gt;)</code></pre> 
+  <p>As you can see, there are two additional classes, <code class="language-python">Car</code> and <code class="language-python">Boat</code>. Your task is to figure out where these classes fit into the hierarchy using the information about MRO and general logic and then program this hierarchy. You don't need to define any methods in the classes.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-1009').style.display='inline'"> Hint </button> </p>
+  <div id="hint-1009" style="display:none;">
+   The class 
+   <code class="language-python">CarBoat</code> directly inherits from classes 
+   <code class="language-python">Car</code> and 
+   <code class="language-python">Boat</code>.
+  </div>
+  <p></p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/7657">Show topic summary</a>

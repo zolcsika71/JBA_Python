@@ -1,0 +1,25 @@
+<h2>Create a date</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Below we have the <code class="language-python">Date</code> class. We have specified two attributes the <code class="language-python">day</code> and the <code class="language-python">month</code> in its <code class="language-python">__init__</code> method:</p> 
+  <pre><code class="language-python">class Date:
+
+    def __init__(self, day, month):
+        self.day = day
+        self.month = month</code></pre> 
+  <p>Based on these attributes, we want to create a new one, the <code class="language-python">date</code> that will represent the <code class="language-python">day</code> and the <code class="language-python">month</code> string values divided by a slash. For example, for <code class="language-python">14</code> and <code class="language-python">05</code> we should get <code class="language-python">14/05</code>.</p> 
+  <p>This attribute could have been set in the initializer, too. In this case, however, if we were to change the <code class="language-python">day</code> value to <code class="language-python">15</code>, for example, we would still get <code class="language-python">14/05</code>. What we actually want to get is the following:</p> 
+  <pre><code class="language-python">date_obj = Date(14, 05)
+print(date_obj.date)  # 14/05
+
+date_obj.day = 15
+print(date_obj.date)  # 15/05</code></pre> 
+  <p>Write the body of the <code class="language-python">date</code> method that will return the values of the <code class="language-python">day</code> and the <code class="language-python">month</code> separated by a slash and make it accessible as an attribute by placing the correct decorator name above. Note that you do not have to take input or create new class instances.</p> 
+  <p>NOTE: in this case, both <code class="language-python">day</code> and <code class="language-python">month</code> are strings, so they can have leading zeros.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 30 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/10153">Show topic summary</a>

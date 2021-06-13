@@ -1,0 +1,117 @@
+<h2>Abstract classes</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Suppose, you want to create a role-playing game. You have come up with a bunch of different character classes and you want to define their actions. You want your characters to explore the world, interact with each other, fight, cast spells, sing songs. All characters should be able to do all these things, but the exact way they do it should depend on the type of the character. </p> 
+  <p>In practice, this means that you need to create a class for each character and define the corresponding methods. To make the process easier and more structured, you should use <strong>abstract classes. </strong></p> 
+  <p>In this topic, we will discuss what abstract classes are, and why they are perfect for these tasks.</p> 
+  <h2>What are abstract classes?</h2> 
+  <p>Generally speaking, an <strong>abstract class </strong>is a template that can be used to create other classes. Once we have a template, we do not work with it directly, we create other objects based on this template and work with them instead. Abstract classes operate in a similar manner.</p> 
+  <p>So, what makes a class abstract?</p> 
+  <p>Well, for one, we cannot create instances of abstract classes. Since an abstract class is some kind of a blueprint, it would make no sense to create such an instance. Another feature of abstract classes is that they have <strong>abstract methods. </strong>Abstract methods are methods that generally do not have any implementation and they are declared with the <code class="language-python">@abstractmethod</code><strong> </strong>decorator.</p> 
+  <p>You may wonder what is the purpose of these abstract classes since there are no objects and no functionality. Well, their value lies in the fact that they define the structure and functionality for other classes. Abstract classes are used as parent or base classes. All abstract methods defined in the abstract class should be overridden in a child class.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   Note that even though abstract methods generally do not have any implementation, they can be implemented. You would still need to override this method in the child class, though. So, implementing an abstract method doesn't make a lot of sense.
+  </div>
+  <p></p> 
+  <p>Take our RPG as an example. We can use abstract classes to create our characters: we would need to create an abstract player class, list all possible actions as methods, and then create child classes for specific character roles.</p> 
+  <h2>How to create an abstract class?</h2> 
+  <p>To create an abstract class in Python, we need to use the <code class="language-python">abc</code> module (which we first have to import). <code class="language-python">abc</code> is a module for <strong>a</strong>bstract <strong>b</strong>ase <strong>c</strong>lasses, that is why we have the name.</p> 
+  <p>The first step to make a class abstract is to declare it with a parent class <code class="language-python">ABC</code> from the <code class="language-python">abc</code> module.</p> 
+  <pre><code class="language-python">from abc import ABC, abstractmethod
+
+
+class Player(ABC):
+    ...</code></pre> 
+  <p>As we start to create our player classes, we take the class <code class="language-python">Player</code> as our template. However, this is not enough. This class is not abstract yet, as it does not have any abstract methods. So, you could create an instance of this class, but it is not what we want.</p> 
+  <p>Now we need to define methods, they represent the actions that our players will be able to do.</p> 
+  <pre><code class="language-python">from abc import ABC, abstractmethod
+
+
+class Player(ABC):
+    def __init__(self, name, rank, level):
+        self.name = name
+        self.rank = rank
+        self.level = level
+        super().__init__()
+
+    @abstractmethod
+    def fight(self):
+        ...
+
+    @abstractmethod
+    def do_spell(self):
+        ...
+
+    def sing_song(self):
+        print("No songs for me!")</code></pre> 
+  <p>Now, this is a proper abstract class — it inherits from <code class="language-python">ABC</code> and has abstract methods.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   Note that not all methods in the abstract class need to be abstract. With the abstract class, only "mandatory" methods should be abstract because they will need to be overridden in the child class to work properly.
+  </div>
+  <p></p> 
+  <p>If we attempt to create an object of this class now, we will get a <code class="language-python">TypeError</code>:</p> 
+  <pre><code class="language-python">some_player = Player("Legolas", 3, 3)
+
+# TypeError: Can't instantiate abstract class Player with abstract methods do_spell, fight</code></pre> 
+  <h2>Subclasses</h2> 
+  <p>Now we have a proper template, which means we are ready to create actual player classes. Let's start with the class <code class="language-python">Warrior</code>.</p> 
+  <pre><code class="language-python">class Warrior(Player):
+    ...</code></pre> 
+  <p>We have already mentioned that abstract methods need to be overridden in the subclasses of an abstract class. What happens if they remain the way they are? Well, as you can see, with the class <code class="language-python">Warrior</code> above, we have not overridden anything. This is what happens when we try to create an object of this class:</p> 
+  <pre><code class="language-python">warrior = Warrior("Bran", 1, 1)
+
+# TypeError: Can't instantiate abstract class Warrior with abstract methods do_spell, fight</code></pre> 
+  <p>We have an error because we have not overridden abstract methods <code class="language-python">do_spell</code> and <code class="language-python">fight</code>. Note that nothing is said about the <code class="language-python">sing_song</code> method since it is not abstract.</p> 
+  <p>Now, let's implement this class properly:</p> 
+  <pre><code class="language-python">class Warrior(Player):
+    def fight(self):
+        print("Swing an ax")
+        
+    def do_spell(self):
+        print("Increase weapon fatality")
+
+
+warrior = Warrior("Bran", 1, 1)
+
+warrior.fight()
+# Swing an ax
+warrior.do_spell()
+# Increase weapon fatality
+warrior.sing_song()
+# No song for me!</code></pre> 
+  <p>No exceptions now! Here, you can see that the <code class="language-python">sing_song</code> method was inherited "as is" from the <code class="language-python">Player</code> class. Since it is a regular instance method, we do not have to override it in the child class. But we could do it just in case.</p> 
+  <p>Take another character class, <code class="language-python">Bard</code>, as an example. Bards do need to sing, so we could override this method:</p> 
+  <pre><code class="language-python">class Bard(Player):
+    def fight(self):
+        print("Smash the opponent with your lute.")
+        
+    def do_spell(self):
+        print("Enchant everyone with your tale.")
+        
+    def sing_song(self):
+        print("Sing a beautiful song.")
+        
+
+bard = Bard("Jaskier", 4, 5)
+
+bard.fight()
+# Smash the opponent with your lute.
+bard.do_spell()
+# Enchant everyone with your tale.
+bard.sing_song()
+# Sing a beautiful song.</code></pre> 
+  <p>Now our bards can sing a song! </p> 
+  <h2>Summary</h2> 
+  <p>To sum up:</p> 
+  <ul> 
+   <li>Abstract classes serve as a template for other classes.</li> 
+   <li>Abstract classes inherit from the class <code class="language-python">ABC</code> from <code class="language-python">abc</code> module and have abstract methods.</li> 
+   <li>Abstract methods have no implementation. They are preceded by <code class="language-python">@abstractmethod</code> decorator.</li> 
+   <li>Abstract methods should be overridden in child classes.</li> 
+  </ul>
+ </body>
+</html>
+<a href="https://hyperskill.org/learn/step/10111">Show topic summary</a>

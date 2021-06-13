@@ -1,0 +1,21 @@
+<h2>Time</h2>
+<html>
+ <head></head>
+ <body>
+  <p>We have the <code class="language-python">Time</code> class. We have defined two attributes: the <code class="language-python">hour</code> and the <code class="language-python">minute</code> in its initializer.</p> 
+  <pre><code class="language-python">class Time:
+
+    def __init__(self, hour, minute):
+        self.hour = hour
+        self.minute = minute</code></pre> 
+  <p>To create class instances from such strings as <code class="language-python">14:00</code>, we need to parse them as two string variables. Write a <code class="language-python">from_string</code> method that will serve as an alternative constructor for the <code class="language-python">Time</code> class. Use the <code class="language-python">split(":")</code> to divide the given string. </p> 
+  <p> For example, given the input <code class="language-python">14:05</code>, we can create the <code class="language-python">time</code> instance with the following attribute values:</p> 
+  <pre><code class="language-python">print(time.hour)    # 14
+print(time.minute)  # 05</code></pre> 
+  <p>You do not need to take any input or create new class instances, just write the body of the method and specify the correct decorator.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 30 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
+<a href="https://hyperskill.org/learn/step/10153">Show topic summary</a>

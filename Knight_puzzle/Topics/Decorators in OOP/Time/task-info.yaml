@@ -1,0 +1,25 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Time:
+
+        def __init__(self, hour, minute):
+            self.hour = hour
+            self.minute = minute
+
+        # use appropriate decorator
+        def from_string(...):
+            ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10160#comment
+status: Solved
+feedback:
+  message: |-
+    <html>[+] Test #1. OK
+    [+] Test #2. OK
+
+    2 of 2 test(s) passed.</html>
+  time: Sat, 12 Jun 2021 15:53:34 UTC
+record: -1

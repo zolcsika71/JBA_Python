@@ -1,0 +1,18 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Animal:
+        def __init__(self, name):
+            self.name = name
+            print("Created an Animal")
+
+    # create the rest of the classes here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7663#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 12 Jun 2021 11:23:47 UTC
+record: -1

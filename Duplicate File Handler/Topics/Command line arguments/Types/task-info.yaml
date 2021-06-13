@@ -1,0 +1,15 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    args = sys.argv
+
+    # further code of the script "add_four_numbers.py"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7988#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 13 Jun 2021 12:24:42 UTC
+record: -1

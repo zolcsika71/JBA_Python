@@ -1,0 +1,29 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    from abc import ABC, abstractmethod
+
+
+    class Account(ABC):
+        def __init__(self, starting_sum, interest=None):
+            self.sum = starting_sum
+            self.interest = interest
+
+        @abstractmethod
+        def add_money(self, amount):
+            ...
+
+        def add_interest(self):
+            ...
+
+
+    # create SavingsAccount and Deposit
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10117#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 12 Jun 2021 14:28:58 UTC
+record: -1

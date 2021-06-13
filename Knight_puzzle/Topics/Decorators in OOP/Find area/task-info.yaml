@@ -1,0 +1,24 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    class Area:
+
+        def __init__(self, figure_name):
+            self.figure_name = figure_name
+
+        # use appropriate decorator
+        def rhombus_area(a, b):
+            ...
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10159#comment
+status: Solved
+feedback:
+  message: |-
+    <html>[+] Test #1. OK
+    [+] Test #2. OK
+
+    2 of 2 test(s) passed.</html>
+  time: Sat, 12 Jun 2021 14:57:06 UTC
+record: -1
