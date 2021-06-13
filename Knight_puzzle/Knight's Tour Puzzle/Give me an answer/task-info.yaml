@@ -382,9 +382,5 @@ files:
         KnightsTourTest().run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/projects/141/stages/764/implement#comment
-status: Solved
-feedback:
-  message: Well done! You finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
-    Academy</a> to continue learning.
-  time: Fri, 11 Jun 2021 15:56:22 UTC
+status: Failed
 record: 6
