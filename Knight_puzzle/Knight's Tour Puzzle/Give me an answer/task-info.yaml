@@ -383,4 +383,22 @@ files:
   learner_created: false
 feedback_link: https://hyperskill.org/projects/141/stages/764/implement#comment
 status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #19
+
+    No solution should exist, you need to check if there are solutions for the board
+
+    Please find below the output of your program during this failed test.
+    Note that the '>' character indicates the beginning of the input line.
+
+    ---
+
+    Enter your board dimensions:> 3 3
+    Enter the knight's starting position:> 1 1
+    Do you want to try the puzzle? (y/n):> y
+    No solution exists!
+
+    0.0
+  time: Sun, 13 Jun 2021 14:40:42 UTC
 record: 6

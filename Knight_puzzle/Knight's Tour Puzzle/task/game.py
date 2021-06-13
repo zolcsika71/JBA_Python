@@ -153,7 +153,7 @@ class Game(Board):
 
         end = time.time()
 
-        print(f'\n{end - start}')
+        # print(f'\n{end - start}')
 
     def find_solution(self, position, counter):
         knight_positions = self.possible_moves(position, False)
