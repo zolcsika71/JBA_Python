@@ -1,0 +1,72 @@
+<h2>Description</h2>
+
+<p>In this stage, you need to add a new feature to the project — pick one name from the dictionary at random; this person's share will be paid by others. Make it a lucky day for somebody!</p>
+
+<p>Make sure you give your users a choice whether they want to use this feature or not. Don't turn it on by default.</p>
+
+<p>After picking a random name, print it so that everyone knows who is the lucky one.</p>
+
+<h2>Objectives</h2>
+
+<p>In this stage your program should perform the following steps together with the steps from the previous stages:</p>
+
+<ol>
+	<li>In case of an invalid number of people, <code class="java">"No one is joining for the party"</code> is expected as an output;</li>
+	<li>Otherwise, ask the user whether they want to use the "Who is lucky?" feature;</li>
+	<li>Take input from the user;</li>
+	<li>If a user wants to use the feature (<code class="java">Yes</code>), choose a name from the dictionary keys at random and print the following: <code class="java">{Name} is the lucky one!</code>;</li>
+	<li>If the user enters anything else, print <code class="java">No one is going to be lucky</code>.</li>
+</ol>
+
+<p>Do not print the output of the previous stage (see examples).</p>
+
+<h2>Examples</h2>
+
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+
+<p><strong>Example 1: </strong><em>The feature is used</em></p>
+
+<pre><code class="language-no-highlight">Enter the number of friends joining (including you):
+&gt; 5
+
+Enter the name of every friend (including you), each on a new line:
+&gt; Marc
+&gt; Jem
+&gt; Monica
+&gt; Anna
+&gt; Jason
+
+Enter the total bill value:
+&gt; 100
+
+Do you want to use the "Who is lucky?" feature? Write Yes/No:
+&gt; Yes
+
+Jem is the lucky one!</code></pre>
+
+<p><strong>Example 2: </strong><em>The feature is skipped</em></p>
+
+<pre><code class="language-no-highlight">Enter the number of friends joining (including you):
+&gt; 5
+
+Enter the name of every friend (including you), each on a new line:
+&gt; Marc
+&gt; Jem
+&gt; Monica
+&gt; Anna
+&gt; Jason
+
+Enter the total bill value:
+&gt; 100
+
+Do you want to use the "Who is lucky?" feature? Write Yes/No:
+&gt; No
+
+No one is going to be lucky</code></pre>
+
+<p><strong>Example 3:</strong><em> Invalid input</em></p>
+
+<pre><code class="language-no-highlight">Enter the number of friends joining (including you):
+&gt; 0
+
+No one is joining for the party</code></pre>

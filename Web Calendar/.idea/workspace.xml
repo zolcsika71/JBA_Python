@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d12cb7e9-d19d-4575-aa1f-26078055701b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/Weather App.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Count up the squares/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Count up the squares/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Count up the squares/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Count up the squares/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Theory/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Vowels and consonants/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Vowels and consonants/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Vowels and consonants/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/Vowels and consonants/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/Loop control statements/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Factorial/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Factorial/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Factorial/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Factorial/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Favor/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Favor/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Favor/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Favor/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Half-life/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Half-life/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Half-life/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Half-life/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Rich man's world/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Rich man's world/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Rich man's world/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Rich man's world/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Theory/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/While loop/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Topics/section-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Weather App/task/web/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Weather App/task/web/static/img/day.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Weather App/task/web/static/img/evening-morning.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Weather App/task/web/static/img/night.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Weather App/task/web/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Weather App/Weather App/task/web/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing daily temperatures/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing daily temperatures/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing daily temperatures/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing daily temperatures/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing exam results/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing exam results/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing exam results/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Analyzing exam results/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Filter out negative numbers/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Filter out negative numbers/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Filter out negative numbers/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Filter out negative numbers/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Multiplying lists/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Multiplying lists/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Multiplying lists/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Multiplying lists/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Re-write using map( ) and filter( )/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Re-write using map( ) and filter( )/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Re-write using map( ) and filter( )/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Re-write using map( ) and filter( )/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Theory/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Map and filter/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Factorial/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Factorial/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Factorial/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Factorial/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Favor/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Favor/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Favor/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Favor/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Half-life/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Half-life/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Half-life/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Half-life/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Theory/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/While loop/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Web Calendar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Web Calendar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Topics/section-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Topics/section-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web Calendar/Back to the future/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Web Calendar/Back to the future/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/_collections.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/_collections.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/_version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connectionpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connectionpool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_appengine_environ.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_appengine_environ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/bindings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/bindings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/low_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/low_level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/appengine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/ntlmpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/ntlmpool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/pyopenssl.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/pyopenssl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/securetransport.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/securetransport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/socks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/socks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/fields.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/filepost.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/filepost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/backports/makefile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/backports/makefile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/six.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/_implementation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/poolmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/poolmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/retry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/ssl_.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/ssl_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/timeout.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/timeout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/wait.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/wait.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qOWKP4N2gGEMsowtBW1wOduT7U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../pythonProjects/machine_learning/test.py" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Web Calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Web Calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web Calendar/task" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web Calendar/task/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Web Calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Topics/Map and filter/Filter out negative numbers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Topics/Map and filter/Filter out negative numbers/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Web Calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Topics/Exception handling/Implementing logic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Topics/Exception handling/Implementing logic/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Web Calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Topics/While loop/Factorial" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Topics/While loop/Factorial/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Web Calendar/Back to the future" type="ccruntests" factoryName="Run Study Tests" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="Web Calendar" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web Calendar/task/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <option name="studyTest" value="D:\Games\Jetbrains_academy\JBA_Python\Web Calendar\Web Calendar\task\tests.py" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Run Study Tests.Web Calendar/Back to the future" />
+        <item itemvalue="Python.main (3)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d12cb7e9-d19d-4575-aa1f-26078055701b" name="Default Changelist" comment="" />
+      <created>1616951051804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616951051804</updated>
+      <workItem from="1616951054916" duration="2953000" />
+      <workItem from="1617026347397" duration="2114000" />
+      <workItem from="1617285614698" duration="879000" />
+      <workItem from="1617372345728" duration="8504000" />
+      <workItem from="1617461770476" duration="11341000" />
+      <workItem from="1617527155074" duration="8947000" />
+      <workItem from="1617809366312" duration="1825000" />
+      <workItem from="1617997487576" duration="2493000" />
+      <workItem from="1618050840732" duration="20565000" />
+      <workItem from="1618416620824" duration="3515000" />
+      <workItem from="1618498119263" duration="6247000" />
+      <workItem from="1619114462325" duration="5717000" />
+      <workItem from="1619168248070" duration="14205000" />
+      <workItem from="1619194753225" duration="10849000" />
+      <workItem from="1619249429847" duration="145000" />
+      <workItem from="1619249676949" duration="81000" />
+      <workItem from="1619249771154" duration="828000" />
+      <workItem from="1619270402821" duration="1045000" />
+      <workItem from="1619363608949" duration="71000" />
+      <workItem from="1619368142963" duration="158000" />
+      <workItem from="1619368449980" duration="119000" />
+      <workItem from="1619377115027" duration="68000" />
+      <workItem from="1619546878051" duration="363000" />
+      <workItem from="1619548400446" duration="5000" />
+      <workItem from="1619554141550" duration="102000" />
+      <workItem from="1619554259931" duration="126000" />
+      <workItem from="1619622655793" duration="4347000" />
+      <workItem from="1619631177004" duration="10000" />
+      <workItem from="1620217081513" duration="28000" />
+    </task>
+    <task id="LOCAL-00001" summary="Web Calendar done">
+      <created>1619206107044</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619206107044</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Web Calendar done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web Calendar done" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Web_Calendar$main.coverage" NAME="main Coverage Results" MODIFIED="1618068501129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Topics/Exceptions/Make it work_" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$test.coverage" NAME="test Coverage Results" MODIFIED="1617999787123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$Web_Calendar_GET_vs_POST.coverage" NAME="Web Calendar/GET vs POST Coverage Results" MODIFIED="1617809630249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$app.coverage" NAME="app Coverage Results" MODIFIED="1619623533585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web Calendar/task" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1618079969220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Topics/Method overriding/Dolphin" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$Web_Calendar_Back_to_the_future.coverage" NAME="Web Calendar/Back to the future Coverage Results" MODIFIED="1619205678781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$Web_Calendar_What_should_I_do_today.coverage" NAME="Web Calendar/What should I do today Coverage Results" MODIFIED="1617027984117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1619117714007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Topics/Exception handling/Implementing logic" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1618417765089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Topics/Built-in exceptions/One of the exceptions" />
+    <SUITE FILE_PATH="coverage/Web_Calendar$Web_Calendar_Relax.coverage" NAME="Web Calendar/Relax Coverage Results" MODIFIED="1618068455039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>

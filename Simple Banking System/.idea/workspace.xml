@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b5571b8-89a4-48e0-af6c-6b3661eebd03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/A little about strings/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/A little about strings/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/A little about strings/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/A little about strings/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Help with time/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Help with time/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Help with time/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Help with time/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Math from NumPy/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Math from NumPy/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Math from NumPy/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Math from NumPy/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Numeric Types/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Numeric Types/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Numeric Types/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Numeric Types/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/Web Scraper/Soup, Sweet Soup/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/Web Scraper/The Beautiful Soup Ingredients/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/Web Scraper/The Soup is Real/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/Web Scraper/Wanna Talk to the Internet/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/Web Scraper/What the File/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web Scraper/Web Scraper/task/scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Simple Banking System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Simple Banking System.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simple Banking System/Advanced system/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Simple Banking System/Advanced system/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simple Banking System/task/card.s3db" beforeDir="false" afterPath="$PROJECT_DIR$/Simple Banking System/task/card.s3db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet-4.0.0.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet-4.0.0.dist-info/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet-4.0.0.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet-4.0.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet-4.0.0.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet-4.0.0.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet-4.0.0.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/charsetgroupprober.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/charsetgroupprober.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/cli/chardetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/cli/chardetect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langbulgarianmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langbulgarianmodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langgreekmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langgreekmodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langhebrewmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langhebrewmodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langhungarianmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langhungarianmodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langrussianmodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langthaimodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langthaimodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langturkishmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/langturkishmodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/metadata/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/metadata/languages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/sbcharsetprober.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/sbcharsetprober.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/sbcsgroupprober.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/sbcsgroupprober.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/universaldetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/universaldetector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/chardet/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests-2.25.1.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests-2.25.1.dist-info/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests-2.25.1.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests-2.25.1.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests-2.25.1.dist-info/REQUESTED" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests-2.25.1.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests-2.25.1.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/__version__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/__version__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/sessions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/requests/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3-1.26.3.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3-1.26.3.dist-info/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3-1.26.3.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3-1.26.3.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3-1.26.3.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3-1.26.3.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/_collections.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/_collections.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/_version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connectionpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/connectionpool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/bindings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/bindings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/low_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/_securetransport/low_level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/appengine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/ntlmpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/ntlmpool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/pyopenssl.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/pyopenssl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/securetransport.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/securetransport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/socks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/contrib/socks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/fields.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/filepost.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/filepost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/backports/makefile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/backports/makefile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/poolmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/poolmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/proxy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/queue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/retry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/ssl_.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/ssl_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/ssltransport.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/timeout.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/timeout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/wait.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Lib/site-packages/urllib3/util/wait.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/Scripts/chardetect.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/Scripts/chardetect.exe" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1pZhOkPvJglMV5dQyqQhNiKwm8R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite.xerial&#10;sqlite" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../venv" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Simple Banking System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="banking" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Simple Banking System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simple Banking System/task/banking" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simple Banking System/task/banking/banking.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Simple Banking System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problems/Math from NumPy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problems/Math from NumPy/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.banking" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b5571b8-89a4-48e0-af6c-6b3661eebd03" name="Default Changelist" comment="" />
+      <created>1615396489340</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615396489340</updated>
+      <workItem from="1615396490921" duration="3763000" />
+      <workItem from="1615480431910" duration="10253000" />
+      <workItem from="1615916142592" duration="6641000" />
+      <workItem from="1615981947178" duration="16106000" />
+      <workItem from="1616006918297" duration="10022000" />
+      <workItem from="1616070781967" duration="140000" />
+      <workItem from="1616071225374" duration="1153000" />
+      <workItem from="1616080145672" duration="16036000" />
+      <workItem from="1616100030554" duration="2154000" />
+      <workItem from="1616161449637" duration="88000" />
+    </task>
+    <task id="LOCAL-00001" summary="banking system ok">
+      <created>1616090318807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616090318807</updated>
+    </task>
+    <task id="LOCAL-00002" summary="banking system done">
+      <created>1616096848731</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616096848731</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="banking system ok" />
+    <MESSAGE value="banking system done" />
+    <option name="LAST_COMMIT_MESSAGE" value="banking system done" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Simple_Banking_System$Simple_Banking_System_I_m_so_lite.coverage" NAME="Simple Banking System/I'm so lite Coverage Results" MODIFIED="1615921709384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Simple_Banking_System$Simple_Banking_System_Luhn_algorithm.coverage" NAME="Simple Banking System/Luhn algorithm Coverage Results" MODIFIED="1615489799490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Simple_Banking_System$main.coverage" NAME="main Coverage Results" MODIFIED="1616100177157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems/Math from NumPy" />
+    <SUITE FILE_PATH="coverage/Simple_Banking_System$Simple_Banking_System_Card_anatomy.coverage" NAME="Simple Banking System/Card anatomy Coverage Results" MODIFIED="1615486054189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Simple_Banking_System$banking.coverage" NAME="banking Coverage Results" MODIFIED="1616088818086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Simple Banking System/task/banking" />
+    <SUITE FILE_PATH="coverage/Simple_Banking_System$Simple_Banking_System_Advanced_system.coverage" NAME="Simple Banking System/Advanced system Coverage Results" MODIFIED="1616099887910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
