@@ -1,0 +1,102 @@
+<h2>Elif statement</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Since you are familiar with basic conditional statements, such as <strong>if</strong> statement and <strong>if-else</strong> statement, it’s time for the more advanced <strong>elif statement</strong>.</p> 
+  <p><strong>Elif statement</strong> is used when we want to specify several conditions in our code. How does it differ from <strong>if-else statements</strong>? Well, it's simple. Here we add the <strong>elif</strong> keyword for our additional conditions. It is mostly used with both if and else operators and the basic syntax looks like this:</p> 
+  <pre><code class="language-python"># basic elif syntax
+if condition1:
+    action1
+elif condition2:
+    action2
+else:
+    action3</code></pre> 
+  <p>The condition is followed by a colon, just like with the <strong>if-else</strong> statements, the desired action is placed within the <strong>elif</strong> body and don't forget about an <strong>indentation</strong>, i.e., 4 spaces at the beginning of a new line. Here we first check the condition1 in the <strong>if</strong> statement and if it holds (the value of the Boolean expression is <strong>True</strong>), action1 is performed. If it is <strong>False</strong>, we skip action1 and then check the condition2 in the <strong>elif</strong> statement. Again, if condition2 is True, action2 is performed, otherwise, we skip it and go to the <strong>else</strong> part of the code. </p> 
+  <p>Let's take a look at the example below:</p> 
+  <pre><code class="language-python"># elif example
+price = 10000 # there should be some int value
+if price &gt; 5000:
+    print("That's too expensive!")
+elif price &gt; 500:
+    print("I can afford that!")
+else:
+    print("That's too cheap!")</code></pre> 
+  <p>To buy or not to buy? To answer the question we first check if the price is higher than 5000. If ‘price &gt; 5000’ is True, we print that it’s too expensive and set off, looking for something cheaper. But what if the price was less than 5000? In this case, we check the next condition is ‘price &gt; 500’, and again, if it is True, we print out that we can afford that, and if it is False, we go to the <strong>else </strong>block and print that it's too cheap. So “I can afford it!” will be printed if the price is less than 5000 but more than 500, and “That’s too cheap” if the price is lower than 500.</p> 
+  <p><strong>Elif </strong>statement differs from <strong>else </strong>in one key moment: it represents another specific option while <strong>else </strong>fits all cases that don't fall into the condition given in <strong>if</strong> statement. That's why sometimes you may encounter conditional statements without <strong>else</strong>:</p> 
+  <pre><code class="language-python">pet = 'cat'  # or 'dog'?
+
+# cats vs dogs conditional
+if pet == 'cat':
+    print('Oh, you are a cat person. Meow!')
+elif pet == 'dog':
+    print('Oh, you are a dog person. Woof!')</code></pre> 
+  <p>In this example, it's possible to add an <strong>else </strong>statement to slightly expand a perspective, but it's not necessary if we are only interested in dogs and cats.</p> 
+  <h2 style="text-align: center;">Why elif and not if?</h2> 
+  <p>The last example probably made you wonder: why did we use <code class="language-python">elif</code>statement instead of just two <code class="language-python">if</code>statements? Wouldn't two <code class="language-python">if</code> statements be easier?</p> 
+  <pre><code class="language-python">if pet == 'cat':
+    print('Oh, you are a cat person. Meow!')
+if pet == 'dog':
+    print('Oh, you are a dog person. Woof!')</code></pre> 
+  <p> In this particular case, the result would be the same as with <code class="language-python">elif</code>. But this wouldn't work as needed for the first example of this topic:</p> 
+  <pre><code class="language-python">price = 6000
+if price &gt; 5000:
+    print("That's too expensive!")
+if price &gt; 500:
+    print("I can afford that!")
+else:
+    print("That's too cheap!")
+# The output is 'That's too expensive!\nI can afford that!'</code></pre> 
+  <p>See? We got two contradicting messages instead of one that we originally intended to output. The difference between the above examples is that in the example with pets, the cases described by conditional statements are <em>mutually exclusive</em>, that is, there's no string that would be equal both to <code class="language-python">'dog'</code> and <code class="language-python">'cat'</code> at the same time. In the other example, the cases aren't mutually exclusive, and there are values for <code class="language-python">price</code> that can satisfy both conditions. </p> 
+  <p>So, <code class="language-python">elif</code> statement is a better alternative than two <code class="language-python">if</code> statements when you want to show that only one of the conditions is supposed to be satisfied. A chain of <code class="language-python">if</code> statements implies that the conditions stated in them are totally unrelated and can be satisfied independently of each other, like in the following example:</p> 
+  <pre><code class="language-python">animal = 'unicorn'
+if animal in 'crow, dog, frog, pony':
+    print('This animal exists')
+if animal in 'unicorn, pegasus, pony':
+    print('This animal is a horse')</code></pre> 
+  <p>With this distinction in mind, you'll be able to make your code more clear and less error-prone. Now, let's get back to studying <code class="language-python">elif</code> functionality. </p> 
+  <h2 style="text-align: center;">Multiple elifs and a decision tree</h2> 
+  <p>There can be as many <strong>elif</strong> statements as you need, so your conditions can be very detailed. No matter how many <strong>elif </strong>statements you have, the syntax is always the same. The only difference is that we add more <strong>elifs</strong>:</p> 
+  <pre><code class="language-python"># multiple elifs syntax
+if condition1:
+    action1
+elif condition2:
+    action2
+# here you can add as many elifs as you need
+elif conditionN:
+    actionN
+else:
+    actionN1</code></pre> 
+  <p>The code inside the <strong>else</strong> block is executed only if all conditions before it are <strong>False</strong>. See the following example: </p> 
+  <pre><code class="language-python"># multiple elifs example
+light = "red"  # there can be any other color
+if light == "green":
+    print("You can go!")
+elif light == "yellow":
+    print("Get ready!")
+elif light == "red":
+    print("Just wait.")
+else:
+    print("No such traffic light color, do whatever you want")</code></pre> 
+  <p>In this program, the message from the <strong>else </strong>block is printed for the light of any color except green, yellow and red for which we’ve written special messages.</p> 
+  <p>Conditionals with multiple branches make a <strong>decision tree</strong>, in which a node is a Boolean expression and branches are marked with either <strong>True</strong> or <strong>False</strong>. The branch marked as True leads to the action that has to be executed, and the False branch leads to the next condition. The picture below shows such a decision tree of our example with traffic lights.</p> 
+  <p><img alt="" height="398" src="https://ucarecdn.com/8f7d80be-494d-4599-85a9-c917d5b77cf7/" width="478"></p> 
+  <h2 style="text-align: center;">Nested elif statements</h2> 
+  <p>Elif statements can also be <strong>nested</strong>, just like <strong>if-else</strong> statements. We can rewrite our example of traffic lights with nested conditionals:</p> 
+  <pre><code class="language-python"># nested elifs example
+traffic_lights = "green, yellow, red"
+# a string with one color
+light = "purple"  # variable for color name
+if light in traffic_lights:
+    if light == "green":
+        print("You can go!")
+    elif light == "yellow":
+        print("Get ready!")
+    else:
+        # if the lights are red
+        print("Just wait.")
+else:
+    print("No such traffic light color, do whatever you want")</code></pre> 
+  <p> Since you have mastered the topic of conditionals, from now on you can make your program do what you want when you want it! </p>
+ </body>
+</html>
+<a href="https://hyperskill.org/learn/step/5926">Show topic summary</a>
