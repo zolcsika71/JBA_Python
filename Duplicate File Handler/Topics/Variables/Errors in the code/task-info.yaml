@@ -1,0 +1,11 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    ost = Happy
+    print(type_of(0st))
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11111#comment
+status: Solved
+record: -1
