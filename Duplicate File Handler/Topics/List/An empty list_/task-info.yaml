@@ -1,0 +1,15 @@
+type: code
+custom_name: An empty list!
+files:
+- name: main.py
+  visible: true
+  text: |-
+    # don't modify the em_list variable, please
+    em_list =
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6738#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 19 Jun 2021 08:37:25 UTC
+record: -1
