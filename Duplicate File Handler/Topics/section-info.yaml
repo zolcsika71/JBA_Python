@@ -3,6 +3,7 @@ content:
 - Command line arguments
 - Argparse module
 - Integer arithmetic
+- Loop control statements
 - Variables
 - List
 - Program with numbers
