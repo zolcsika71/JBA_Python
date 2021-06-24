@@ -18,5 +18,5 @@ def get_files(path):
 if not args.dir:
     print('Directory is not specified')
 else:
-    print(args.dir)
+    # print(args.dir)
     get_files(args.dir)

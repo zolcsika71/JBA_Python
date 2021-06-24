@@ -1,0 +1,22 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    hero_damage = 100
+
+
+    def double_damage():
+        pass
+
+
+    def disarmed():
+        pass
+
+
+    def power_potion():
+        pass
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9900#comment
+status: Unchecked
+record: -1
