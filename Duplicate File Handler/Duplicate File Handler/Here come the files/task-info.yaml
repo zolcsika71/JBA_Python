@@ -1,10 +1,5 @@
 type: edu
 files:
-- name: handler.py
-  visible: true
-  text: |
-    # write your code here
-  learner_created: false
 - name: tests.py
   visible: false
   text: |
@@ -171,10 +166,15 @@ files:
     if __name__ == '__main__':
         DuplicateFileHandlerCheck().run_tests()
   learner_created: false
+- name: handler.py
+  visible: true
+  text: |
+    # write your code here
+  learner_created: false
 feedback_link: https://hyperskill.org/projects/176/stages/905/implement#comment
 status: Failed
 feedback:
   message: No tests have run. For more information, see <a href="https://plugins.jetbrains.com/plugin/10081-edutools/docs/troubleshooting-guide.html#no_tests_have_run">the
     Troubleshooting guide</a>
-  time: Wed, 23 Jun 2021 12:31:59 UTC
+  time: Thu, 24 Jun 2021 13:23:04 UTC
 record: -1
