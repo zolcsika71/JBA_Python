@@ -1,5 +1,10 @@
 type: edu
 files:
+- name: handler.py
+  visible: true
+  text: |
+    # write your code here
+  learner_created: false
 - name: tests.py
   visible: false
   text: |
@@ -166,15 +171,45 @@ files:
     if __name__ == '__main__':
         DuplicateFileHandlerCheck().run_tests()
   learner_created: false
-- name: handler.py
-  visible: true
-  text: |
-    # write your code here
-  learner_created: false
 feedback_link: https://hyperskill.org/projects/176/stages/905/implement#comment
 status: Failed
 feedback:
-  message: No tests have run. For more information, see <a href="https://plugins.jetbrains.com/plugin/10081-edutools/docs/troubleshooting-guide.html#no_tests_have_run">the
-    Troubleshooting guide</a>
-  time: Thu, 24 Jun 2021 13:23:04 UTC
+  message: |-
+    Wrong answer in test #2
+
+    Output contains extra files. Number of files in your output is 25
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    Arguments: module\root_folder\files
+
+    module\root_folder\files
+    module\root_folder\files\handler.py
+    module\root_folder\files\handler_windows
+    module\root_folder\files\tests.py
+    module\root_folder\files\tests_windows
+    module\root_folder\files\module\root_folder\info.txt
+    module\root_folder\files\module\root_folder\lost.json
+    module\root_folder\files\module\root_folder\phones.csv
+    module\root_folder\files\module\root_folder\python.txt
+    module\root_folder\files\module\root_folder\calc\bikeshare.csv
+    module\root_folder\files\module\root_folder\calc\server.php
+    module\root_folder\files\module\root_folder\files\db_cities.js
+    module\root_folder\files\module\root_folder\files\some_text.txt
+    module\root_folder\files\module\root_folder\files\stage\cars.json
+    module\root_folder\files\module\root_folder\files\stage\package-lock.json
+    module\root_folder\files\module\root_folder\files\stage\src\index.js
+    module\root_folder\files\module\root_folder\files\stage\src\libs.txt
+    module\root_folder\files\module\root_folder\files\stage\src\reviewSlider.js
+    module\root_folder\files\module\root_folder\files\stage\src\spoiler.js
+    module\root_folder\files\module\root_folder\files\stage\src\src.txt
+    module\root_folder\files\module\root_folder\files\stage\src\toggleMiniMenu.js
+    module\root_folder\files\module\root_folder\project\extraversion.csv
+    module\root_folder\files\module\root_folder\project\index.html
+    module\root_folder\files\module\root_folder\project\python_copy.txt
+    module\root_folder\files\__pycache__\handler.cpython-39.pyc
+    ['module\\root_folder\\files', 'module\\root_folder\\files\\handler.py', 'module\\root_folder\\files\\handler_windows', 'module\\root_folder\\files\\tests.py', 'module\\root_folder\\files\\tests_windows', 'module\\root_folder\\files\\module\\root_folder\\info.txt', 'module\\root_folder\\files\\module\\root_folder\\lost.json', 'module\\root_folder\\files\\module\\root_folder\\phones.csv', 'module\\root_folder\\files\\module\\root_folder\\python.txt', 'module\\root_folder\\files\\module\\root_folder\\calc\\bikeshare.csv', 'module\\root_folder\\files\\module\\root_folder\\calc\\server.php', 'module\\root_folder\\files\\module\\root_folder\\files\\db_cities.js', 'module\\root_folder\\files\\module\\root_folder\\files\\some_text.txt', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\cars.json', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\package-lock.json', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\src\\index.js', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\src\\libs.txt', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\src\\reviewSlider.js', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\src\\spoiler.js', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\src\\src.txt', 'module\\root_folder\\files\\module\\root_folder\\files\\stage\\src\\toggleMiniMenu.js', 'module\\root_folder\\files\\module\\root_folder\\project\\extraversion.csv', 'module\\root_folder\\files\\module\\root_folder\\project\\index.html', 'module\\root_folder\\files\\module\\root_folder\\project\\python_copy.txt', 'module\\root_folder\\files\\__pycache__\\handler.cpython-39.pyc']
+  time: Thu, 24 Jun 2021 13:47:41 UTC
 record: -1

@@ -6,9 +6,9 @@
   <h2 style="text-align: center;">Random method: first steps</h2> 
   <p>First of all, we need to import the module:</p> 
   <pre><code class="language-python">import random</code></pre> 
-  <p>After we've managed to do the previous task, it's possible to try <code class="language-python">random.random()</code>function that will provide us with a pseudo-random number from 0 to 1:</p> 
+  <p>After we've managed to do the previous task, it's possible to try the <code class="language-python">random.random()</code>function that will provide us with a pseudo-random number from 0 to 1:</p> 
   <pre><code class="language-python">print(random.random())  # 0.5557276751294531</code></pre> 
-  <p>We can also control the pseudo-random behavior by specifying the seed manually, i.e. configure the new sequence of pseudo-random numbers using <code class="language-python">random.seed(x)</code> function. You can set your own number or omit the optional argument x and consequently current system time would be used by default.</p> 
+  <p>We can also control the pseudo-random behavior by specifying the seed manually, i.e. configure the new sequence of pseudo-random numbers using the <code class="language-python">random.seed(x)</code> function. You can set your own number or omit the optional argument x and consequently current system time would be used by default.</p> 
   <pre><code class="language-python">random.seed()
 print(random.random())  # 0.956177930864557</code></pre> 
   <p>Now try to set the <strong>x</strong> argument. Haven't you noticed the change of the result? If you choose <samp>5</samp>, you'll get <samp>0.6229016948897019</samp> as a result, if <samp>20</samp> – <samp>0.9056396761745207</samp>, etc. Thus, the seed controls the behavior of pseudo-random in Python and can be used with any other function of the random module.</p> 

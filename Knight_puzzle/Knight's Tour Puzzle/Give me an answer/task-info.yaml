@@ -1,10 +1,5 @@
 type: edu
 files:
-- name: game.py
-  visible: true
-  text: |
-    # Write your code here
-  learner_created: false
 - name: tests.py
   visible: false
   text: |
@@ -380,6 +375,11 @@ files:
 
     if __name__ == '__main__':
         KnightsTourTest().run_tests()
+  learner_created: false
+- name: game.py
+  visible: true
+  text: |
+    # Write your code here
   learner_created: false
 feedback_link: https://hyperskill.org/projects/141/stages/764/implement#comment
 status: Solved
