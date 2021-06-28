@@ -44,7 +44,7 @@ out2 = open('file2.txt', 'w')
 
 for i in range(3):
     print(i, file=out2, flush=True)
-    # the numbers are immediately written in the file
+    # the numbers are immediately written to the file
     time.sleep(5)
 
 out2.close()</code></pre> 
@@ -66,6 +66,6 @@ out2.close()</code></pre>
   </ul> 
   <p>The first one is a bit more flexible and might be helpful when we don't want to think about rendering objects ourselves, while the second one offers a conscious approach due to explicitness.</p> 
   <h2>Conclusion</h2> 
-  <p>Arguments of the <code class="language-python">print()</code> function discussed in this topic provide a very useful opportunity not only to write objects in the system's standard output, but also to make them look like error messages or write them to files. With the help of these arguments, we can do so either straight away or (by default) when the buffer is full, and without rendering the objects ourselves. Keep that in mind when coding further!</p>
+  <p>Arguments of the <code class="language-python">print()</code> function discussed in this topic provide a very useful opportunity not only to write objects to the system's standard output, but also to make them look like error messages or write them to files. With the help of these arguments, we can do so either straight away or (by default) when the buffer is full, and without rendering the objects ourselves. Keep that in mind when coding further!</p>
  </body>
 </html>

@@ -1,11 +1,6 @@
 type: edu
 custom_name: What's that hash about?
 files:
-- name: handler.py
-  visible: true
-  text: |
-    # write your code here
-  learner_created: false
 - name: tests.py
   visible: false
   text: "from hstest.stage_test import StageTest\nfrom hstest.check_result import\
@@ -254,6 +249,11 @@ files:
       time: Sun, 13 Jun 2021 14:07:11 UTC
     record: -1
   learner_created: true
+- name: handler.py
+  visible: true
+  text: |
+    # write your code here
+  learner_created: false
 feedback_link: https://hyperskill.org/projects/176/stages/907/implement#comment
 status: Unchecked
 record: 3
