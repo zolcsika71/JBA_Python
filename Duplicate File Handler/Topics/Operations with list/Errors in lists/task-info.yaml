@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    games = ['backgammon', 'Scrabble', 'chess', 'battleship', 'Monopoly']
+    removed_game = game.pop[2]
+
+    print("The resultant list of games:")
+    print(games)
+    print("The removed game:")
+    print(removed__game)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11113#comment
+status: Solved
+record: -1

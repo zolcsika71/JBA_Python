@@ -134,5 +134,27 @@ files:
     \    DuplicateFileHandlerCheck().run_tests()\n"
   learner_created: false
 feedback_link: https://hyperskill.org/projects/176/stages/906/implement#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: "Wrong answer in test #4\n\nmodule\\root_folder\\calc\\server.phpmodule\\\
+    root_folder\\files\\db_cities.jsmodule\\root_folder\\files\\some_text.txtmodule\\\
+    root_folder\\files\\stage\\cars.jsonmodule\\root_folder\\files\\stage\\package-lock.jsonmodule\\\
+    root_folder\\files\\stage\\src\\index.jsmodule\\root_folder\\files\\stage\\src\\\
+    libs.txtmodule\\root_folder\\files\\stage\\src\\reviewslider.jsmodule\\root_folder\\\
+    files\\stage\\src\\spoiler.js path does not exist\n\nPlease find below the output\
+    \ of your program during this failed test.\nNote that the '>' character indicates\
+    \ the beginning of the input line.\n\n---\n\nArguments: module\\root_folder\n\n\
+    Enter file format:\n> \nSize sorting options\n1. Descending\n2. Ascending\n\n\
+    Enter a sorting option:\n> 2\n32 bytes\nmodule\\root_folder\\calc\\server.phpmodule\\\
+    root_folder\\files\\db_cities.jsmodule\\root_folder\\files\\some_text.txtmodule\\\
+    root_folder\\files\\stage\\cars.jsonmodule\\root_folder\\files\\stage\\package-lock.jsonmodule\\\
+    root_folder\\files\\stage\\src\\index.jsmodule\\root_folder\\files\\stage\\src\\\
+    libs.txtmodule\\root_folder\\files\\stage\\src\\reviewSlider.jsmodule\\root_folder\\\
+    files\\stage\\src\\spoiler.js\n34 bytes\nmodule\\root_folder\\info.txtmodule\\\
+    root_folder\\lost.jsonmodule\\root_folder\\phones.csvmodule\\root_folder\\python.txtmodule\\\
+    root_folder\\calc\\bikeshare.csvmodule\\root_folder\\files\\stage\\src\\src.txtmodule\\\
+    root_folder\\files\\stage\\src\\toggleMiniMenu.jsmodule\\root_folder\\project\\\
+    extraversion.csvmodule\\root_folder\\project\\index.htmlmodule\\root_folder\\\
+    project\\python_copy.txt"
+  time: Sat, 26 Jun 2021 15:53:25 UTC
 record: -1

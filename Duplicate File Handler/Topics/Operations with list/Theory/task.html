@@ -1,0 +1,113 @@
+<h2>Operations with list</h2>
+<html>
+ <head></head>
+ <body>
+  <p>You already know how to create lists (even empty ones), so, no wonder, that you may want to change your lists somehow. There are lots of things to do with a list, you can read about them in the <a target="_blank" href="https://docs.python.org/3/tutorial/datastructures.html" rel="noopener noreferrer nofollow">Python Data Structures documentation</a>. In this topic, we will discuss only the basic operations.</p> 
+  <h2 style="text-align: center;">Adding one element</h2> 
+  <p>The list is a <strong>dynamic collection</strong>, which means you can add and remove elements. To take a closer look, let's create an empty list of dragons.</p> 
+  <pre><code class="language-python">dragons = []  # we do not have dragons yet</code></pre> 
+  <p>What is next? The first thing that comes to mind is, of course, <strong>to add new elements </strong>to the list.</p> 
+  <p>To add a new element to the end of an existing list, you need to use the <code class="language-python">list.append(element)</code> method. It takes only a single argument, so this way you can add only one element to the list at a time. </p> 
+  <pre><code class="language-python">dragons.append('Rudror')
+dragons.append('Targiss')
+dragons.append('Coporth')</code></pre> 
+  <p>Now you have three dragons, and they are ordered the way you added them:</p> 
+  <pre><code class="language-python">print(dragons)  # ['Rudror', 'Targiss', 'Coporth']</code></pre> 
+  <h2 style="text-align: center;">Adding several elements</h2> 
+  <p>There is the <code class="language-python">list.extend(another_list)</code> operation that adds all the elements from another iterable to the end of a list.</p> 
+  <pre><code class="language-python">numbers = [1, 2, 3, 4, 5]
+numbers.extend([10, 20, 30])
+print(numbers)  # [1, 2, 3, 4, 5, 10, 20, 30]</code></pre> 
+  <p>Be careful — if you use <code class="language-python">list.append(another_list)</code> instead of <code class="language-python">list.extend(another_list)</code>, it adds the entire list as an element:</p> 
+  <pre><code class="language-python">numbers = [1, 2, 3, 4, 5]
+numbers.append([10, 20, 30])
+print(numbers)  # [1, 2, 3, 4, 5, [10, 20, 30]]</code></pre> 
+  <p>Alternatively, to merge two lists, you can just add one to another:</p> 
+  <pre><code class="language-python">numbers_to_four = [0, 1, 2, 3, 4]
+numbers_from_five = [5, 6, 7, 8, 9]
+numbers = numbers_to_four + numbers_from_five 
+print(numbers)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre> 
+  <p>If you need a list with repeating elements, you can create a list with the repeating pattern, and then just multiply it by any number. This is particularly useful when you want to create a list of a specific length with the same value:</p> 
+  <pre><code class="language-python">pattern = ['a', 'b', 'c']
+patterns = pattern * 3
+print(patterns)  # ['a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c']
+
+one = [1]
+ones = one * 7
+print(ones)  # [1, 1, 1, 1, 1, 1, 1]</code></pre> 
+  <h2 style="text-align: center;">Removing elements</h2> 
+  <p>The opposite of adding elements — <strong>deleting them </strong>— can be done in three ways. Let's have a look at them.</p> 
+  <p>First, we can use the <code class="language-python">list.remove(element)</code> operation.</p> 
+  <pre><code class="language-python">dragons.remove('Targiss')
+print(dragons)  # ['Rudror', 'Coporth']</code></pre> 
+  <p>If the element we want to delete occurs several times in the list, only the first instance of that element is removed.</p> 
+  <pre><code class="language-python">dragons = ['Rudror', 'Targiss', 'Coporth', 'Targiss']
+dragons.remove('Targiss')
+print(dragons)  # ['Rudror', 'Coporth', 'Targiss']</code></pre> 
+  <p>The other two ways remove elements by their <strong>indexes </strong>rather than the values themselves. The <code class="language-python">del</code> keyword deletes any kind of objects in Python, so it can be used to remove specific elements in a list:</p> 
+  <pre><code class="language-python">dragons = ['Rudror', 'Targiss', 'Coporth']
+del dragons[1]
+print(dragons)  # ['Rudror', 'Coporth']</code></pre> 
+  <p>Finally, there is the <code class="language-python">list.pop()</code> method. If used without arguments, it removes and returns <strong>the last element</strong> in the list.</p> 
+  <pre><code class="language-python">dragons = ['Rudror', 'Targiss', 'Coporth']
+last_dragon = dragons.pop()
+print(last_dragon)  # 'Coporth'
+print(dragons)      # ['Rudror', 'Targiss']</code></pre> 
+  <p>Alternatively, we can specify the index of the element we want to remove and return:</p> 
+  <pre><code class="language-python">dragons = ['Rudror', 'Targiss', 'Coporth']
+first_dragon = dragons.pop(0)
+print(first_dragon)  # 'Rudror'
+print(dragons)       # ['Targiss', 'Coporth']</code></pre> 
+  <h2 style="text-align: center;">Inserting elements at a specified position</h2> 
+  <p>At the beginning of this topic, we have learned how to add new elements to the end of a list. If we want to add a new element in the middle, we use the <code class="language-python">list.insert(position, element)</code> operation. The first argument is the index of the element <strong>before</strong> which the new element is going to be inserted; so <code class="language-python">list.insert(0, element)</code> inserts an element to the beginning of the list, and <code class="language-python">list.insert(len(list), element)</code> is completely similar to <code class="language-python">list.append(element)</code>.</p> 
+  <p>Here is an example:</p> 
+  <pre><code class="language-python">years = [2016, 2018, 2019]
+years.insert(1, 2017)           # [2016, 2017, 2018, 2019]
+years.insert(0, 2015)           # [2015, 2016, 2017, 2018, 2019]
+years.insert(len(years), 2020)  # [2015, 2016, 2017, 2018, 2019, 2020]</code></pre> 
+  <p>Now, you can fill any empty list with something useful!</p> 
+  <h2 style="text-align: center;">Membership testing in a list</h2> 
+  <p>Another thing that can be quite useful is checking if an item is present in the list. It can be done simply by using <code class="language-python">in</code> and <code class="language-python">not in</code> operators:</p> 
+  <pre><code class="language-python">catalog = ['yogurt', 'apples', 'oranges', 'bananas', 'milk', 'cheese']
+ 
+print('bananas' in catalog)      # True
+ 
+product = 'lemon'
+print(product in catalog)        # False
+print(product not in catalog)    # True</code></pre> 
+  <h2 style="text-align: center;">Searching specific elements</h2> 
+  <p>Sometimes, knowing that the specified element is in the list is not enough; we may want to get more information about it — how many times the element occurs in the list and at which position.</p> 
+  <p>The method <code class="language-python">count()</code> can help with the quantity:</p> 
+  <pre><code class="language-python">grades = [10, 5, 7, 9, 5, 10, 9]
+print(grades.count(5))  # 2</code></pre> 
+  <p>We can use the method <code class="language-python">index()</code>to get the position of the element. It finds the index of the <strong>first occurrence</strong><em> </em>of the element in the list:</p> 
+  <pre><code class="language-python">print(grades.index(7))   # 2
+print(grades.index(10))  # 0</code></pre> 
+  <p>We can also specify the interval for searching: <code class="language-python">list.index(element, start, end)</code>.</p> 
+  <pre><code class="language-python">print(grades.index(9, 2, 5))  # 3
+
+# if we don't specify the end of the interval, it automatically equals the end of the list
+print(grades.index(10, 1))    # 5</code></pre> 
+  <p></p>
+  <div class="alert alert-primary">
+   Be careful — the 
+   <code class="language-python">end</code> index is not included in the interval.
+  </div>
+  <p></p> 
+  <p>It is also good to know that if the element we are looking for is not in the list, the method will cause an <strong>error</strong>:</p> 
+  <pre><code class="language-python">print(grades.index(8))  # ValueError: 8 is not in list</code></pre> 
+  <p>Our discussion of the basic operations with lists has come to its end. If you need more information, check out the <a target="_blank" href="http://docs.python.org/3/tutorial/datastructures.html" rel="noopener noreferrer nofollow">Python Data Structures documentation</a>.</p> 
+  <h2>Conclusion</h2> 
+  <p>Summing up, in this topic we've learned to:</p> 
+  <ul> 
+   <li>add an element with <code class="language-python">append()</code>;</li> 
+   <li>add several elements with <code class="language-python">extend()</code>;</li> 
+   <li>remove elements with <code class="language-python">remove()</code>;</li> 
+   <li>insert an element at a specified position with <code class="language-python">insert()</code>;</li> 
+   <li>check if an element in a list or not with <code class="language-python">in</code> and <code class="language-python">not in</code> operators;</li> 
+   <li>count how many times an element occurs in a list with <code class="language-python">count()</code>;</li> 
+   <li>get the position of an element in a list with <code class="language-python">index()</code>.</li> 
+  </ul> 
+  <p>We also know that since the list is a dynamic collection, it can be changed. There is no need to constantly create new lists, which benefits the memory and performance of your program.</p>
+ </body>
+</html>

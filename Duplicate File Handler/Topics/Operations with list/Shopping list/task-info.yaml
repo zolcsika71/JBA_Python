@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: '# remove a product and add another one; do not create a variable, it has
+    already been created'
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7928#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 25 Jun 2021 13:06:59 UTC
+record: -1
