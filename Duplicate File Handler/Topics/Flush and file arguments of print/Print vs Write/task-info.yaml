@@ -1,0 +1,14 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    numbers = [1234, 5678, 90]
+    # save this list in `file_with_list.txt`
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9331#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Mon, 28 Jun 2021 08:35:48 UTC
+record: -1

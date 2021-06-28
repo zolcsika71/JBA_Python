@@ -67,5 +67,7 @@ class FileParser:
             print("".join(self.sizes[size]))
             # print('\n')
 
+        self.path = args.path
+
 
 FileParser().run()

@@ -1,0 +1,13 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    f_name = "test.txt"
+    my_string = "A string to be written to a file!"
+
+    # what to do with the file and the string
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8012#comment
+status: Solved
+record: -1
