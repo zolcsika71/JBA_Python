@@ -234,6 +234,26 @@ files:
     \        except Exception as ignored:\n            pass\n        return []\n\n\
     \nif __name__ == '__main__':\n    DuplicateFileHandlerCheck().run_tests()\n"
   learner_created: false
+- name: root/Argparse module/Simple program/task-info_2.yaml
+  visible: true
+  text: |
+    type: code
+    files:
+    - name: main.py
+      visible: true
+      text: |-
+        import argparse
+
+
+        parser = # your code here
+      learner_created: false
+    feedback_link: https://hyperskill.org/learn/step/11394#comment
+    status: Solved
+    feedback:
+      message: <html>Correct solution</html>
+      time: Sun, 13 Jun 2021 14:07:11 UTC
+    record: -1
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/176/stages/907/implement#comment
 status: Unchecked
 record: -1
