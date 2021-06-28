@@ -52,22 +52,16 @@ class FileParser:
                 path = os.path.join(root, name)
                 size = os.path.getsize(path)
                 filename, file_extension = os.path.splitext(path)
-                # print(self.ext)
-                # print(file_extension)
                 if self.ext == '.' or file_extension == self.ext:
                     self.sizes[size].append(path)
 
     def print_result(self):
-        # print(f'{self.order=}')
         sizes = sorted(self.sizes.keys(), reverse=self.order)
-        # print(sizes)
         for size in sizes:
-            # print('\n')
+            print('\n')
             print(f'{size} bytes')
-            print("".join(self.sizes[size]))
-            # print('\n')
-
-        self.path = args.path
+            for path in self.sizes[size]:
+                print("".join(path))
 
 
 FileParser().run()

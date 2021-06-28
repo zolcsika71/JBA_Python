@@ -1,10 +1,5 @@
 type: edu
 files:
-- name: handler.py
-  visible: true
-  text: |
-    # write your code here
-  learner_created: false
 - name: tests.py
   visible: false
   text: |
@@ -171,9 +166,11 @@ files:
     if __name__ == '__main__':
         DuplicateFileHandlerCheck().run_tests()
   learner_created: false
+- name: handler.py
+  visible: true
+  text: |
+    # write your code here
+  learner_created: false
 feedback_link: https://hyperskill.org/projects/176/stages/905/implement#comment
 status: Solved
-feedback:
-  message: Congratulations!
-  time: Fri, 25 Jun 2021 12:24:47 UTC
-record: 1
+record: 3

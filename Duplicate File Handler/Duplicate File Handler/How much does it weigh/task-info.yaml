@@ -1,6 +1,11 @@
 type: edu
 custom_name: How much does it weigh?
 files:
+- name: handler.py
+  visible: true
+  text: |
+    # write your code here
+  learner_created: false
 - name: tests.py
   visible: false
   text: "from hstest.stage_test import StageTest\nfrom hstest.check_result import\
@@ -128,14 +133,12 @@ files:
     \ as ignored:\n            pass\n        return []\n\n\nif __name__ == '__main__':\n\
     \    DuplicateFileHandlerCheck().run_tests()\n"
   learner_created: false
-- name: handler.py
+- name: root/Argparse module/Simple program/task-info_2.yaml
   visible: true
-  text: |
-    # write your code here
-  learner_created: false
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/176/stages/906/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: Syntax Error
-  time: Mon, 28 Jun 2021 08:19:26 UTC
+  message: Congratulations!
+  time: Mon, 28 Jun 2021 09:50:04 UTC
 record: 1
