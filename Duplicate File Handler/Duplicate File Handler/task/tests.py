@@ -305,7 +305,7 @@ class DuplicateFileHandlerCheck(StageTest):
                 path = ' '.join(temp[1:])
                 try:
                     file_size = os.path.getsize(path)
-                except FileNotFoundError:
+                except Exception:
                     return CheckResult.wrong(f"Your output contains invalid file path:\n"
                                              f"{val}")
                 if size != file_size:

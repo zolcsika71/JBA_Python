@@ -157,11 +157,11 @@ files:
     \                                 \"Make sure that the file paths are printed\
     \ as in the examples\")\n                path = ' '.join(temp[1:])\n         \
     \       try:\n                    file_size = os.path.getsize(path)\n        \
-    \        except FileNotFoundError:\n                    return CheckResult.wrong(f\"\
-    Your output contains invalid file path:\\n\"\n                               \
-    \              f\"{val}\")\n                if size != file_size:\n          \
-    \          return CheckResult.wrong(f\"{val} has wrong size group\")\n       \
-    \ return CheckResult.correct()\n\n    @dynamic_test()\n    def check_duplicate_order_asc(self):\n\
+    \        except Exception:\n                    return CheckResult.wrong(f\"Your\
+    \ output contains invalid file path:\\n\"\n                                  \
+    \           f\"{val}\")\n                if size != file_size:\n             \
+    \       return CheckResult.wrong(f\"{val} has wrong size group\")\n        return\
+    \ CheckResult.correct()\n\n    @dynamic_test()\n    def check_duplicate_order_asc(self):\n\
     \        main = TestedProgram()\n        output = main.start(root_dir_path).lower()\n\
     \        output = main.execute(\"\").lower()\n        output = main.execute(\"\
     2\").lower()\n        output = main.execute(\"yes\").lower().split('\\n')\n\n\
