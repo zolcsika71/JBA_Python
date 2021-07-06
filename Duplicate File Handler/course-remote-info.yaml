@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/518715/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Wed, 30 Jun 2021 11:43:18 UTC
+update_date: Mon, 05 Jul 2021 16:12:19 UTC
 stages:
 - id: 905
   step: 12944
@@ -115,6 +115,8 @@ topics:
     theory_id: 13991
   - title: Data structures
     theory_id: 5161
+  - title: File types
+    theory_id: 13017
   - title: 'Hashing: overview'
     theory_id: 9831
   - title: Hash function
@@ -123,6 +125,12 @@ topics:
     theory_id: 13054
   - title: Collisions
     theory_id: 9562
+  - title: Introduction to Linux
+    theory_id: 9526
+  - title: File modes and permissions
+    theory_id: 13953
+  - title: Working with file modes and permissions
+    theory_id: 13961
   - title: Files in Python
     theory_id: 8691
   - title: Reading files

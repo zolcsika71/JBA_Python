@@ -162,7 +162,7 @@ files:
     \ \"\n                                             \"Make sure that the file paths\
     \ are printed as in the examples\")\n                path = ' '.join(temp[1:])\n\
     \                try:\n                    file_size = os.path.getsize(path)\n\
-    \                except FileNotFoundError:\n                    return CheckResult.wrong(f\"\
+    \                except Exception:\n                    return CheckResult.wrong(f\"\
     Your output contains invalid file path:\\n\"\n                               \
     \              f\"{val}\")\n                if size != file_size:\n          \
     \          return CheckResult.wrong(f\"{val} has wrong size group\")\n       \
