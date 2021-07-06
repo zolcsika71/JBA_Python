@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/446262/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 24 Jun 2021 13:45:58 UTC
+update_date: Tue, 06 Jul 2021 08:55:20 UTC
 stages:
 - id: 746
   step: 11568
@@ -33,6 +33,8 @@ topics:
     theory_id: 9704
   - title: Files
     theory_id: 13025
+  - title: File types
+    theory_id: 13017
   - title: Introduction to Python
     theory_id: 5204
   - title: Overview of the basic program
@@ -69,6 +71,14 @@ topics:
     theory_id: 6052
   - title: Exceptions
     theory_id: 6042
+  - title: Command line overview
+    theory_id: 8977
+  - title: Introduction to Linux
+    theory_id: 9526
+  - title: File modes and permissions
+    theory_id: 13953
+  - title: Working with file modes and permissions
+    theory_id: 13961
   - title: Files in Python
     theory_id: 8691
   - title: Built-in exceptions
