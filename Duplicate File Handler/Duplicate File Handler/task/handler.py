@@ -8,6 +8,7 @@ class FileParser:
         self.path = None
         self.ext = None
         self.order = None
+        self.duplicates = None
         self.sizes = defaultdict(list)
 
     def run(self):
@@ -18,7 +19,18 @@ class FileParser:
             self.get_ext()
             self.get_order()
             self.get_files()
-            self.print_result()
+            self.print_sizes()
+            self.get_duplicates()
+
+    def get_duplicates(self, display=True):
+        if display:
+            print('Check for duplicates?')
+
+        self.duplicates = input()
+
+        if not (self.duplicates == 'yes' or self.duplicates == 'no'):
+            print('\nWrong option')
+            self.get_duplicates(False)
 
     def get_ext(self):
         self.ext = '.' + input('Enter file format:\n')
@@ -55,7 +67,7 @@ class FileParser:
                 if self.ext == '.' or file_extension == self.ext:
                     self.sizes[size].append(path)
 
-    def print_result(self):
+    def print_sizes(self):
         sizes = sorted(self.sizes.keys(), reverse=self.order)
         for size in sizes:
             print('\n')

@@ -246,9 +246,9 @@ files:
     \        output = main.execute(\"1\").lower()\n        output = main.execute(\"\
     yes\").lower().split('\\n')\n\n        del_choice = \"1 2 5 3\"\n        del_arr\
     \ = []\n\n        for val in output:\n            if '.' in val and val.split()[0][0]\
-    \ in del_choice:\n                string, path = val.split()\n               \
-    \ del_arr.append(path)\n\n        output = main.execute(\"yes\").lower()\n   \
-    \     output = main.execute(del_choice).lower()\n\n        for path in del_arr:\n\
+    \ in del_choice:\n                string, path = val.split(' ', 1)\n         \
+    \       del_arr.append(path)\n\n        output = main.execute(\"yes\").lower()\n\
+    \        output = main.execute(del_choice).lower()\n\n        for path in del_arr:\n\
     \            if os.path.exists(path):\n                return CheckResult.wrong(f\"\
     Some files still exist\")\n        return CheckResult.correct()\n\n    @dynamic_test()\n\
     \    def check_free_space(self):\n        create_files(root_dir_path)\n      \

@@ -1,0 +1,53 @@
+<h2>Comparisons</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Writing code without comparing any values in it will get you only so far. Now, it's time to master this skill.</p> 
+  <h2 style="text-align: center;">Comparison operators</h2> 
+  <p><strong>Comparison</strong> or <strong>relation</strong> operations let you compare two values and determine the relation between them. There are ten comparison operators in Python:</p> 
+  <ul> 
+   <li><code class="language-python">&lt;</code> strictly less than</li> 
+   <li><code class="language-python">&lt;=</code> less than or equal</li> 
+   <li><code class="language-python">&gt;</code> strictly greater than</li> 
+   <li><code class="language-python">&gt;=</code> greater than or equal</li> 
+   <li><code class="language-python">==</code> equal</li> 
+   <li><code class="language-python">!=</code> not equal</li> 
+   <li><code class="language-python">is</code> object identity</li> 
+   <li><code class="language-python">is not</code> negated object identity</li> 
+   <li><code class="language-python">in</code> membership</li> 
+   <li><code class="language-python">not in</code> negated membership.</li> 
+  </ul> 
+  <p>The result of applying these operators is always <code class="language-python">bool</code>. The following sections focus on the first six operators (<code class="language-python">&lt;</code>, <code class="language-python">&lt;=</code>, <code class="language-python">&gt;</code>, <code class="language-python">&gt;=</code>, <code class="language-python">==</code>, <code class="language-python">!=</code>), but you can find more details about identity and membership testing in the next topics.</p> 
+  <h2 style="text-align: center;">Comparing integers</h2> 
+  <p>In this topic, we will cover only integer comparison.</p> 
+  <pre><code class="language-python">a = 5
+b = -10
+c = 15
+
+result_1 = a &lt; b   # False
+result_2 = a == a  # True
+result_3 = a != b  # True
+result_4 = b &gt;= c  # False</code></pre> 
+  <p>Any expression that returns integer is a valid comparison operand too:</p> 
+  <pre><code class="language-python">calculated_result = a == b + c  # True</code></pre> 
+  <p>Given the defined variables <code class="language-python">a</code>, <code class="language-python">b</code> and <code class="language-python">c</code>, we basically check if <code class="language-python">5</code> is equal to <code class="language-python">-10 + 15</code>, which is true.</p> 
+  <h2 style="text-align: center;">Comparison chaining</h2> 
+  <p>Since comparison operations return boolean values, you can join them using logical operators.</p> 
+  <pre><code class="language-python">x = -5
+y = 10
+z = 12
+
+result = x &lt; y and y &lt;= z  # True</code></pre> 
+  <p>In Python, there is a fancier way to write complex comparisons. It is called <strong>chaining</strong>. For example, <code class="language-python">x &lt; y &lt;= z</code> is almost equivalent to the expression you saw in the last example. The difference is that <code class="language-python">y</code> is evaluated only once. </p> 
+  <pre><code class="language-python">result = 10 &lt; (100 * 100) &lt;= 10000  # True, the multiplication is evaluated once</code></pre> 
+  <p></p>
+  <div class="alert alert-primary">
+    Please pay attention to the fact that tools for code quality often recommend 
+   <em>chaining</em> comparisons instead of 
+   <em>joining</em> them. 
+  </div>
+  <p></p> 
+  <h2>Summary</h2> 
+  <p>In this topic, we familiarized ourselves with Python comparison operators, learned how to compare integers and use comparison chaining. These basic operators will definitely be a great help to you in the future!</p>
+ </body>
+</html>
