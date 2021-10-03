@@ -1,0 +1,16 @@
+type: code
+files:
+- name: main.py
+  visible: true
+  text: |-
+    import argparse
+
+
+    parser = # your code here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11394#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 13 Jun 2021 14:07:11 UTC
+record: -1
