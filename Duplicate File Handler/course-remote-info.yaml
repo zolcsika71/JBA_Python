@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/518715/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Mon, 05 Jul 2021 16:12:19 UTC
+update_date: Sun, 03 Oct 2021 19:50:05 UTC
 stages:
 - id: 905
   step: 12944
@@ -25,6 +25,10 @@ topics:
     theory_id: 9704
   - title: Files
     theory_id: 13025
+  - title: Computer programming
+    theory_id: 8739
+  - title: Introduction to OOP
+    theory_id: 3614
   - title: Introduction to Python
     theory_id: 5204
   - title: Overview of the basic program
@@ -41,32 +45,22 @@ topics:
     theory_id: 5913
   - title: Program with numbers
     theory_id: 5872
-  - title: Invoking a function
-    theory_id: 5891
-  - title: Declaring a function
-    theory_id: 5900
-  - title: Arguments
-    theory_id: 7248
   - title: If statement
     theory_id: 5953
   - title: Else statement
     theory_id: 5932
   - title: For loop
     theory_id: 6065
-  - title: Default arguments
-    theory_id: 10295
-  - title: Args
-    theory_id: 8560
   - title: Load module
     theory_id: 6019
   - title: Command line overview
     theory_id: 8977
   - title: Parameters and options
     theory_id: 9746
-  - title: os module
-    theory_id: 11119
   - title: Command line arguments
     theory_id: 7981
+  - title: os module
+    theory_id: 11119
   - title: Argparse module
     theory_id: 11389
   - title: Basic data types
@@ -83,22 +77,32 @@ topics:
     theory_id: 6189
   - title: Slicing
     theory_id: 6177
+  - title: Invoking a function
+    theory_id: 5891
+  - title: Declaring a function
+    theory_id: 5900
   - title: Boolean logic
     theory_id: 6025
   - title: Comparisons
     theory_id: 5920
-  - title: Tuple
-    theory_id: 7462
-  - title: Operations with list
-    theory_id: 6031
   - title: Identity testing
     theory_id: 8077
+  - title: Arguments
+    theory_id: 7248
+  - title: Operations with list
+    theory_id: 6031
+  - title: Tuple
+    theory_id: 7462
   - title: List comprehension
     theory_id: 6315
   - title: Nested lists
     theory_id: 6938
   - title: Objects in Python
     theory_id: 9262
+  - title: Default arguments
+    theory_id: 10295
+  - title: Args
+    theory_id: 8560
   1:
   - title: Dictionary
     theory_id: 6481
@@ -115,16 +119,10 @@ topics:
     theory_id: 13991
   - title: Data structures
     theory_id: 5161
+  - title: String basics
+    theory_id: 5141
   - title: File types
     theory_id: 13017
-  - title: 'Hashing: overview'
-    theory_id: 9831
-  - title: Hash function
-    theory_id: 10878
-  - title: Hash table
-    theory_id: 13054
-  - title: Collisions
-    theory_id: 9562
   - title: Introduction to Linux
     theory_id: 9526
   - title: File modes and permissions
@@ -139,3 +137,13 @@ topics:
     theory_id: 8334
   - title: Context manager
     theory_id: 8702
+  - title: 'Hashing: overview'
+    theory_id: 9831
+  - title: String hashing
+    theory_id: 6420
+  - title: Hash function
+    theory_id: 10878
+  - title: Hash table
+    theory_id: 13054
+  - title: Collisions
+    theory_id: 9562

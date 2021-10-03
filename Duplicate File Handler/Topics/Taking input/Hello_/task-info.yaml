@@ -1,0 +1,9 @@
+type: code
+custom_name: Hello!
+files:
+- name: main.py
+  visible: true
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6808#comment
+status: Solved
+record: -1

@@ -1,0 +1,95 @@
+<h2>Math functions</h2>
+<html>
+ <head></head>
+ <body>
+  <p>We already learned how to perform basic arithmetics in Python. We covered addition, subtraction, multiplication, division and several other built-in operations. But if we want to do more complex operations on numbers we can use built-in mathematical functions or functions from the <code class="language-python">math</code> module.</p> 
+  <p><code class="language-python">math</code> module provides useful mathematical functions and constants. This module is available on every platform in the standard library.</p> 
+  <h5 style="text-align: center;">Advanced arithmetics</h5> 
+  <p>There are built-in functions abs, round, pow, max and min:</p> 
+  <ul> 
+   <li><strong>abs(x)</strong> returns the absolute value of <strong>x </strong>(i.e. value without a regard to its sign);</li> 
+   <li><strong>round(x, </strong><strong>ndigits</strong><strong>)</strong> returns <strong>x</strong> rounded to <strong>ndigits </strong>number of decimal part digits;</li> 
+   <li><strong>pow(x, y)</strong> returns <strong>x</strong> raised to the power of <strong>y</strong>;</li> 
+   <li><strong>max(a, b, c, ...) </strong>returns the largest argument;</li> 
+   <li><strong>min(a, b, c, ...) </strong>returns the smallest argument.</li> 
+  </ul> 
+  <pre><code class="language-python">abs_integer = abs(-10)  # 10
+abs_float = abs(-10.0)  # 10.0
+
+round_integer = round(10.0)      # 10, returns integer when ndigits is omitted
+round_float = round(10.2573, 2)  # 10.26
+
+pow_integer = pow(2, 10)  # 1024
+pow_float = pow(2.0, 10)  # 1024.0
+
+largest = max(1, 2, 3, 4, 5)   # 5
+smallest = min(1, 2, 3, 4, 5)  # 1</code></pre> 
+  <p><code class="language-python">abs()</code> and <code class="language-python">pow()</code> functions have equivalents in the <code class="language-python">math</code> module. The key difference of <code class="language-python">math.fabs()</code> and <code class="language-python">math.pow()</code> is that they always return floats:</p> 
+  <pre><code class="language-python">import math
+
+fabs_integer = math.fabs(-10)  # 10.0
+fabs_float = math.fabs(-10.0)  # 10.0
+
+pow_integer = math.pow(2, 10)  # 1024.0
+pow_float = math.pow(2.0, 10)  # 1024.0</code></pre> 
+  <p>Remember that in order to use definitions from <samp><code class="language-python">math</code>,</samp> you should import the module first.</p> 
+  <p>Suppose you raised <em>x</em> to the power<em> y</em>, and then forgot <em>y</em>. You can recover it using the <code class="language-python">math.log()</code> function:</p> 
+  <pre><code class="language-python">import math
+
+x = 2
+y = 10
+pow = math.pow(x, y)    # 1024.0
+log = math.log(pow, x)  # 10.0</code></pre> 
+  <p><code class="language-python">math.log(pow, x)</code> returns <em>z</em> such that <em>x</em> raised to the power <em>z</em> equals <em>pow</em>. If the second argument <em>x</em> (called the base of the logarithm) is omitted, it is considered equal to a special number <em>e</em> (approximately 2.718):</p> 
+  <pre><code class="language-python">import math
+
+natural_log = math.log(1024)  # 6.931471805599453</code></pre> 
+  <p>Besides the <code class="language-python">round()</code> function, we can use <code class="language-python">floor()</code> and <code class="language-python">ceil()</code> from the <code class="language-python">math</code> module to obtain integer values from floats:</p> 
+  <ul> 
+   <li><strong>math.floor(a)</strong><strong> </strong>returns the nearest integer less than or equal to <strong>a</strong>;</li> 
+   <li><strong>math.ceil(a)</strong> returns the nearest integer greater than or equal to <strong>a</strong>.</li> 
+  </ul> 
+  <p>The <code class="language-python">math</code> module also provides the <code class="language-python">sqrt</code> function to calculate the square root of a number.</p> 
+  <pre><code class="language-python">import math
+
+result = math.sqrt(100)  # 10.0</code></pre> 
+  <h5 style="text-align: center;">Geometry</h5> 
+  <p>The number <span class="math-tex">\(\pi\)</span> is often used in geometry and other mathematical fields. It is the ratio of the circumference of a circle to its diameter. It can be found in the <samp>math</samp> module as <samp>pi</samp>.</p> 
+  <p>The next example shows how to calculate the circumference of a circle:</p> 
+  <pre><code class="language-python">import math
+
+r = 3.5
+circumference = 2 * math.pi * r  # 21.991...</code></pre> 
+  <p>There are also common trigonometric functions available in the <samp>math</samp> module:</p> 
+  <ul> 
+   <li><strong>math.cos(a)</strong> returns the cosine of <strong>a</strong> radians;</li> 
+   <li><strong>math.sin(a)</strong> returns the sine of <strong>a</strong> radians;</li> 
+   <li><strong>math.degrees(a)</strong> returns angle <strong>a</strong> converted from radians to degrees;</li> 
+   <li><strong>math.radians(a)</strong> returns angle <strong>a</strong> converted from degrees to radians<strong>.</strong></li> 
+  </ul> 
+  <pre><code class="language-python">import math
+
+deg = 60.0
+x = math.radians(deg)  # 1.047...
+
+cos = math.cos(x)  # 0.500...
+sin = math.sin(x)  # 0.866...
+
+degrees = math.degrees(x)  # 59.999...</code></pre> 
+  <p>As you can see, due to a limited precision of floats the value of <code class="language-python">degrees</code> is actually <code class="language-python">59.99999999999999</code> instead of expected <code class="language-python">60.0</code>.</p> 
+  <p>It is impossible to cover all the <samp>math</samp> module in this topic so you can learn more from its <a target="_blank" href="https://docs.python.org/3/library/math.html" rel="noopener noreferrer nofollow">documentation</a>.</p> 
+  <h5 style="text-align: center;">The volume of a cylinder</h5> 
+  <p>Let's assume we have a cylinder with the height <code class="language-python">h = 5</code> and the radius of the base <code class="language-python">r = 3</code>. The formula for the volume of a cylinder is <span class="math-tex">\(V = \pi r^2 h\)</span>. This is how we can calculate the volume using Python:</p> 
+  <pre><code class="language-python">import math
+
+h = 5
+r = 3
+
+volume = math.pi * math.pow(r, 2) * h  # 141.3716...
+
+print(round(volume, 1))  # 141.4</code></pre> 
+  <p>In the code above, we used the <samp>round</samp> function to get a prettier value for printing.</p> 
+  <h5>Summary</h5> 
+  <p>In this topic, we've learned several new advanced arithmetic operations, familiarized ourselves with arithmetics and geometry in <samp>math</samp> module, and calculated the volume of a cylinder. As you can see, it is possible to round a number or find a maximum value in Python using just built-in functions. However, now you can use functions from the <samp>math</samp> module for more advanced tasks.</p>
+ </body>
+</html>

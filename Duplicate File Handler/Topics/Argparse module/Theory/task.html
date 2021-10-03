@@ -2,17 +2,17 @@
 <html>
  <head></head>
  <body>
-  <p>If you're writing a user-friendly program, one way to make it more universal is to use the command line and let users specify all the necessary parameters and their values themselves. By doing that, you design a program capable of taking different numbers if it's a calculator, for example, or a path to a file, as it's often required, without making the user go inside the script trying to find where and what should be replaced.</p> 
+  <p>If you're writing a user-friendly program, one way to make it more universal is to use the command line and let users specify all the necessary parameters and their values themselves. Thus you can design a program capable of taking different numbers (a calculator, for example) or a path to a file, as is often required. Then the user won't need to go inside the script trying to find where and what should be replaced.</p> 
   <p>The <code class="language-python">argparse</code> is one of the modules that lets you do that. It allows you to pass the arguments through the command line and also assign names to them, use them as “flags”, automatically generate messages for users, and do a lot of other cool things we will get to a bit later.</p> 
   <p>We will write a script called <code class="language-python">recipe_book.py</code> as an example that takes up to five ingredients and prints a recipe of a dish you can cook with the provided ingredients. </p> 
-  <h2>Getting started with argparse</h2> 
+  <h5>Getting started with argparse</h5> 
   <p>The first thing is to import the module:</p> 
   <pre><code class="language-python">import argparse</code></pre> 
   <p>The next step is to create an <code class="language-python">ArgumentParser</code> object which will store all the information about the arguments:</p> 
   <pre><code class="language-python">parser = argparse.ArgumentParser(description="This program prints recipes \
 consisting of the ingredients you provide.")</code></pre> 
   <p>The <code class="language-python">ArgumentParser</code> has quite a number of parameters that you can specify, but we only invoked <code class="language-python">description</code> which is quite handy in order to explain to a user what your program is for in general. Now let's add some arguments.</p> 
-  <h2>Adding arguments</h2> 
+  <h5>Adding arguments</h5> 
   <p>To do that, we will use the <code class="language-python">add_argument()</code> method:</p> 
   <pre><code class="language-python">parser.add_argument("-i1", "--ingredient_1")  # optional argument
                                               # or
@@ -31,7 +31,7 @@ parser.add_argument("ingredient_1")           # positional argument</code></pre>
                              "garlic", "carrot", "soy_sauce", "tomato_sauce"],
                     help="You need to choose only one ingredient from the list.")</code></pre> 
   <p>Another useful parameter you see here is <code class="language-python">help</code>. It contains a brief description of an argument and also allows you to guide a user in their work with a script.</p> 
-  <h2>Parsing arguments</h2> 
+  <h5>Parsing arguments</h5> 
   <p>The <code class="language-python">parse_args()</code> method is used for reading argument strings from the command line:</p> 
   <pre><code class="language-python">args = parser.parse_args()</code></pre> 
   <p>Now we can access the values specified by a user as attributes of the <code class="language-python">args</code>. The long versions are used as attribute names:</p> 
@@ -90,8 +90,8 @@ print(f"The ingredients you provided are: {ingredients}")
 def find_a_recipe(ingredients):
     ...
     # processes the input and returns a recipe depending on the provided ingredients</code></pre> 
-  <h2>How do you actually use that in the command line?</h2> 
-  <p>Now let's see how it looks like from the user perspective. Here's a sample call of our program from the command line:</p> 
+  <h5>How do you actually use that in the command line?</h5> 
+  <p>Now let's see what it looks like from the user's perspective. Here's a sample call of our program from the command line:</p> 
   <pre><code class="language-bash">python recipe_book.py -i1 rice -i2 onion -i3 garlic -i4 carrot -i5 tomato_sauce --salt
 # The ingredients you provided are: ['rice', 'onion', 'garlic', 'carrot', 'tomato_sauce', 'salt']
 # &lt;The description of the available recipe&gt;</code></pre> 
@@ -149,8 +149,7 @@ def find_a_recipe(ingredients):
 #   --salt                Specify if you'd like to use salt in your recipe.
 #   --pepper              Change to 'True' if you'd like to use pepper in your recipe.</code></pre> 
   <p>Again, first we see the 'usage' of our program, then, there's the description we wrote, and, finally, the list of all arguments.</p> 
-  <h2>Summary</h2> 
-  <p>In this topic, we briefly familiarized ourselves with Python <code class="language-python">argparse</code> module. There are three main steps to get the job done: first, create the <code class="language-python">ArgumentParser</code> object; then, add arguments with <code class="language-python">add_argument()</code> method; finally, parse them by <code class="language-python">parse_args()</code> method and use in your program. Since what we discussed here is more of a review than a full description, it's definitely worth reading the <a target="_blank" href="https://docs.python.org/3/library/argparse.html" rel="noopener noreferrer nofollow">official docs</a>, argparse section for more details, especially to learn about different parameter options you can use in your program.</p>
+  <h5>Summary</h5> 
+  <p>In this topic, we briefly familiarized ourselves with Python <code class="language-python">argparse</code> module. There are three main steps to get the job done: first, create the <code class="language-python">ArgumentParser</code> object; then, add arguments with <code class="language-python">add_argument()</code> method; finally, parse them with the <code class="language-python">parse_args()</code> method and use them in your program. Since what we discussed here is more of a review than a full description, it's definitely worth reading the argparse section in the <a target="_blank" href="https://docs.python.org/3/library/argparse.html" rel="noopener noreferrer nofollow">official docs</a> for more details, especially to learn about different parameter options you can use in your program.</p>
  </body>
 </html>
-<a href="https://hyperskill.org/learn/step/11389">Show topic summary</a>

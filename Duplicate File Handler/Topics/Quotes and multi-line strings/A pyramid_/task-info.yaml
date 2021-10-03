@@ -1,0 +1,10 @@
+type: code
+custom_name: A pyramid!
+files:
+- name: main.py
+  visible: true
+  text: print(...)
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/6892#comment
+status: Solved
+record: -1

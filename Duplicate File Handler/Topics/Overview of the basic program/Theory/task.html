@@ -1,0 +1,58 @@
+<h2>Overview of the basic program</h2>
+<html>
+ <head></head>
+ <body>
+  <p>In this topic, you will learn how to develop your first Python programs. Despite the fact that these programs are quite simple, they are still syntactically correct and show that programming in Python is a treat.</p> 
+  <h5 style="text-align: center;">The Hello World program</h5> 
+  <p>Our first example will be <strong>Hello, World!</strong> It is traditionally used to introduce beginners to a new programming language.</p> 
+  <pre><code class="language-python">print("Hello, World!")</code></pre> 
+  <p>As you can see, it consists of a single line and just prints a string passed in the parentheses, but without quotes. You may run this code <a target="_blank" href="https://repl.it/languages/python3" rel="nofollow noopener noreferrer">online</a> (just copy it and click on the triangle) or follow these <a target="_blank" href="https://www.python.org/about/gettingstarted/#installing" rel="noopener noreferrer nofollow">installation tips</a>. You should get this result:</p> 
+  <pre><code class="language-no-highlight">Hello, World!</code></pre> 
+  <p>Although this code is very simple, we will go through it in some more detail.</p> 
+  <h5 style="text-align: center;">Short explanation</h5> 
+  <p>Here,<strong> print</strong> is the name of a function. A <strong>function</strong> is a block of code that does some useful work for you, e.g. prints a text. In some sense, a function is a subprogram that can be reused within your programs. When the name of a function is followed by parentheses, it means that it was <strong>called</strong> to get the result.</p> 
+  <p>Let's go further: <strong>"Hello, World!"</strong> is a Python string. All strings are surrounded by either <em>single</em> or <em>double</em> quotes, so <strong>'Hello, World!'</strong> is also a valid string. You may replace this string with another one, and the program will print the new string. For example:</p> 
+  <pre><code class="language-python">print('Python 3.x')</code></pre> 
+  <p>As you might guess, this program will print:</p> 
+  <pre><code class="language-no-highlight">Python 3.x</code></pre> 
+  <h5 style="text-align: center;">Printing quotes</h5> 
+  <p>Now imagine that the string you want to print already contains some type of quotation mark. If you would like to include quotes into a string, then enclose this string in quotes of <strong>another</strong> type, e.g.:</p> 
+  <pre><code class="language-python">print("Yes, I'm ready to learn Python.")</code></pre> 
+  <p>Part of the string with <code class="language-python">I'm</code> is printed <strong>correctly</strong>, because you used double quotes <code class="language-python">"..."</code> to enclose the whole string:</p> 
+  <pre><code class="language-no-highlight">Yes, I'm ready to learn Python.</code></pre> 
+  <p>If you write it in the following <strong>wrong</strong> way:</p> 
+  <pre><code class="language-python">print('Yes, I'm ready to learn Python.')</code></pre> 
+  <p>your program won't know where the string starts and ends.</p> 
+  <p>You can try to run all the examples using the <a target="_blank" href="https://repl.it/languages/python3" rel="nofollow noopener noreferrer" title="Link: https://trinket.io/python/77624890a0">link</a> provided earlier. This will help you familiarize yourself with Python.</p> 
+  <h5 style="text-align: center;">Possible errors</h5> 
+  <p>Even this simple line of code may contain errors, most common of them are:</p> 
+  <ul> 
+   <li><strong>putting extra indentation</strong></li> 
+  </ul> 
+  <pre><code class="language-python">print("Hello, World!")</code></pre> 
+  <p>This does not work because of extra spaces before <strong>print</strong>.</p> 
+  <ul> 
+   <li><strong>calling the function by the wrong name</strong></li> 
+  </ul> 
+  <pre><code class="language-python">pint("Hello, World!")</code></pre> 
+  <p>This line contains <strong>pint</strong> instead of <strong>print.</strong> Make sure to refer to every function by its proper name.</p> 
+  <ul> 
+   <li><strong>writing names in the wrong case</strong></li> 
+  </ul> 
+  <pre><code class="language-python">PRINT("All caps")</code></pre> 
+  <p>Again, <strong>Print</strong>, <strong>print</strong> and <strong>PRINT</strong> are not the same. Names are case-sensitive in Python.</p> 
+  <ul> 
+   <li><strong>missing one or both quotes for a string</strong></li> 
+  </ul> 
+  <pre><code class="language-python">print("Python)</code></pre> 
+  <p>This does not work because of missing closing quotes.</p> 
+  <ul> 
+   <li><strong>missing one or more parentheses</strong></li> 
+  </ul> 
+  <pre><code class="language-python">print("I have no end"</code></pre> 
+  <p>Be careful with parentheses, especially when calling a function.</p> 
+  <p>Now you shouldn't have any serious trouble with such programs.</p> 
+  <h5>Summary</h5> 
+  <p>In this topic, we've written our first program in Python, broke it down, printed some strings, and looked at the most common errors you may encounter at the very start.</p>
+ </body>
+</html>

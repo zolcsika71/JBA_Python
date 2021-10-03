@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>In addition to several ways that you can use to pass arguments into functions, Python also has special syntax for accepting these values from a function call. So, while in earlier topics we have learned how to work with arguments, now we will focus on parameters, the ones with <strong>default values </strong>in particular, and look into them in more detail.</p> 
-  <h2 style="text-align: center;">Defaults</h2> 
+  <h5 style="text-align: center;">Defaults</h5> 
   <p>In Python, functions can have parameters with <strong>default values</strong>. Default parameters are specified in the function definition and contain default values for arguments in case they are not provided with a function call. Have a look at this code:</p> 
   <pre><code class="language-python">def locate(place, planet="Earth"):
     print(place, "on", planet)
@@ -20,7 +20,7 @@ locate("Craters", "Mercury")         # Craters on Mercury</code></pre>
 
 # SyntaxError: non-default argument follows default argument</code></pre> 
   <p>In this case, you will not be able to use the default value at all. As the second parameter still requires a value, we would always have to write both values in a call, which makes not much sense. So, when you declare a function, pay attention to the order of the parameters.</p> 
-  <h2 style="text-align: center;">Mutable objects as defaults</h2> 
+  <h5 style="text-align: center;">Mutable objects as defaults</h5> 
   <p>When it comes to mutable objects, things are getting trickier. Let's set a list as a default value and see how it works:</p> 
   <pre><code class="language-python">def add_player(player, team=[]):
     ...
@@ -45,9 +45,9 @@ print(rugby_team)     # ['Robin', 'Andrew']</code></pre>
     team.append(player)
     return team</code></pre> 
   <p>Setting the default value to <code class="language-python">None</code> and explicitly reassigning the value of the <code class="language-python">team</code> parameter allows you to create a new list each time this function is called.</p> 
-  <h2 style="text-align: center;">PEP time</h2> 
+  <h5 style="text-align: center;">PEP time</h5> 
   <p>Look at the declared functions shown in this topic one more time, for example, <code class="language-python">def locate(place, planet="Earth"): ...</code>. Have you noticed missing spaces around the equals sign? Their absence is not accidental. By <a target="_blank" href="https://www.python.org/dev/peps/pep-0008/#other-recommendations" rel="noopener noreferrer nofollow">PEP 8 convention</a>, you should not put spaces around <code class="language-python">=</code> when indicating a keyword argument. This holds true for parameters with default values.</p> 
-  <h2 style="text-align: center;">Recap</h2> 
+  <h5 style="text-align: center;">Summary</h5> 
   <p>Let's go over the main points we have discussed:</p> 
   <ul> 
    <li>Python Functions can be quite flexible, you can use them passing fewer arguments in a call (thanks to <strong>default values</strong>).</li> 
@@ -56,4 +56,3 @@ print(rugby_team)     # ['Robin', 'Andrew']</code></pre>
   </ul>
  </body>
 </html>
-<a href="https://hyperskill.org/learn/step/10295">Show topic summary</a>

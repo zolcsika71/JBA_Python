@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>In this topic, we will discuss arguments that can be extremely helpful when working with files. As you know, the <code class="language-python">print()</code> function takes keyword arguments <code class="language-python">sep</code> and <code class="language-python">end</code>. Now it's time to learn that it takes two more: <code class="language-python">file</code> and <code class="language-python">flush</code>.</p> 
-  <h2>The file</h2> 
+  <h5>The file</h5> 
   <p>The <code class="language-python">file</code> argument is in charge of where the function will write given objects to. By default, it is <code class="language-python">sys.stdout</code>, the standard output stream that prints objects on the screen.</p> 
   <p>Instead of the default value, you can specify the file parameter with the name of the required file. The file should be <strong>opened in advance</strong>, and make sure to close it when you are done:</p> 
   <pre><code class="language-python">my_file = open('testfile.txt', 'w')
@@ -20,7 +20,7 @@ def division():
     else:
         # The string below will look like an error message.
         print("The second number cannot be a zero!", file=sys.stderr)</code></pre> 
-  <h2>The flush</h2> 
+  <h5>The flush</h5> 
   <p>The last argument is the bool parameter <code class="language-python">flush</code>. It can only be used together with specifying the file argument. <code class="language-python">False</code> by default, if set to <code class="language-python">True</code>, it forces the stream to be flushed. But what exactly does it mean?</p> 
   <p>When writing to files, the output is <strong>buffered </strong>in memory and accumulated until the buffer is full, at which point the buffer gets <strong>flushed</strong>, so the content is written from the buffer to the file. The thing is, it's just more efficient to flush the buffer fewer times, and the user is less likely to notice if the output is not flushed each new line. The <strong>default size</strong> of the buffer depends on the operating system but it is also possible to specify the desired size of the buffer when opening the file (using the keyword argument <code class="language-python">buffering</code>). </p> 
   <p>Getting back to our topic, if <code class="language-python">flush=False</code>, writing to file takes place when the buffer is full (or when the file is being closed even if the buffer is not full yet). And if <code class="language-python">flush=True</code>, the input is written to the file <strong>straight away</strong>. Below are two examples to understand the difference.</p> 
@@ -58,14 +58,14 @@ out2.close()</code></pre>
    <code class="language-python">end</code>, are keyword arguments. You should explicitly specify them when calling the function.
   </div>
   <p></p> 
-  <h2>Print vs Write</h2> 
+  <h5>Print vs Write</h5> 
   <p>You might wonder if there's any difference between the methods <code class="language-python">file.write()</code> and <code class="language-python">print()</code> with the <code class="language-python">file</code> argument. Though they do roughly the same (write a string to a file), there are a few things to keep in mind:</p> 
   <ul> 
    <li><code class="language-python">print()</code> renders the given objects, that is, converts them to strings, and there's an opportunity to specify the <code class="language-python">sep</code> and <code class="language-python">end</code> arguments or leave the defaults (a space and <code class="language-python">\n</code> correspondingly), as well as either to flush the stream or not.</li> 
    <li><code class="language-python">file.write()</code>, on the contrary, writes the exact string that is given only when the buffer is full. This also implies that it takes only a string as an argument, and if we want to print a number, for example, we should explicitly convert it into a string.</li> 
   </ul> 
   <p>The first one is a bit more flexible and might be helpful when we don't want to think about rendering objects ourselves, while the second one offers a conscious approach due to explicitness.</p> 
-  <h2>Conclusion</h2> 
+  <h5>Conclusion</h5> 
   <p>Arguments of the <code class="language-python">print()</code> function discussed in this topic provide a very useful opportunity not only to write objects to the system's standard output, but also to make them look like error messages or write them to files. With the help of these arguments, we can do so either straight away or (by default) when the buffer is full, and without rendering the objects ourselves. Keep that in mind when coding further!</p>
  </body>
 </html>
